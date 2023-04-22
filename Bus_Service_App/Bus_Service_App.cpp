@@ -1,5 +1,8 @@
 #include "pch.h" 
+#include <Windows.h>
+#include <ShellScalingAPI.h>
 
+#pragma comment(lib, "Shcore.lib")
 using namespace System;
 
 
@@ -9,7 +12,6 @@ using namespace System;
 #include"menu.h"
 #include"adminMenu.h"
 using namespace System::Windows::Forms;
-
 int countUsers() {	//Returns the total users in database.
 	try {
 		String^ connString = "Data Source=localhost\\SQLEXPRESS;Initial Catalog=Bus;Integrated Security=True";
@@ -29,10 +31,10 @@ int countUsers() {	//Returns the total users in database.
 		return -1;
 	}
 }
-
 [STAThread]
 int main()
 {
+	SetProcessDpiAwareness(PROCESS_PER_MONITOR_DPI_AWARE);
 	Application::EnableVisualStyles();
 	Application::SetCompatibleTextRenderingDefault(false);
 
