@@ -17,7 +17,7 @@ int countUsers() {	//Returns the total users in database.
 		sqlconn.Open();
 
 		String^ sqlquery = "SELECT COUNT(*) FROM passengers;";
-		SqlCommand command(sqlquery, % sqlconn);
+		SqlCommand command(sqlquery, % sqlconn); 
 		int count = (int)command.ExecuteScalar();
 
 		sqlconn.Close();
