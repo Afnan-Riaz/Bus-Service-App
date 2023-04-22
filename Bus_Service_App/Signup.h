@@ -62,7 +62,7 @@ namespace Bus_Service_App {
 
 	private: System::Windows::Forms::TextBox^ usernametb;
 	private: System::Windows::Forms::TextBox^ emailtb;
-	private: System::Windows::Forms::PictureBox^ pictureBox1;
+
 
 
 
@@ -84,7 +84,6 @@ namespace Bus_Service_App {
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(Signup::typeid));
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->label3 = (gcnew System::Windows::Forms::Label());
@@ -104,8 +103,6 @@ namespace Bus_Service_App {
 			this->label9 = (gcnew System::Windows::Forms::Label());
 			this->usernametb = (gcnew System::Windows::Forms::TextBox());
 			this->emailtb = (gcnew System::Windows::Forms::TextBox());
-			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// label1
@@ -134,7 +131,7 @@ namespace Bus_Service_App {
 			// 
 			this->label3->Font = (gcnew System::Drawing::Font(L"Arial", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label3->Location = System::Drawing::Point(511, 127);
+			this->label3->Location = System::Drawing::Point(72, 185);
 			this->label3->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label3->Name = L"label3";
 			this->label3->Size = System::Drawing::Size(131, 34);
@@ -146,7 +143,7 @@ namespace Bus_Service_App {
 			this->nametb->BackColor = System::Drawing::SystemColors::Control;
 			this->nametb->BorderStyle = System::Windows::Forms::BorderStyle::None;
 			this->nametb->ForeColor = System::Drawing::Color::Gray;
-			this->nametb->Location = System::Drawing::Point(515, 252);
+			this->nametb->Location = System::Drawing::Point(515, 243);
 			this->nametb->Margin = System::Windows::Forms::Padding(4);
 			this->nametb->Multiline = true;
 			this->nametb->Name = L"nametb";
@@ -161,7 +158,7 @@ namespace Bus_Service_App {
 			// 
 			this->label4->Font = (gcnew System::Drawing::Font(L"Arial", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label4->Location = System::Drawing::Point(72, 227);
+			this->label4->Location = System::Drawing::Point(72, 237);
 			this->label4->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label4->Name = L"label4";
 			this->label4->Size = System::Drawing::Size(131, 34);
@@ -184,7 +181,7 @@ namespace Bus_Service_App {
 			this->phonetb->BackColor = System::Drawing::SystemColors::Control;
 			this->phonetb->BorderStyle = System::Windows::Forms::BorderStyle::None;
 			this->phonetb->ForeColor = System::Drawing::Color::Gray;
-			this->phonetb->Location = System::Drawing::Point(515, 315);
+			this->phonetb->Location = System::Drawing::Point(515, 321);
 			this->phonetb->Margin = System::Windows::Forms::Padding(4);
 			this->phonetb->Multiline = true;
 			this->phonetb->Name = L"phonetb";
@@ -211,7 +208,7 @@ namespace Bus_Service_App {
 			this->passtb->BackColor = System::Drawing::SystemColors::Control;
 			this->passtb->BorderStyle = System::Windows::Forms::BorderStyle::None;
 			this->passtb->ForeColor = System::Drawing::Color::Gray;
-			this->passtb->Location = System::Drawing::Point(515, 399);
+			this->passtb->Location = System::Drawing::Point(515, 405);
 			this->passtb->Margin = System::Windows::Forms::Padding(4);
 			this->passtb->Multiline = true;
 			this->passtb->Name = L"passtb";
@@ -238,7 +235,7 @@ namespace Bus_Service_App {
 			this->repasstb->BackColor = System::Drawing::SystemColors::Control;
 			this->repasstb->BorderStyle = System::Windows::Forms::BorderStyle::None;
 			this->repasstb->ForeColor = System::Drawing::Color::Gray;
-			this->repasstb->Location = System::Drawing::Point(515, 437);
+			this->repasstb->Location = System::Drawing::Point(515, 443);
 			this->repasstb->Margin = System::Windows::Forms::Padding(4);
 			this->repasstb->Multiline = true;
 			this->repasstb->Name = L"repasstb";
@@ -301,7 +298,7 @@ namespace Bus_Service_App {
 			this->tbaddress->BackColor = System::Drawing::SystemColors::Control;
 			this->tbaddress->BorderStyle = System::Windows::Forms::BorderStyle::None;
 			this->tbaddress->ForeColor = System::Drawing::Color::Gray;
-			this->tbaddress->Location = System::Drawing::Point(515, 357);
+			this->tbaddress->Location = System::Drawing::Point(515, 363);
 			this->tbaddress->Margin = System::Windows::Forms::Padding(4);
 			this->tbaddress->Multiline = true;
 			this->tbaddress->Name = L"tbaddress";
@@ -328,7 +325,7 @@ namespace Bus_Service_App {
 			this->usernametb->BackColor = System::Drawing::SystemColors::ButtonHighlight;
 			this->usernametb->BorderStyle = System::Windows::Forms::BorderStyle::None;
 			this->usernametb->ForeColor = System::Drawing::Color::Gray;
-			this->usernametb->Location = System::Drawing::Point(532, 197);
+			this->usernametb->Location = System::Drawing::Point(515, 191);
 			this->usernametb->Margin = System::Windows::Forms::Padding(4);
 			this->usernametb->Multiline = true;
 			this->usernametb->Name = L"usernametb";
@@ -344,7 +341,7 @@ namespace Bus_Service_App {
 			this->emailtb->BackColor = System::Drawing::SystemColors::Control;
 			this->emailtb->BorderStyle = System::Windows::Forms::BorderStyle::None;
 			this->emailtb->ForeColor = System::Drawing::Color::Gray;
-			this->emailtb->Location = System::Drawing::Point(515, 285);
+			this->emailtb->Location = System::Drawing::Point(515, 283);
 			this->emailtb->Margin = System::Windows::Forms::Padding(4);
 			this->emailtb->Multiline = true;
 			this->emailtb->Name = L"emailtb";
@@ -354,17 +351,6 @@ namespace Bus_Service_App {
 			this->emailtb->Text = L"Enter Email Address";
 			this->emailtb->Enter += gcnew System::EventHandler(this, &Signup::emailtb_Enter);
 			this->emailtb->Leave += gcnew System::EventHandler(this, &Signup::emailtb_Leave);
-			// 
-			// pictureBox1
-			// 
-			this->pictureBox1->BackColor = System::Drawing::Color::Transparent;
-			this->pictureBox1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox1.Image")));
-			this->pictureBox1->Location = System::Drawing::Point(491, 43);
-			this->pictureBox1->Name = L"pictureBox1";
-			this->pictureBox1->Size = System::Drawing::Size(401, 50);
-			this->pictureBox1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
-			this->pictureBox1->TabIndex = 19;
-			this->pictureBox1->TabStop = false;
 			// 
 			// Signup
 			// 
@@ -391,12 +377,10 @@ namespace Bus_Service_App {
 			this->Controls->Add(this->label3);
 			this->Controls->Add(this->label2);
 			this->Controls->Add(this->label1);
-			this->Controls->Add(this->pictureBox1);
 			this->Margin = System::Windows::Forms::Padding(4);
 			this->Name = L"Signup";
 			this->Padding = System::Windows::Forms::Padding(6);
 			this->Text = L"Signup";
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
