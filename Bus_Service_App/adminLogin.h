@@ -13,7 +13,7 @@ namespace Bus_Service_App {
 	using namespace System::Data::SqlClient;
 
 	/// <summary>
-	/// Summary for adminLogin
+	/// Summary for adminLogin 
 	/// </summary>
 	public ref class adminLogin : public System::Windows::Forms::Form
 	{

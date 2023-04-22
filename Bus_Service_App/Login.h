@@ -11,7 +11,7 @@ namespace Bus_Service_App {
 	using namespace System::Data::SqlClient;
 
 	/// <summary>
-	/// Summary for Form1
+	/// Summary for Form1 
 	/// </summary>
 	public ref class Login : public System::Windows::Forms::Form
 	{
