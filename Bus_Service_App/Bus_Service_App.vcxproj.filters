@@ -44,6 +44,12 @@
     <ClInclude Include="userClass.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="AddRemBus.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="busClass.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AssemblyInfo.cpp">
@@ -70,6 +76,9 @@
     <ClCompile Include="Bus_Service_App.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="AddRemBus.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Image Include="app.ico">
@@ -81,9 +90,6 @@
       <Filter>Resource Files</Filter>
     </EmbeddedResource>
     <EmbeddedResource Include="adminMenu.resx">
-      <Filter>Resource Files</Filter>
-    </EmbeddedResource>
-    <EmbeddedResource Include="..\..\Bus Service Application\Bus Service App\Login.resx">
       <Filter>Resource Files</Filter>
     </EmbeddedResource>
     <EmbeddedResource Include="..\..\Bus Service Application\Bus Service App\menu.resx">

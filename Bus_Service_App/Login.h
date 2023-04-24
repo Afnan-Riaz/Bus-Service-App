@@ -47,6 +47,9 @@ namespace Bus_Service_App {
 	private: System::Windows::Forms::Label^ label4;
 	private: System::Windows::Forms::LinkLabel^ adminlink;
 
+
+
+
 	protected:
 
 	private:
@@ -191,7 +194,7 @@ namespace Bus_Service_App {
 			this->label4->Location = System::Drawing::Point(47, 121);
 			this->label4->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label4->Name = L"label4";
-			this->label4->Size = System::Drawing::Size(548, 41);
+			this->label4->Size = System::Drawing::Size(375, 41);
 			this->label4->TabIndex = 10;
 			this->label4->Text = L"Please Login to Continue:";
 			// 

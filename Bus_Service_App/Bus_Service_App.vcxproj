@@ -130,12 +130,16 @@
     <ResourceCompile Include="app.rc" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AddRemBus.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="adminLogin.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="adminMenu.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="busClass.h" />
     <ClInclude Include="Login.h">
       <FileType>CppForm</FileType>
     </ClInclude>
@@ -150,6 +154,7 @@
     <ClInclude Include="userClass.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="AddRemBus.cpp" />
     <ClCompile Include="adminLogin.cpp" />
     <ClCompile Include="adminMenu.cpp" />
     <ClCompile Include="AssemblyInfo.cpp" />
@@ -175,10 +180,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="..\..\Bus Service Application\Bus Service App\Login.resx" />
     <EmbeddedResource Include="..\..\Bus Service Application\Bus Service App\menu.resx" />
+    <EmbeddedResource Include="AddRemBus.resx">
+      <DependentUpon>AddRemBus.h</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="adminLogin.resx" />
     <EmbeddedResource Include="adminMenu.resx" />
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.h</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Signup.resx">
       <DependentUpon>Signup.h</DependentUpon>
     </EmbeddedResource>

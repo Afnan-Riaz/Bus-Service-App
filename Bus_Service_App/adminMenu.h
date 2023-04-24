@@ -21,7 +21,7 @@ namespace Bus_Service_App {
 			//
 			//TODO: Add the constructor code here
 			//
-			AdNameLabel->Text = admin->name;
+			AdName->Text = admin->name;
 		}
 
 	protected:
@@ -35,23 +35,20 @@ namespace Bus_Service_App {
 				delete components;
 			}
 		}
-	private: System::Windows::Forms::MenuStrip^ menuStrip1;
-	private: System::Windows::Forms::ToolStripMenuItem^ AdaccountToolStripMenuItem;
-	private: System::Windows::Forms::ToolStripMenuItem^ AdlogoutToolStripMenuItem;
-	private: System::Windows::Forms::ToolStripMenuItem^ AdmanageAccountToolStripMenuItem;
-	protected:
 
 
+	private: System::Windows::Forms::Button^ MngBusButton;
 
-	private: System::Windows::Forms::Label^ AppNameAdLabel;
-
-	private: System::Windows::Forms::Label^ AdSignLabel;
-	private: System::Windows::Forms::Label^ AdNameLabel;
-	private: System::Windows::Forms::Button^ AddRemBusButton;
 	private: System::Windows::Forms::Button^ ModScedButton;
 	private: System::Windows::Forms::Button^ ModRoutButton;
 	private: System::Windows::Forms::Button^ AddRemUserButton;
-	private: System::Windows::Forms::Button^ ModBusInButton;
+	private: System::Windows::Forms::Panel^ panel1;
+	private: System::Windows::Forms::Panel^ panel2;
+	private: System::Windows::Forms::Label^ AdName;
+	private: System::Windows::Forms::Button^ AdLogoutButton;
+	private: System::Windows::Forms::Panel^ panel3;
+	private: System::Windows::Forms::Label^ label1;
+
 
 
 	private:
@@ -67,174 +64,202 @@ namespace Bus_Service_App {
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			this->menuStrip1 = (gcnew System::Windows::Forms::MenuStrip());
-			this->AdaccountToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->AdlogoutToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->AdmanageAccountToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->AppNameAdLabel = (gcnew System::Windows::Forms::Label());
-			this->AdSignLabel = (gcnew System::Windows::Forms::Label());
-			this->AdNameLabel = (gcnew System::Windows::Forms::Label());
-			this->AddRemBusButton = (gcnew System::Windows::Forms::Button());
+			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(adminMenu::typeid));
+			this->MngBusButton = (gcnew System::Windows::Forms::Button());
 			this->ModScedButton = (gcnew System::Windows::Forms::Button());
 			this->ModRoutButton = (gcnew System::Windows::Forms::Button());
 			this->AddRemUserButton = (gcnew System::Windows::Forms::Button());
-			this->ModBusInButton = (gcnew System::Windows::Forms::Button());
-			this->menuStrip1->SuspendLayout();
+			this->panel1 = (gcnew System::Windows::Forms::Panel());
+			this->panel2 = (gcnew System::Windows::Forms::Panel());
+			this->AdName = (gcnew System::Windows::Forms::Label());
+			this->AdLogoutButton = (gcnew System::Windows::Forms::Button());
+			this->panel3 = (gcnew System::Windows::Forms::Panel());
+			this->label1 = (gcnew System::Windows::Forms::Label());
+			this->panel1->SuspendLayout();
+			this->panel2->SuspendLayout();
+			this->panel3->SuspendLayout();
 			this->SuspendLayout();
 			// 
-			// menuStrip1
+			// MngBusButton
 			// 
-			this->menuStrip1->ImageScalingSize = System::Drawing::Size(20, 20);
-			this->menuStrip1->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(1) { this->AdaccountToolStripMenuItem });
-			this->menuStrip1->Location = System::Drawing::Point(0, 0);
-			this->menuStrip1->Name = L"menuStrip1";
-			this->menuStrip1->Size = System::Drawing::Size(1026, 28);
-			this->menuStrip1->TabIndex = 0;
-			this->menuStrip1->Text = L"menuStrip1";
-			// 
-			// AdaccountToolStripMenuItem
-			// 
-			this->AdaccountToolStripMenuItem->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(2) {
-				this->AdlogoutToolStripMenuItem,
-					this->AdmanageAccountToolStripMenuItem
-			});
-			this->AdaccountToolStripMenuItem->Name = L"AdaccountToolStripMenuItem";
-			this->AdaccountToolStripMenuItem->Size = System::Drawing::Size(77, 24);
-			this->AdaccountToolStripMenuItem->Text = L"Account";
-			// 
-			// AdlogoutToolStripMenuItem
-			// 
-			this->AdlogoutToolStripMenuItem->Name = L"AdlogoutToolStripMenuItem";
-			this->AdlogoutToolStripMenuItem->Size = System::Drawing::Size(224, 26);
-			this->AdlogoutToolStripMenuItem->Text = L"Logout";
-			this->AdlogoutToolStripMenuItem->Click += gcnew System::EventHandler(this, &adminMenu::AdlogoutToolStripMenuItem_Click);
-			// 
-			// AdmanageAccountToolStripMenuItem
-			// 
-			this->AdmanageAccountToolStripMenuItem->Name = L"AdmanageAccountToolStripMenuItem";
-			this->AdmanageAccountToolStripMenuItem->Size = System::Drawing::Size(224, 26);
-			this->AdmanageAccountToolStripMenuItem->Text = L"Manage Account";
-			// 
-			// AppNameAdLabel
-			// 
-			this->AppNameAdLabel->AutoSize = true;
-			this->AppNameAdLabel->Font = (gcnew System::Drawing::Font(L"Perpetua Titling MT", 22, static_cast<System::Drawing::FontStyle>((System::Drawing::FontStyle::Bold | System::Drawing::FontStyle::Underline)),
-				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->AppNameAdLabel->ImageAlign = System::Drawing::ContentAlignment::TopCenter;
-			this->AppNameAdLabel->Location = System::Drawing::Point(88, 56);
-			this->AppNameAdLabel->Name = L"AppNameAdLabel";
-			this->AppNameAdLabel->Padding = System::Windows::Forms::Padding(7);
-			this->AppNameAdLabel->Size = System::Drawing::Size(565, 58);
-			this->AppNameAdLabel->TabIndex = 1;
-			this->AppNameAdLabel->Text = L"Bus Service Application";
-			this->AppNameAdLabel->TextAlign = System::Drawing::ContentAlignment::TopCenter;
-			// 
-			// AdSignLabel
-			// 
-			this->AdSignLabel->AutoSize = true;
-			this->AdSignLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->MngBusButton->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->MngBusButton->FlatAppearance->BorderSize = 0;
+			this->MngBusButton->FlatAppearance->MouseOverBackColor = System::Drawing::SystemColors::GradientActiveCaption;
+			this->MngBusButton->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->MngBusButton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->AdSignLabel->Location = System::Drawing::Point(742, 72);
-			this->AdSignLabel->Name = L"AdSignLabel";
-			this->AdSignLabel->Size = System::Drawing::Size(106, 25);
-			this->AdSignLabel->TabIndex = 2;
-			this->AdSignLabel->Text = L"Signed In: ";
-			// 
-			// AdNameLabel
-			// 
-			this->AdNameLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->AdNameLabel->Location = System::Drawing::Point(854, 72);
-			this->AdNameLabel->Name = L"AdNameLabel";
-			this->AdNameLabel->Size = System::Drawing::Size(101, 25);
-			this->AdNameLabel->TabIndex = 0;
-			this->AdNameLabel->Text = L"Name";
-			// 
-			// AddRemBusButton
-			// 
-			this->AddRemBusButton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->AddRemBusButton->Location = System::Drawing::Point(172, 171);
-			this->AddRemBusButton->Name = L"AddRemBusButton";
-			this->AddRemBusButton->Size = System::Drawing::Size(200, 70);
-			this->AddRemBusButton->TabIndex = 3;
-			this->AddRemBusButton->Text = L"Add or Remove Buses";
-			this->AddRemBusButton->UseVisualStyleBackColor = true;
+			this->MngBusButton->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"MngBusButton.Image")));
+			this->MngBusButton->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
+			this->MngBusButton->Location = System::Drawing::Point(0, 95);
+			this->MngBusButton->Name = L"MngBusButton";
+			this->MngBusButton->Size = System::Drawing::Size(238, 70);
+			this->MngBusButton->TabIndex = 3;
+			this->MngBusButton->Text = L"   Manage Buses";
+			this->MngBusButton->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
+			this->MngBusButton->TextImageRelation = System::Windows::Forms::TextImageRelation::ImageBeforeText;
+			this->MngBusButton->UseVisualStyleBackColor = true;
+			this->MngBusButton->Click += gcnew System::EventHandler(this, &adminMenu::MngBusButton_Click);
 			// 
 			// ModScedButton
 			// 
+			this->ModScedButton->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->ModScedButton->FlatAppearance->BorderSize = 0;
+			this->ModScedButton->FlatAppearance->MouseOverBackColor = System::Drawing::SystemColors::GradientActiveCaption;
+			this->ModScedButton->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->ModScedButton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->ModScedButton->Location = System::Drawing::Point(669, 355);
+			this->ModScedButton->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"ModScedButton.Image")));
+			this->ModScedButton->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
+			this->ModScedButton->Location = System::Drawing::Point(0, 231);
 			this->ModScedButton->Name = L"ModScedButton";
-			this->ModScedButton->Size = System::Drawing::Size(200, 70);
+			this->ModScedButton->Size = System::Drawing::Size(238, 70);
 			this->ModScedButton->TabIndex = 4;
-			this->ModScedButton->Text = L"Modify Scedules";
+			this->ModScedButton->Text = L"   Modify Scedules";
 			this->ModScedButton->UseVisualStyleBackColor = true;
 			// 
 			// ModRoutButton
 			// 
+			this->ModRoutButton->BackColor = System::Drawing::Color::LightSkyBlue;
+			this->ModRoutButton->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->ModRoutButton->FlatAppearance->BorderSize = 0;
+			this->ModRoutButton->FlatAppearance->MouseOverBackColor = System::Drawing::SystemColors::GradientActiveCaption;
+			this->ModRoutButton->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->ModRoutButton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->ModRoutButton->Location = System::Drawing::Point(172, 355);
+			this->ModRoutButton->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"ModRoutButton.Image")));
+			this->ModRoutButton->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
+			this->ModRoutButton->Location = System::Drawing::Point(0, 162);
 			this->ModRoutButton->Name = L"ModRoutButton";
-			this->ModRoutButton->Size = System::Drawing::Size(200, 70);
+			this->ModRoutButton->Size = System::Drawing::Size(238, 70);
 			this->ModRoutButton->TabIndex = 5;
 			this->ModRoutButton->Text = L"Modify Routes";
-			this->ModRoutButton->UseVisualStyleBackColor = true;
+			this->ModRoutButton->UseVisualStyleBackColor = false;
 			// 
 			// AddRemUserButton
 			// 
+			this->AddRemUserButton->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->AddRemUserButton->FlatAppearance->BorderSize = 0;
+			this->AddRemUserButton->FlatAppearance->MouseOverBackColor = System::Drawing::SystemColors::GradientActiveCaption;
+			this->AddRemUserButton->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->AddRemUserButton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->AddRemUserButton->Location = System::Drawing::Point(669, 171);
+			this->AddRemUserButton->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"AddRemUserButton.Image")));
+			this->AddRemUserButton->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
+			this->AddRemUserButton->Location = System::Drawing::Point(0, 300);
 			this->AddRemUserButton->Name = L"AddRemUserButton";
-			this->AddRemUserButton->Size = System::Drawing::Size(200, 70);
+			this->AddRemUserButton->Size = System::Drawing::Size(238, 70);
 			this->AddRemUserButton->TabIndex = 6;
-			this->AddRemUserButton->Text = L"Add or Remove Users";
+			this->AddRemUserButton->Text = L"Manage Users";
 			this->AddRemUserButton->UseVisualStyleBackColor = true;
 			// 
-			// ModBusInButton
+			// panel1
 			// 
-			this->ModBusInButton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->panel1->BackColor = System::Drawing::Color::LightSkyBlue;
+			this->panel1->Controls->Add(this->panel2);
+			this->panel1->Controls->Add(this->MngBusButton);
+			this->panel1->Controls->Add(this->ModScedButton);
+			this->panel1->Controls->Add(this->AdLogoutButton);
+			this->panel1->Controls->Add(this->AddRemUserButton);
+			this->panel1->Controls->Add(this->ModRoutButton);
+			this->panel1->Dock = System::Windows::Forms::DockStyle::Left;
+			this->panel1->Location = System::Drawing::Point(0, 0);
+			this->panel1->Name = L"panel1";
+			this->panel1->Size = System::Drawing::Size(241, 583);
+			this->panel1->TabIndex = 7;
+			// 
+			// panel2
+			// 
+			this->panel2->BackColor = System::Drawing::Color::SteelBlue;
+			this->panel2->Controls->Add(this->AdName);
+			this->panel2->Location = System::Drawing::Point(-3, 1);
+			this->panel2->Name = L"panel2";
+			this->panel2->Size = System::Drawing::Size(244, 94);
+			this->panel2->TabIndex = 8;
+			// 
+			// AdName
+			// 
+			this->AdName->AutoSize = true;
+			this->AdName->Font = (gcnew System::Drawing::Font(L"Poppins", 13, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->ModBusInButton->Location = System::Drawing::Point(429, 264);
-			this->ModBusInButton->Name = L"ModBusInButton";
-			this->ModBusInButton->Size = System::Drawing::Size(200, 70);
-			this->ModBusInButton->TabIndex = 7;
-			this->ModBusInButton->Text = L"Modify Bus Details";
-			this->ModBusInButton->UseVisualStyleBackColor = true;
+			this->AdName->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
+			this->AdName->Location = System::Drawing::Point(78, 30);
+			this->AdName->Name = L"AdName";
+			this->AdName->Size = System::Drawing::Size(84, 39);
+			this->AdName->TabIndex = 0;
+			this->AdName->Text = L"Name";
+			// 
+			// AdLogoutButton
+			// 
+			this->AdLogoutButton->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->AdLogoutButton->Dock = System::Windows::Forms::DockStyle::Bottom;
+			this->AdLogoutButton->FlatAppearance->BorderSize = 0;
+			this->AdLogoutButton->FlatAppearance->MouseOverBackColor = System::Drawing::SystemColors::GradientActiveCaption;
+			this->AdLogoutButton->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->AdLogoutButton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->AdLogoutButton->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"AdLogoutButton.Image")));
+			this->AdLogoutButton->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
+			this->AdLogoutButton->Location = System::Drawing::Point(0, 513);
+			this->AdLogoutButton->Name = L"AdLogoutButton";
+			this->AdLogoutButton->Size = System::Drawing::Size(241, 70);
+			this->AdLogoutButton->TabIndex = 6;
+			this->AdLogoutButton->Text = L"Logout";
+			this->AdLogoutButton->UseVisualStyleBackColor = true;
+			this->AdLogoutButton->Click += gcnew System::EventHandler(this, &adminMenu::AdLogoutButton_Click);
+			// 
+			// panel3
+			// 
+			this->panel3->BackColor = System::Drawing::SystemColors::MenuHighlight;
+			this->panel3->Controls->Add(this->label1);
+			this->panel3->Dock = System::Windows::Forms::DockStyle::Top;
+			this->panel3->Location = System::Drawing::Point(241, 0);
+			this->panel3->Name = L"panel3";
+			this->panel3->Size = System::Drawing::Size(880, 95);
+			this->panel3->TabIndex = 8;
+			// 
+			// label1
+			// 
+			this->label1->Anchor = System::Windows::Forms::AnchorStyles::None;
+			this->label1->AutoSize = true;
+			this->label1->Font = (gcnew System::Drawing::Font(L"Poppins Medium", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label1->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
+			this->label1->Location = System::Drawing::Point(386, 24);
+			this->label1->Name = L"label1";
+			this->label1->Size = System::Drawing::Size(114, 53);
+			this->label1->TabIndex = 0;
+			this->label1->Text = L"HOME";
 			// 
 			// adminMenu
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(1026, 540);
-			this->Controls->Add(this->ModBusInButton);
-			this->Controls->Add(this->AddRemUserButton);
-			this->Controls->Add(this->ModRoutButton);
-			this->Controls->Add(this->ModScedButton);
-			this->Controls->Add(this->AddRemBusButton);
-			this->Controls->Add(this->AdNameLabel);
-			this->Controls->Add(this->AdSignLabel);
-			this->Controls->Add(this->AppNameAdLabel);
-			this->Controls->Add(this->menuStrip1);
-			this->MainMenuStrip = this->menuStrip1;
+			this->AutoScroll = true;
+			this->AutoSize = true;
+			this->ClientSize = System::Drawing::Size(1121, 583);
+			this->Controls->Add(this->panel3);
+			this->Controls->Add(this->panel1);
 			this->Name = L"adminMenu";
 			this->Text = L"adminMenu";
-			this->menuStrip1->ResumeLayout(false);
-			this->menuStrip1->PerformLayout();
+			this->panel1->ResumeLayout(false);
+			this->panel2->ResumeLayout(false);
+			this->panel2->PerformLayout();
+			this->panel3->ResumeLayout(false);
+			this->panel3->PerformLayout();
 			this->ResumeLayout(false);
-			this->PerformLayout();
 
 		}
 #pragma endregion
-
 	public: bool logoutAdmin = false;
-
-	private: System::Void AdlogoutToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
-		this->logoutAdmin = true;
+	public: bool toMng = false;
+	private: System::Void MngBusButton_Click(System::Object^ sender, System::EventArgs^ e) {
+		this->BackColor = Color::CornflowerBlue;
+		this->toMng = true;
 		this->Close();
 	}
-	};
+private: System::Void AdLogoutButton_Click(System::Object^ sender, System::EventArgs^ e) {
+	this->logoutAdmin = true;
+	this->Close();
+}
+};
 };

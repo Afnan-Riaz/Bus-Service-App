@@ -5,7 +5,7 @@
 #pragma comment(lib, "Shcore.lib")
 using namespace System;
 
-
+#include "AddRemBus.h"
 #include "Login.h"
 #include "Signup.h"
 #include"adminLogin.h"
@@ -30,6 +30,27 @@ int countUsers() {	//Returns the total users in database.
 		MessageBox::Show(e->Message, "Error", MessageBoxButtons::OK);
 		return -1;
 	}
+}
+
+bool adminmenu(Admin^& admin) {
+	while (true) {
+		Bus_Service_App::adminMenu adMenu(admin);
+		adMenu.ShowDialog();
+		if (adMenu.logoutAdmin) {
+			admin = nullptr;
+			return 1;
+		}
+		else if (adMenu.toMng) {
+			Bus_Service_App::AddRemBus mngbus;
+			mngbus.ShowDialog();
+			if (mngbus.go_back) {
+				continue;
+			}
+
+		}
+		return 0;
+	}
+
 }
 [STAThread]
 int main()
@@ -78,10 +99,7 @@ int main()
 			}
 		}
 		if (admin != nullptr) {
-			Bus_Service_App::adminMenu adMenu(admin);
-			adMenu.ShowDialog();
-			if (adMenu.logoutAdmin) {
-				admin = nullptr;
+			if (adminmenu(admin)) {
 				continue;
 			}
 		}
