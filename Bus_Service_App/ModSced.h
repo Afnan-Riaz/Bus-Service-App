@@ -36,7 +36,6 @@ namespace Bus_Service_App {
 			}
 		}
 	private: System::Windows::Forms::Panel^ panel2;
-	protected:
 	private: System::Windows::Forms::Label^ AdName;
 	private: System::Windows::Forms::Panel^ panel1;
 	private: System::Windows::Forms::Panel^ panel3;

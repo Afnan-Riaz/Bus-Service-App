@@ -74,22 +74,18 @@ public:
 		grid->Columns[4]->HeaderText = "Available Seats";
 		return 1;
 	}
-	//bool addSced() {
-	//	String^ connStr = "Data Source=localhost\\SQLEXPRESS;Initial Catalog=Bus;Integrated Security=True";
-	//	SqlConnection sqlconn(connStr);
-	//	sqlconn.Open();
-	//	String^ que = "INSERT INTO BusInfo (Id, servProv, classTr, totSeat, avSeat) VALUES (@Id, @servProv, @classTr, @totSeat, @avSeat);";
-	//	SqlCommand cmd(que, % sqlconn);
-	//	cmd.Parameters->AddWithValue("@Id", id);
-	//	cmd.Parameters->AddWithValue("@servProv", sProv);
-	//	cmd.Parameters->AddWithValue("@classTr", trClass);
-	//	cmd.Parameters->AddWithValue("@totSeat", tot_Seats);
-	//	cmd.Parameters->AddWithValue("@avSeat", av_Seats);
-	//	cmd.ExecuteNonQuery();
-	//	sqlconn.Close();
-	//	return 1;
+	bool addSced() {
+		String^ connStr = "Data Source=localhost\\SQLEXPRESS;Initial Catalog=Bus;Integrated Security=True";
+		SqlConnection sqlconn(connStr);
+		sqlconn.Open();
+		String^ que = "INSERT INTO BusInfo (depDT, arrDT) VALUES (@dep, @arr);";
+		SqlCommand cmd(que, % sqlconn);
+		//cmd.Parameters->AddWithValue("@dep", );
+		cmd.ExecuteNonQuery();
+		sqlconn.Close();
+		return 1;
 
-	//}
+	}
 	bool show(DataGridView^ grid) {
 		String^ connStr = "Data Source=localhost\\SQLEXPRESS;Initial Catalog=Bus;Integrated Security=True";
 		SqlConnection sqlconn(connStr);
@@ -105,7 +101,7 @@ public:
 		grid->Columns[2]->HeaderText = "Travel Class";
 		grid->Columns[3]->HeaderText = "Total Seats";
 		grid->Columns[4]->HeaderText = "Available Seats";
-		grid->Columns[5]->DefaultCellStyle->Format = "yyyy-MM-dd HH:mm:ss";
+		//grid->Columns[5]->DefaultCellStyle->Format = "yyyy-MM-dd HH:mm:ss";
 		return 1;
 	}
 };
