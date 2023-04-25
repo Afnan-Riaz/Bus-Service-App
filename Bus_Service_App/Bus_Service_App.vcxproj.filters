@@ -50,6 +50,9 @@
     <ClInclude Include="busClass.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="ModRoute.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AssemblyInfo.cpp">
@@ -78,6 +81,9 @@
     </ClCompile>
     <ClCompile Include="AddRemBus.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ModRoute.cpp">
+      <Filter>Header Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

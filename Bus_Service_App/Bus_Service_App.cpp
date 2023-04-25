@@ -4,13 +4,13 @@
 
 #pragma comment(lib, "Shcore.lib")
 using namespace System;
-
+#include "ModSced.h"
 #include "AddRemBus.h"
 #include "Login.h"
 #include "Signup.h"
-#include"adminLogin.h"
-#include"menu.h"
-#include"adminMenu.h"
+#include "adminLogin.h"
+#include "menu.h"
+#include "adminMenu.h"
 using namespace System::Windows::Forms;
 int countUsers() {	//Returns the total users in database.
 	try {
@@ -41,12 +41,18 @@ bool adminmenu(Admin^& admin) {
 			return 1;
 		}
 		else if (adMenu.toMng) {
-			Bus_Service_App::AddRemBus mngbus;
+			Bus_Service_App::AddRemBus mngbus(admin);
 			mngbus.ShowDialog();
 			if (mngbus.go_back) {
 				continue;
 			}
-
+		}
+		else if (adMenu.toSced) {
+			Bus_Service_App::ModSced modSd(admin);
+			modSd.ShowDialog();
+			if (modSd.go_back) {
+				continue;
+			}
 		}
 		return 0;
 	}
@@ -65,7 +71,7 @@ int main()
 	while (true) {
 		Bus_Service_App::Login loginform;
 		loginform.ShowDialog();
-
+		
 		if (loginform.toSignup == true) {
 			Bus_Service_App::Signup signform;
 			signform.ShowDialog();
