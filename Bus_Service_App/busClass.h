@@ -13,6 +13,9 @@ public:
 	Scedule^ sced;
 	int tot_Seats;
 	int av_Seats;
+	BusData() {
+		sced = gcnew Scedule();
+	}
 	bool insert() {
 		String^ connStr = "Data Source=localhost\\SQLEXPRESS;Initial Catalog=Bus;Integrated Security=True";
 		SqlConnection sqlconn(connStr);
@@ -74,23 +77,11 @@ public:
 		grid->Columns[4]->HeaderText = "Available Seats";
 		return 1;
 	}
-	bool addSced() {
-		String^ connStr = "Data Source=localhost\\SQLEXPRESS;Initial Catalog=Bus;Integrated Security=True";
-		SqlConnection sqlconn(connStr);
-		sqlconn.Open();
-		String^ que = "INSERT INTO BusInfo (depDT, arrDT) VALUES (@dep, @arr);";
-		SqlCommand cmd(que, % sqlconn);
-		//cmd.Parameters->AddWithValue("@dep", );
-		cmd.ExecuteNonQuery();
-		sqlconn.Close();
-		return 1;
-
-	}
 	bool show(DataGridView^ grid) {
 		String^ connStr = "Data Source=localhost\\SQLEXPRESS;Initial Catalog=Bus;Integrated Security=True";
 		SqlConnection sqlconn(connStr);
 		sqlconn.Open();
-		String^ que = "SELECT * FROM BusInfo;";
+		String^ que = "SELECT Id, servProv, classTr, totSeat, avSeat FROM BusInfo;";
 		SqlCommand cmd(que, % sqlconn);
 		SqlDataAdapter^ da = gcnew SqlDataAdapter(% cmd);
 		System::Data::DataTable^ dt = gcnew System::Data::DataTable();
@@ -101,7 +92,75 @@ public:
 		grid->Columns[2]->HeaderText = "Travel Class";
 		grid->Columns[3]->HeaderText = "Total Seats";
 		grid->Columns[4]->HeaderText = "Available Seats";
-		//grid->Columns[5]->DefaultCellStyle->Format = "yyyy-MM-dd HH:mm:ss";
 		return 1;
+	}
+	bool addSced() {
+		String^ connStr = "Data Source=localhost\\SQLEXPRESS;Initial Catalog=Bus;Integrated Security=True";
+		SqlConnection sqlconn(connStr);
+		sqlconn.Open();
+		String^ que = "UPDATE BusInfo SET depDT=@dep, arrDT=@arr WHERE Id=@Id;";
+		SqlCommand cmd(que, % sqlconn);
+		cmd.Parameters->AddWithValue("@Id", id);
+		cmd.Parameters->AddWithValue("@dep",sced->depTime );
+		cmd.Parameters->AddWithValue("@arr",sced->arrTime );
+		cmd.ExecuteNonQuery();
+		sqlconn.Close();
+		return 1;
+	}
+	bool delSced() {
+		String^ connStr = "Data Source=localhost\\SQLEXPRESS;Initial Catalog=Bus;Integrated Security=True";
+		SqlConnection sqlconn(connStr);
+		sqlconn.Open();
+		String^ que = "UPDATE BusInfo SET depDT=NULL, arrDT=NULL WHERE Id=@Id;";
+		SqlCommand cmd(que, % sqlconn);
+		cmd.Parameters->AddWithValue("@Id", id);
+		cmd.ExecuteNonQuery();
+		sqlconn.Close();
+		return 1;
+	}
+	bool updSced() {
+		String^ connStr = "Data Source=localhost\\SQLEXPRESS;Initial Catalog=Bus;Integrated Security=True";
+		SqlConnection sqlconn(connStr);
+		sqlconn.Open();
+		String^ que = "UPDATE BusInfo SET depDT=@dep, arrDT=@arr WHERE Id=@Id;";
+		SqlCommand cmd(que, % sqlconn);
+		cmd.Parameters->AddWithValue("@Id", id);
+		cmd.Parameters->AddWithValue("@dep", sced->depTime);
+		cmd.Parameters->AddWithValue("@arr", sced->arrTime);
+		cmd.ExecuteNonQuery();
+		sqlconn.Close();
+		return 1;
+	}
+	bool searchSced(DataGridView^ grid) {
+		String^ connStr = "Data Source=localhost\\SQLEXPRESS;Initial Catalog=Bus;Integrated Security=True";
+		SqlConnection sqlconn(connStr);
+		sqlconn.Open();
+		String^ que = "SELECT Id, depDT, arrDT FROM BusInfo WHERE Id=@Id;";
+		SqlCommand cmd(que, % sqlconn);
+		cmd.Parameters->AddWithValue("@Id", id);
+		SqlDataAdapter^ da = gcnew SqlDataAdapter(% cmd);
+		System::Data::DataTable^ dt = gcnew System::Data::DataTable();
+		da->Fill(dt);
+		grid->DataSource = dt;
+		grid->Columns[0]->HeaderText = "Bus ID";
+		grid->Columns[1]->HeaderText = "Departure Time";
+		grid->Columns[2]->HeaderText = "Arrival Time";
+		return 1;
+	}
+	bool showSced(DataGridView^ grid) {
+		String^ connStr = "Data Source=localhost\\SQLEXPRESS;Initial Catalog=Bus;Integrated Security=True";
+		SqlConnection sqlconn(connStr);
+		sqlconn.Open();
+		String^ que = "SELECT Id, depDT, arrDT FROM BusInfo;";
+		SqlCommand cmd(que, % sqlconn);
+		SqlDataAdapter^ da = gcnew SqlDataAdapter(% cmd);
+		System::Data::DataTable^ dt = gcnew System::Data::DataTable();
+		da->Fill(dt);
+		grid->DataSource = dt;
+		grid->Columns[0]->HeaderText = "Bus ID";
+		grid->Columns[1]->HeaderText = "Departure Time";
+		grid->Columns[2]->HeaderText = "Arrival Time";
+		return 1;
+
 	}
 };

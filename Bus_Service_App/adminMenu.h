@@ -257,7 +257,7 @@ namespace Bus_Service_App {
 			this->MinimumSize = System::Drawing::Size(289, 749);
 			this->Name = L"adminMenu";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
-			this->Text = L"adminMenu";
+			this->Text = L"Bus Service Application";
 			this->panel1->ResumeLayout(false);
 			this->panel2->ResumeLayout(false);
 			this->panel2->PerformLayout();

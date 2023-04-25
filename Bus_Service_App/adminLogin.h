@@ -186,7 +186,7 @@ namespace Bus_Service_App {
 			this->Controls->Add(this->label1);
 			this->Margin = System::Windows::Forms::Padding(4);
 			this->Name = L"adminLogin";
-			this->Text = L"adminLogin";
+			this->Text = L"Bus Service Application";
 			this->ResumeLayout(false);
 			this->PerformLayout();
 

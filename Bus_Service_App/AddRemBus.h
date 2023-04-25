@@ -444,7 +444,7 @@ namespace Bus_Service_App {
 			this->MinimumSize = System::Drawing::Size(289, 749);
 			this->Name = L"AddRemBus";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
-			this->Text = L"AddRemBus";
+			this->Text = L"Bus Service Application";
 			this->Load += gcnew System::EventHandler(this, &AddRemBus::AddRemBus_Load);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->BackButton))->EndInit();
@@ -470,6 +470,7 @@ private: System::Void addButton_Click(System::Object^ sender, System::EventArgs^
 	}
 	else
 		MessageBox::Show("An error occured");
+	showbutton->PerformClick();
 }
 private: System::Void tbBId_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 	tbBId->Text = tbBId->Text->ToUpper();
@@ -487,7 +488,7 @@ private: System::Void modButton_Click(System::Object^ sender, System::EventArgs^
 	}
 	else
 		MessageBox::Show("An error occured");
-
+	showbutton->PerformClick();
 }
 private: System::Void delButton_Click(System::Object^ sender, System::EventArgs^ e) {
 	BusData^ bd = gcnew BusData;
@@ -501,7 +502,7 @@ private: System::Void delButton_Click(System::Object^ sender, System::EventArgs^
 	}
 	else
 		MessageBox::Show("An error occured");
-
+	showbutton->PerformClick();
 }
 
 private: System::Void srchButton_Click(System::Object^ sender, System::EventArgs^ e) {

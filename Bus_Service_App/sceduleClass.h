@@ -9,6 +9,9 @@ public ref class Scedule {
 public:
 	DateTime^ arrTime;
 	DateTime^ depTime;
-
+	Scedule() {
+		arrTime = nullptr;
+		depTime = nullptr;
+	}
 
 };

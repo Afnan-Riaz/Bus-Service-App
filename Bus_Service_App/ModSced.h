@@ -1,5 +1,6 @@
 #pragma once
 #include"userClass.h"
+#include"busClass.h"
 namespace Bus_Service_App {
 
 	using namespace System;
@@ -155,6 +156,7 @@ namespace Bus_Service_App {
 			this->srchButton->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			this->srchButton->TextImageRelation = System::Windows::Forms::TextImageRelation::ImageBeforeText;
 			this->srchButton->UseVisualStyleBackColor = true;
+			this->srchButton->Click += gcnew System::EventHandler(this, &ModSced::srchButton_Click);
 			// 
 			// delButton
 			// 
@@ -175,6 +177,7 @@ namespace Bus_Service_App {
 			this->delButton->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			this->delButton->TextImageRelation = System::Windows::Forms::TextImageRelation::ImageBeforeText;
 			this->delButton->UseVisualStyleBackColor = true;
+			this->delButton->Click += gcnew System::EventHandler(this, &ModSced::delButton_Click);
 			// 
 			// showbutton
 			// 
@@ -195,6 +198,7 @@ namespace Bus_Service_App {
 			this->showbutton->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			this->showbutton->TextImageRelation = System::Windows::Forms::TextImageRelation::ImageBeforeText;
 			this->showbutton->UseVisualStyleBackColor = true;
+			this->showbutton->Click += gcnew System::EventHandler(this, &ModSced::showbutton_Click);
 			// 
 			// modButton
 			// 
@@ -215,6 +219,7 @@ namespace Bus_Service_App {
 			this->modButton->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			this->modButton->TextImageRelation = System::Windows::Forms::TextImageRelation::ImageBeforeText;
 			this->modButton->UseVisualStyleBackColor = true;
+			this->modButton->Click += gcnew System::EventHandler(this, &ModSced::modButton_Click);
 			// 
 			// addButton
 			// 
@@ -237,6 +242,7 @@ namespace Bus_Service_App {
 			this->addButton->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			this->addButton->TextImageRelation = System::Windows::Forms::TextImageRelation::ImageBeforeText;
 			this->addButton->UseVisualStyleBackColor = true;
+			this->addButton->Click += gcnew System::EventHandler(this, &ModSced::addButton_Click);
 			// 
 			// button1
 			// 
@@ -294,11 +300,11 @@ namespace Bus_Service_App {
 			// 
 			this->dataGridView1->AutoSizeColumnsMode = System::Windows::Forms::DataGridViewAutoSizeColumnsMode::Fill;
 			this->dataGridView1->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			this->dataGridView1->Location = System::Drawing::Point(352, 407);
+			this->dataGridView1->Location = System::Drawing::Point(491, 407);
 			this->dataGridView1->Name = L"dataGridView1";
 			this->dataGridView1->RowHeadersWidth = 51;
 			this->dataGridView1->RowTemplate->Height = 24;
-			this->dataGridView1->Size = System::Drawing::Size(1006, 210);
+			this->dataGridView1->Size = System::Drawing::Size(633, 210);
 			this->dataGridView1->TabIndex = 12;
 			// 
 			// label5
@@ -317,23 +323,27 @@ namespace Bus_Service_App {
 			this->tbBId->BackColor = System::Drawing::SystemColors::Control;
 			this->tbBId->Location = System::Drawing::Point(355, 266);
 			this->tbBId->Name = L"tbBId";
-			this->tbBId->Size = System::Drawing::Size(180, 22);
+			this->tbBId->Size = System::Drawing::Size(219, 22);
 			this->tbBId->TabIndex = 13;
 			// 
 			// depTimePick
 			// 
+			this->depTimePick->CustomFormat = L"dd/MMMM/yyyy   AT   hh:mm tt";
+			this->depTimePick->Format = System::Windows::Forms::DateTimePickerFormat::Custom;
 			this->depTimePick->Location = System::Drawing::Point(667, 266);
 			this->depTimePick->MinDate = System::DateTime(2023, 4, 25, 0, 0, 0, 0);
 			this->depTimePick->Name = L"depTimePick";
-			this->depTimePick->Size = System::Drawing::Size(200, 22);
+			this->depTimePick->Size = System::Drawing::Size(271, 22);
 			this->depTimePick->TabIndex = 15;
 			// 
 			// arrTimePick
 			// 
-			this->arrTimePick->Location = System::Drawing::Point(1002, 266);
+			this->arrTimePick->CustomFormat = L"dd/MMMM/yyyy   AT   hh:mm tt";
+			this->arrTimePick->Format = System::Windows::Forms::DateTimePickerFormat::Custom;
+			this->arrTimePick->Location = System::Drawing::Point(983, 266);
 			this->arrTimePick->MinDate = System::DateTime(2023, 4, 25, 0, 0, 0, 0);
 			this->arrTimePick->Name = L"arrTimePick";
-			this->arrTimePick->Size = System::Drawing::Size(200, 22);
+			this->arrTimePick->Size = System::Drawing::Size(258, 22);
 			this->arrTimePick->TabIndex = 15;
 			// 
 			// label2
@@ -352,13 +362,13 @@ namespace Bus_Service_App {
 			this->label3->AutoSize = true;
 			this->label3->Font = (gcnew System::Drawing::Font(L"Poppins Medium", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label3->Location = System::Drawing::Point(997, 224);
+			this->label3->Location = System::Drawing::Point(978, 224);
 			this->label3->Name = L"label3";
 			this->label3->Size = System::Drawing::Size(121, 26);
 			this->label3->TabIndex = 17;
 			this->label3->Text = L"Time of Arrival";
 			// 
-			// ModRoute
+			// ModSced
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
@@ -375,9 +385,10 @@ namespace Bus_Service_App {
 			this->Controls->Add(this->panel2);
 			this->Controls->Add(this->panel1);
 			this->MinimumSize = System::Drawing::Size(289, 749);
-			this->Name = L"ModRoute";
+			this->Name = L"ModSced";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"Bus Service Application";
+			this->Load += gcnew System::EventHandler(this, &ModSced::ModSced_Load);
 			this->panel2->ResumeLayout(false);
 			this->panel2->PerformLayout();
 			this->panel1->ResumeLayout(false);
@@ -397,5 +408,57 @@ namespace Bus_Service_App {
 		this->Close();
 
 	}
+private: System::Void addButton_Click(System::Object^ sender, System::EventArgs^ e) {
+	BusData^ bus = gcnew BusData;
+	bus->id = tbBId->Text;
+	bus->sced->depTime = depTimePick->Value;
+	bus->sced->arrTime = arrTimePick->Value;
+	if(bus->addSced()){
+		MessageBox::Show("Successfully Saved");
+	}
+	else
+		MessageBox::Show("An error occured");
+	showbutton->PerformClick();
+}
+private: System::Void delButton_Click(System::Object^ sender, System::EventArgs^ e) {
+	BusData^ bus = gcnew BusData;
+	bus->id = tbBId->Text;
+	if (bus->delSced()) {
+		MessageBox::Show("Successfully Deleted");
+	}
+	else
+		MessageBox::Show("An error occured");
+	showbutton->PerformClick();
+
+}
+private: System::Void modButton_Click(System::Object^ sender, System::EventArgs^ e) {
+	BusData^ bus = gcnew BusData;
+	bus->id = tbBId->Text;
+	bus->sced->depTime = depTimePick->Value;
+	bus->sced->arrTime = arrTimePick->Value;
+	if (bus->updSced()) {
+		MessageBox::Show("Successfully Modified");
+	}
+	else
+		MessageBox::Show("An error occured");
+	showbutton->PerformClick();
+
+}
+private: System::Void srchButton_Click(System::Object^ sender, System::EventArgs^ e) {
+	BusData^ bus = gcnew BusData;
+	bus->id = tbBId->Text;
+	if (!(bus->searchSced(dataGridView1))) {
+		MessageBox::Show("An error occured");
+	}
+
+}
+private: System::Void showbutton_Click(System::Object^ sender, System::EventArgs^ e) {
+	BusData^ bd = gcnew BusData;
+	bd->showSced(dataGridView1);
+}
+private: System::Void ModSced_Load(System::Object^ sender, System::EventArgs^ e) {
+	showbutton->PerformClick();
+}
+
 };
 }
