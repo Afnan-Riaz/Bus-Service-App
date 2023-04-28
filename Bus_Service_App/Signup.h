@@ -136,7 +136,7 @@ namespace Bus_Service_App {
 			this->label1->Font = (gcnew System::Drawing::Font(L"Arial", 20, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label1->ForeColor = System::Drawing::SystemColors::ControlText;
-			this->label1->Location = System::Drawing::Point(741, 18);
+			this->label1->Location = System::Drawing::Point(40, 34);
 			this->label1->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label1->Name = L"label1";
 			this->label1->Size = System::Drawing::Size(143, 49);
@@ -147,7 +147,7 @@ namespace Bus_Service_App {
 			// 
 			this->label2->Font = (gcnew System::Drawing::Font(L"Poppins", 13.8F, static_cast<System::Drawing::FontStyle>((System::Drawing::FontStyle::Bold | System::Drawing::FontStyle::Italic)),
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->label2->Location = System::Drawing::Point(766, 75);
+			this->label2->Location = System::Drawing::Point(65, 91);
 			this->label2->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label2->Name = L"label2";
 			this->label2->Size = System::Drawing::Size(332, 49);
@@ -158,7 +158,7 @@ namespace Bus_Service_App {
 			// 
 			this->label3->Font = (gcnew System::Drawing::Font(L"Poppins", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label3->Location = System::Drawing::Point(767, 129);
+			this->label3->Location = System::Drawing::Point(66, 145);
 			this->label3->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label3->Name = L"label3";
 			this->label3->Size = System::Drawing::Size(131, 29);
@@ -170,7 +170,7 @@ namespace Bus_Service_App {
 			this->nametb->BackColor = System::Drawing::SystemColors::Control;
 			this->nametb->BorderStyle = System::Windows::Forms::BorderStyle::None;
 			this->nametb->ForeColor = System::Drawing::Color::Gray;
-			this->nametb->Location = System::Drawing::Point(784, 259);
+			this->nametb->Location = System::Drawing::Point(83, 275);
 			this->nametb->Margin = System::Windows::Forms::Padding(4);
 			this->nametb->Multiline = true;
 			this->nametb->Name = L"nametb";
@@ -185,7 +185,7 @@ namespace Bus_Service_App {
 			// 
 			this->label4->Font = (gcnew System::Drawing::Font(L"Poppins", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label4->Location = System::Drawing::Point(767, 214);
+			this->label4->Location = System::Drawing::Point(66, 230);
 			this->label4->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label4->Name = L"label4";
 			this->label4->Size = System::Drawing::Size(131, 28);
@@ -196,7 +196,7 @@ namespace Bus_Service_App {
 			// 
 			this->label5->Font = (gcnew System::Drawing::Font(L"Poppins", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label5->Location = System::Drawing::Point(767, 296);
+			this->label5->Location = System::Drawing::Point(66, 312);
 			this->label5->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label5->Name = L"label5";
 			this->label5->Size = System::Drawing::Size(196, 27);
@@ -208,7 +208,7 @@ namespace Bus_Service_App {
 			this->phonetb->BackColor = System::Drawing::SystemColors::Control;
 			this->phonetb->BorderStyle = System::Windows::Forms::BorderStyle::None;
 			this->phonetb->ForeColor = System::Drawing::Color::Gray;
-			this->phonetb->Location = System::Drawing::Point(784, 426);
+			this->phonetb->Location = System::Drawing::Point(83, 442);
 			this->phonetb->Margin = System::Windows::Forms::Padding(4);
 			this->phonetb->Multiline = true;
 			this->phonetb->Name = L"phonetb";
@@ -223,7 +223,7 @@ namespace Bus_Service_App {
 			// 
 			this->label6->Font = (gcnew System::Drawing::Font(L"Poppins", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label6->Location = System::Drawing::Point(767, 380);
+			this->label6->Location = System::Drawing::Point(66, 396);
 			this->label6->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label6->Name = L"label6";
 			this->label6->Size = System::Drawing::Size(131, 27);
@@ -235,7 +235,7 @@ namespace Bus_Service_App {
 			this->passtb->BackColor = System::Drawing::SystemColors::Control;
 			this->passtb->BorderStyle = System::Windows::Forms::BorderStyle::None;
 			this->passtb->ForeColor = System::Drawing::Color::Gray;
-			this->passtb->Location = System::Drawing::Point(784, 592);
+			this->passtb->Location = System::Drawing::Point(83, 608);
 			this->passtb->Margin = System::Windows::Forms::Padding(4);
 			this->passtb->Multiline = true;
 			this->passtb->Name = L"passtb";
@@ -250,7 +250,7 @@ namespace Bus_Service_App {
 			// 
 			this->label7->Font = (gcnew System::Drawing::Font(L"Poppins", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label7->Location = System::Drawing::Point(767, 545);
+			this->label7->Location = System::Drawing::Point(66, 561);
 			this->label7->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label7->Name = L"label7";
 			this->label7->Size = System::Drawing::Size(232, 33);
@@ -262,7 +262,7 @@ namespace Bus_Service_App {
 			this->repasstb->BackColor = System::Drawing::SystemColors::Control;
 			this->repasstb->BorderStyle = System::Windows::Forms::BorderStyle::None;
 			this->repasstb->ForeColor = System::Drawing::Color::Gray;
-			this->repasstb->Location = System::Drawing::Point(784, 679);
+			this->repasstb->Location = System::Drawing::Point(83, 695);
 			this->repasstb->Margin = System::Windows::Forms::Padding(4);
 			this->repasstb->Multiline = true;
 			this->repasstb->Name = L"repasstb";
@@ -277,7 +277,7 @@ namespace Bus_Service_App {
 			// 
 			this->label8->Font = (gcnew System::Drawing::Font(L"Poppins", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label8->Location = System::Drawing::Point(767, 635);
+			this->label8->Location = System::Drawing::Point(66, 651);
 			this->label8->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label8->Name = L"label8";
 			this->label8->Size = System::Drawing::Size(196, 29);
@@ -291,7 +291,7 @@ namespace Bus_Service_App {
 			this->enterbtn->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Zoom;
 			this->enterbtn->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->enterbtn->Location = System::Drawing::Point(784, 730);
+			this->enterbtn->Location = System::Drawing::Point(83, 746);
 			this->enterbtn->Margin = System::Windows::Forms::Padding(4);
 			this->enterbtn->Name = L"enterbtn";
 			this->enterbtn->Size = System::Drawing::Size(136, 38);
@@ -306,7 +306,7 @@ namespace Bus_Service_App {
 			this->cancel->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Zoom;
 			this->cancel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->cancel->Location = System::Drawing::Point(995, 730);
+			this->cancel->Location = System::Drawing::Point(294, 746);
 			this->cancel->Margin = System::Windows::Forms::Padding(4);
 			this->cancel->Name = L"cancel";
 			this->cancel->Size = System::Drawing::Size(132, 38);
@@ -320,7 +320,7 @@ namespace Bus_Service_App {
 			this->loginInsteadBtn->AutoSize = true;
 			this->loginInsteadBtn->Font = (gcnew System::Drawing::Font(L"Arial", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->loginInsteadBtn->Location = System::Drawing::Point(1119, 55);
+			this->loginInsteadBtn->Location = System::Drawing::Point(418, 71);
 			this->loginInsteadBtn->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->loginInsteadBtn->Name = L"loginInsteadBtn";
 			this->loginInsteadBtn->Size = System::Drawing::Size(107, 19);
@@ -334,7 +334,7 @@ namespace Bus_Service_App {
 			this->tbaddress->BackColor = System::Drawing::SystemColors::Control;
 			this->tbaddress->BorderStyle = System::Windows::Forms::BorderStyle::None;
 			this->tbaddress->ForeColor = System::Drawing::Color::Gray;
-			this->tbaddress->Location = System::Drawing::Point(784, 505);
+			this->tbaddress->Location = System::Drawing::Point(83, 521);
 			this->tbaddress->Margin = System::Windows::Forms::Padding(4);
 			this->tbaddress->Multiline = true;
 			this->tbaddress->Name = L"tbaddress";
@@ -349,7 +349,7 @@ namespace Bus_Service_App {
 			// 
 			this->label9->Font = (gcnew System::Drawing::Font(L"Poppins", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label9->Location = System::Drawing::Point(767, 460);
+			this->label9->Location = System::Drawing::Point(66, 476);
 			this->label9->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label9->Name = L"label9";
 			this->label9->Size = System::Drawing::Size(196, 26);
@@ -361,7 +361,7 @@ namespace Bus_Service_App {
 			this->usernametb->BackColor = System::Drawing::SystemColors::Control;
 			this->usernametb->BorderStyle = System::Windows::Forms::BorderStyle::None;
 			this->usernametb->ForeColor = System::Drawing::Color::Gray;
-			this->usernametb->Location = System::Drawing::Point(784, 173);
+			this->usernametb->Location = System::Drawing::Point(83, 189);
 			this->usernametb->Margin = System::Windows::Forms::Padding(4);
 			this->usernametb->Multiline = true;
 			this->usernametb->Name = L"usernametb";
@@ -377,7 +377,7 @@ namespace Bus_Service_App {
 			this->emailtb->BackColor = System::Drawing::SystemColors::Control;
 			this->emailtb->BorderStyle = System::Windows::Forms::BorderStyle::None;
 			this->emailtb->ForeColor = System::Drawing::Color::Gray;
-			this->emailtb->Location = System::Drawing::Point(784, 340);
+			this->emailtb->Location = System::Drawing::Point(83, 356);
 			this->emailtb->Margin = System::Windows::Forms::Padding(4);
 			this->emailtb->Multiline = true;
 			this->emailtb->Name = L"emailtb";
@@ -391,7 +391,7 @@ namespace Bus_Service_App {
 			// pictureBox1
 			// 
 			this->pictureBox1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox1.Image")));
-			this->pictureBox1->Location = System::Drawing::Point(771, 161);
+			this->pictureBox1->Location = System::Drawing::Point(70, 177);
 			this->pictureBox1->Name = L"pictureBox1";
 			this->pictureBox1->Size = System::Drawing::Size(368, 45);
 			this->pictureBox1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
@@ -401,7 +401,7 @@ namespace Bus_Service_App {
 			// pictureBox2
 			// 
 			this->pictureBox2->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox2.Image")));
-			this->pictureBox2->Location = System::Drawing::Point(771, 247);
+			this->pictureBox2->Location = System::Drawing::Point(70, 263);
 			this->pictureBox2->Name = L"pictureBox2";
 			this->pictureBox2->Size = System::Drawing::Size(368, 45);
 			this->pictureBox2->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
@@ -411,7 +411,7 @@ namespace Bus_Service_App {
 			// pictureBox3
 			// 
 			this->pictureBox3->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox3.Image")));
-			this->pictureBox3->Location = System::Drawing::Point(771, 329);
+			this->pictureBox3->Location = System::Drawing::Point(70, 345);
 			this->pictureBox3->Name = L"pictureBox3";
 			this->pictureBox3->Size = System::Drawing::Size(368, 45);
 			this->pictureBox3->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
@@ -421,7 +421,7 @@ namespace Bus_Service_App {
 			// pictureBox4
 			// 
 			this->pictureBox4->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox4.Image")));
-			this->pictureBox4->Location = System::Drawing::Point(771, 414);
+			this->pictureBox4->Location = System::Drawing::Point(70, 430);
 			this->pictureBox4->Name = L"pictureBox4";
 			this->pictureBox4->Size = System::Drawing::Size(368, 45);
 			this->pictureBox4->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
@@ -431,7 +431,7 @@ namespace Bus_Service_App {
 			// pictureBox5
 			// 
 			this->pictureBox5->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox5.Image")));
-			this->pictureBox5->Location = System::Drawing::Point(771, 494);
+			this->pictureBox5->Location = System::Drawing::Point(70, 510);
 			this->pictureBox5->Name = L"pictureBox5";
 			this->pictureBox5->Size = System::Drawing::Size(368, 45);
 			this->pictureBox5->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
@@ -441,7 +441,7 @@ namespace Bus_Service_App {
 			// pictureBox6
 			// 
 			this->pictureBox6->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox6.Image")));
-			this->pictureBox6->Location = System::Drawing::Point(771, 581);
+			this->pictureBox6->Location = System::Drawing::Point(70, 597);
 			this->pictureBox6->Name = L"pictureBox6";
 			this->pictureBox6->Size = System::Drawing::Size(368, 45);
 			this->pictureBox6->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
@@ -451,7 +451,7 @@ namespace Bus_Service_App {
 			// pictureBox7
 			// 
 			this->pictureBox7->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox7.Image")));
-			this->pictureBox7->Location = System::Drawing::Point(771, 667);
+			this->pictureBox7->Location = System::Drawing::Point(70, 683);
 			this->pictureBox7->Name = L"pictureBox7";
 			this->pictureBox7->Size = System::Drawing::Size(368, 45);
 			this->pictureBox7->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
@@ -461,7 +461,7 @@ namespace Bus_Service_App {
 			// pictureBox8
 			// 
 			this->pictureBox8->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox8.Image")));
-			this->pictureBox8->Location = System::Drawing::Point(-5, -14);
+			this->pictureBox8->Location = System::Drawing::Point(541, -14);
 			this->pictureBox8->Name = L"pictureBox8";
 			this->pictureBox8->Size = System::Drawing::Size(728, 869);
 			this->pictureBox8->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
@@ -555,9 +555,6 @@ namespace Bus_Service_App {
 			MessageBox::Show("Signup Successful.", "Congratulations", MessageBoxButtons::OK);
 			user = temp;
 		}
-		else
-			MessageBox::Show("Unable to write to the database.", "Database Error", MessageBoxButtons::OK);
-
 		this->Close();
 	}
 	private: System::Void usernametb_Enter(System::Object^ sender, System::EventArgs^ e) {

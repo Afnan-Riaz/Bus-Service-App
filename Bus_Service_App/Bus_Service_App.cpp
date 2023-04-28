@@ -4,6 +4,8 @@
 
 #pragma comment(lib, "Shcore.lib")
 using namespace System;
+#include"AddRemAdm.h"
+#include"ModRoute.h"
 #include "ModSced.h"
 #include "AddRemBus.h"
 #include "Login.h"
@@ -51,6 +53,20 @@ bool adminmenu(Admin^& admin) {
 			Bus_Service_App::ModSced modSd(admin);
 			modSd.ShowDialog();
 			if (modSd.go_back) {
+				continue;
+			}
+		}
+		else if (adMenu.toRoute) {
+			Bus_Service_App::ModRoute modRt(admin);
+			modRt.ShowDialog();
+			if (modRt.go_back) {
+				continue;
+			}
+		}
+		else if (adMenu.toUsers) {
+			Bus_Service_App::AddRemAdm mnguser(admin);
+			mnguser.ShowDialog();
+			if (mnguser.go_back) {
 				continue;
 			}
 		}

@@ -122,6 +122,7 @@ namespace Bus_Service_App {
 			this->ModRtButton->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			this->ModRtButton->TextImageRelation = System::Windows::Forms::TextImageRelation::ImageBeforeText;
 			this->ModRtButton->UseVisualStyleBackColor = true;
+			this->ModRtButton->Click += gcnew System::EventHandler(this, &adminMenu::ModRtButton_Click);
 			// 
 			// ModScedButton
 			// 
@@ -164,6 +165,7 @@ namespace Bus_Service_App {
 			this->AddRemUserButton->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			this->AddRemUserButton->TextImageRelation = System::Windows::Forms::TextImageRelation::ImageBeforeText;
 			this->AddRemUserButton->UseVisualStyleBackColor = true;
+			this->AddRemUserButton->Click += gcnew System::EventHandler(this, &adminMenu::AddRemUserButton_Click);
 			// 
 			// panel1
 			// 
@@ -191,15 +193,16 @@ namespace Bus_Service_App {
 			// 
 			// AdName
 			// 
-			this->AdName->AutoSize = true;
+			this->AdName->Dock = System::Windows::Forms::DockStyle::Fill;
 			this->AdName->Font = (gcnew System::Drawing::Font(L"Poppins", 13, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->AdName->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
-			this->AdName->Location = System::Drawing::Point(103, 27);
+			this->AdName->Location = System::Drawing::Point(0, 0);
 			this->AdName->Name = L"AdName";
-			this->AdName->Size = System::Drawing::Size(84, 39);
+			this->AdName->Size = System::Drawing::Size(292, 94);
 			this->AdName->TabIndex = 0;
 			this->AdName->Text = L"Name";
+			this->AdName->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
 			// 
 			// AdLogoutButton
 			// 
@@ -260,7 +263,6 @@ namespace Bus_Service_App {
 			this->Text = L"Bus Service Application";
 			this->panel1->ResumeLayout(false);
 			this->panel2->ResumeLayout(false);
-			this->panel2->PerformLayout();
 			this->panel3->ResumeLayout(false);
 			this->panel3->PerformLayout();
 			this->ResumeLayout(false);
@@ -282,6 +284,20 @@ private: System::Void AdLogoutButton_Click(System::Object^ sender, System::Event
 private: System::Void ModScedButton_Click(System::Object^ sender, System::EventArgs^ e) {
 	this->BackColor = Color::CornflowerBlue;
 	this->toSced = true;
+	this->Close();
+}
+public: bool toRoute = false;
+private: System::Void ModRtButton_Click(System::Object^ sender, System::EventArgs^ e) {
+	this->BackColor = Color::CornflowerBlue;
+	this->toRoute = true;
+	this->Close();
+
+}
+
+public: bool toUsers = false;
+private: System::Void AddRemUserButton_Click(System::Object^ sender, System::EventArgs^ e) {
+	this->BackColor = Color::CornflowerBlue;
+	this->toUsers = true;
 	this->Close();
 }
 };
