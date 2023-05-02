@@ -50,7 +50,16 @@
     <ClInclude Include="busClass.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="ModRoute.h">
+    <ClInclude Include="ModSced.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="sceduleClass.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ticketClass.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cancelTicket.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -82,7 +91,10 @@
     <ClCompile Include="AddRemBus.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="ModRoute.cpp">
+    <ClCompile Include="ModSced.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="cancelTicket.cpp">
       <Filter>Header Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -96,9 +108,6 @@
       <Filter>Resource Files</Filter>
     </EmbeddedResource>
     <EmbeddedResource Include="adminMenu.resx">
-      <Filter>Resource Files</Filter>
-    </EmbeddedResource>
-    <EmbeddedResource Include="..\..\Bus Service Application\Bus Service App\menu.resx">
       <Filter>Resource Files</Filter>
     </EmbeddedResource>
   </ItemGroup>

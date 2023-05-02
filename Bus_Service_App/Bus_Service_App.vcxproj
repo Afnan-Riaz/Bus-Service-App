@@ -140,6 +140,9 @@
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="busClass.h" />
+    <ClInclude Include="cancelTicket.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="Login.h">
       <FileType>CppForm</FileType>
     </ClInclude>
@@ -155,6 +158,7 @@
     <ClInclude Include="Signup.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="ticketClass.h" />
     <ClInclude Include="userClass.h" />
   </ItemGroup>
   <ItemGroup>
@@ -163,6 +167,7 @@
     <ClCompile Include="adminMenu.cpp" />
     <ClCompile Include="AssemblyInfo.cpp" />
     <ClCompile Include="Bus_Service_App.cpp" />
+    <ClCompile Include="cancelTicket.cpp" />
     <ClCompile Include="Login.cpp" />
     <ClCompile Include="menu.cpp" />
     <ClCompile Include="ModSced.cpp" />
@@ -190,6 +195,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="adminLogin.resx" />
     <EmbeddedResource Include="adminMenu.resx" />
+    <EmbeddedResource Include="cancelTicket.resx">
+      <DependentUpon>cancelTicket.h</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.h</DependentUpon>
     </EmbeddedResource>

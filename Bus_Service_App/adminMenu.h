@@ -92,10 +92,11 @@ namespace Bus_Service_App {
 				static_cast<System::Byte>(0)));
 			this->MngBusButton->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"MngBusButton.Image")));
 			this->MngBusButton->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
-			this->MngBusButton->Location = System::Drawing::Point(0, 95);
+			this->MngBusButton->Location = System::Drawing::Point(0, 77);
+			this->MngBusButton->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->MngBusButton->Name = L"MngBusButton";
-			this->MngBusButton->Padding = System::Windows::Forms::Padding(10);
-			this->MngBusButton->Size = System::Drawing::Size(289, 70);
+			this->MngBusButton->Padding = System::Windows::Forms::Padding(8, 8, 8, 8);
+			this->MngBusButton->Size = System::Drawing::Size(217, 57);
 			this->MngBusButton->TabIndex = 3;
 			this->MngBusButton->Text = L"   Manage Buses";
 			this->MngBusButton->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
@@ -113,10 +114,11 @@ namespace Bus_Service_App {
 				static_cast<System::Byte>(0)));
 			this->ModRtButton->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"ModRtButton.Image")));
 			this->ModRtButton->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
-			this->ModRtButton->Location = System::Drawing::Point(0, 231);
+			this->ModRtButton->Location = System::Drawing::Point(0, 188);
+			this->ModRtButton->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->ModRtButton->Name = L"ModRtButton";
-			this->ModRtButton->Padding = System::Windows::Forms::Padding(10);
-			this->ModRtButton->Size = System::Drawing::Size(289, 70);
+			this->ModRtButton->Padding = System::Windows::Forms::Padding(8, 8, 8, 8);
+			this->ModRtButton->Size = System::Drawing::Size(217, 57);
 			this->ModRtButton->TabIndex = 4;
 			this->ModRtButton->Text = L" Modify Routes";
 			this->ModRtButton->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
@@ -134,10 +136,11 @@ namespace Bus_Service_App {
 				static_cast<System::Byte>(0)));
 			this->ModScedButton->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"ModScedButton.Image")));
 			this->ModScedButton->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
-			this->ModScedButton->Location = System::Drawing::Point(0, 162);
+			this->ModScedButton->Location = System::Drawing::Point(0, 132);
+			this->ModScedButton->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->ModScedButton->Name = L"ModScedButton";
-			this->ModScedButton->Padding = System::Windows::Forms::Padding(10);
-			this->ModScedButton->Size = System::Drawing::Size(289, 70);
+			this->ModScedButton->Padding = System::Windows::Forms::Padding(8, 8, 8, 8);
+			this->ModScedButton->Size = System::Drawing::Size(217, 57);
 			this->ModScedButton->TabIndex = 5;
 			this->ModScedButton->Text = L"   Modify Scedules";
 			this->ModScedButton->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
@@ -155,10 +158,11 @@ namespace Bus_Service_App {
 				static_cast<System::Byte>(0)));
 			this->AddRemUserButton->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"AddRemUserButton.Image")));
 			this->AddRemUserButton->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
-			this->AddRemUserButton->Location = System::Drawing::Point(0, 300);
+			this->AddRemUserButton->Location = System::Drawing::Point(0, 244);
+			this->AddRemUserButton->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->AddRemUserButton->Name = L"AddRemUserButton";
-			this->AddRemUserButton->Padding = System::Windows::Forms::Padding(10);
-			this->AddRemUserButton->Size = System::Drawing::Size(289, 70);
+			this->AddRemUserButton->Padding = System::Windows::Forms::Padding(8, 8, 8, 8);
+			this->AddRemUserButton->Size = System::Drawing::Size(217, 57);
 			this->AddRemUserButton->TabIndex = 6;
 			this->AddRemUserButton->Text = L"  Manage Users";
 			this->AddRemUserButton->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
@@ -176,28 +180,31 @@ namespace Bus_Service_App {
 			this->panel1->Controls->Add(this->ModScedButton);
 			this->panel1->Dock = System::Windows::Forms::DockStyle::Left;
 			this->panel1->Location = System::Drawing::Point(0, 0);
+			this->panel1->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->panel1->Name = L"panel1";
-			this->panel1->Size = System::Drawing::Size(289, 749);
+			this->panel1->Size = System::Drawing::Size(217, 609);
 			this->panel1->TabIndex = 7;
 			// 
 			// panel2
 			// 
 			this->panel2->BackColor = System::Drawing::Color::SteelBlue;
 			this->panel2->Controls->Add(this->AdName);
-			this->panel2->Location = System::Drawing::Point(-3, 1);
+			this->panel2->Location = System::Drawing::Point(-2, 1);
+			this->panel2->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->panel2->Name = L"panel2";
-			this->panel2->Size = System::Drawing::Size(292, 94);
+			this->panel2->Size = System::Drawing::Size(219, 76);
 			this->panel2->TabIndex = 8;
 			// 
 			// AdName
 			// 
 			this->AdName->AutoSize = true;
-			this->AdName->Font = (gcnew System::Drawing::Font(L"Poppins", 13, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
+			this->AdName->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->AdName->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
-			this->AdName->Location = System::Drawing::Point(103, 27);
+			this->AdName->Location = System::Drawing::Point(77, 22);
+			this->AdName->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->AdName->Name = L"AdName";
-			this->AdName->Size = System::Drawing::Size(84, 39);
+			this->AdName->Size = System::Drawing::Size(57, 22);
 			this->AdName->TabIndex = 0;
 			this->AdName->Text = L"Name";
 			// 
@@ -212,10 +219,11 @@ namespace Bus_Service_App {
 				static_cast<System::Byte>(0)));
 			this->AdLogoutButton->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"AdLogoutButton.Image")));
 			this->AdLogoutButton->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
-			this->AdLogoutButton->Location = System::Drawing::Point(0, 679);
+			this->AdLogoutButton->Location = System::Drawing::Point(0, 552);
+			this->AdLogoutButton->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->AdLogoutButton->Name = L"AdLogoutButton";
-			this->AdLogoutButton->Padding = System::Windows::Forms::Padding(10);
-			this->AdLogoutButton->Size = System::Drawing::Size(289, 70);
+			this->AdLogoutButton->Padding = System::Windows::Forms::Padding(8, 8, 8, 8);
+			this->AdLogoutButton->Size = System::Drawing::Size(217, 57);
 			this->AdLogoutButton->TabIndex = 6;
 			this->AdLogoutButton->Text = L"              Logout";
 			this->AdLogoutButton->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
@@ -227,34 +235,37 @@ namespace Bus_Service_App {
 			this->panel3->BackColor = System::Drawing::SystemColors::MenuHighlight;
 			this->panel3->Controls->Add(this->label1);
 			this->panel3->Dock = System::Windows::Forms::DockStyle::Top;
-			this->panel3->Location = System::Drawing::Point(289, 0);
+			this->panel3->Location = System::Drawing::Point(217, 0);
+			this->panel3->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->panel3->Name = L"panel3";
-			this->panel3->Size = System::Drawing::Size(1125, 95);
+			this->panel3->Size = System::Drawing::Size(811, 77);
 			this->panel3->TabIndex = 8;
 			// 
 			// label1
 			// 
 			this->label1->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->label1->AutoSize = true;
-			this->label1->Font = (gcnew System::Drawing::Font(L"Poppins Medium", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label1->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
-			this->label1->Location = System::Drawing::Point(501, 24);
+			this->label1->Location = System::Drawing::Point(359, 20);
+			this->label1->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(114, 53);
+			this->label1->Size = System::Drawing::Size(89, 29);
 			this->label1->TabIndex = 0;
 			this->label1->Text = L"HOME";
 			// 
 			// adminMenu
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
+			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->AutoScroll = true;
 			this->AutoSize = true;
-			this->ClientSize = System::Drawing::Size(1414, 749);
+			this->ClientSize = System::Drawing::Size(1028, 609);
 			this->Controls->Add(this->panel3);
 			this->Controls->Add(this->panel1);
-			this->MinimumSize = System::Drawing::Size(289, 749);
+			this->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->MinimumSize = System::Drawing::Size(221, 597);
 			this->Name = L"adminMenu";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"Bus Service Application";
@@ -284,5 +295,8 @@ private: System::Void ModScedButton_Click(System::Object^ sender, System::EventA
 	this->toSced = true;
 	this->Close();
 }
+
+
+
 };
 };
