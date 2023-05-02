@@ -3,7 +3,6 @@
 using namespace System;
 using namespace System::Windows::Forms;
 using namespace System::Data::SqlClient;
-
 public ref class User {
 public:
 	int id;
@@ -18,6 +17,45 @@ public:
 	String^ phone;
 	String^ address;
 	int balance;
+	
+	int countUsers() {	//Returns the total users in database.
+		try {
+			String^ connString = "Data Source=localhost\\SQLEXPRESS;Initial Catalog=Bus;Integrated Security=True";
+			SqlConnection sqlconn(connString);
+			sqlconn.Open();
+
+			String^ sqlquery = "SELECT COUNT(*) FROM passengers;";
+			SqlCommand command(sqlquery, % sqlconn);
+			int count = (int)command.ExecuteScalar();
+
+			sqlconn.Close();
+
+			return count;
+		}
+		catch (Exception^ e) {
+			MessageBox::Show(e->Message, "Error", MessageBoxButtons::OK);
+			return -1;
+		}
+	}
+	int countBalance() {	//Returns the total balance of users in database.
+		try {
+			String^ connString = "Data Source=localhost\\SQLEXPRESS;Initial Catalog=Bus;Integrated Security=True";
+			SqlConnection sqlconn(connString);
+			sqlconn.Open();
+
+			String^ sqlquery = "SELECT SUM(balance) FROM passengers;";
+			SqlCommand command(sqlquery, % sqlconn);
+			int count = (int)command.ExecuteScalar();
+
+			sqlconn.Close();
+
+			return count;
+		}
+		catch (Exception^ e) {
+			MessageBox::Show(e->Message, "Error", MessageBoxButtons::OK);
+			return -1;
+		}
+	}
 
 	bool verifyLogin() {
 		try {
@@ -225,7 +263,7 @@ public:
 	int employeeId;
 	String^ name;
 	String^ email;
-
+	
 	bool verifyLogin() {
 		try {
 			String^ connString = "Data Source=localhost\\SQLEXPRESS;Initial Catalog=Bus;Integrated Security=True";

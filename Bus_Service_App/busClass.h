@@ -19,6 +19,29 @@ public:
 		sced = gcnew Scedule();
 		route = gcnew Route();
 	}
+	int countBuses() {	//Returns the total buses in database.
+		try {
+			String^ connString = "Data Source=localhost\\SQLEXPRESS;Initial Catalog=Bus;Integrated Security=True";
+			SqlConnection sqlconn(connString);
+			sqlconn.Open();
+
+			String^ sqlquery = "SELECT COUNT(*) FROM BusInfo;";
+			SqlCommand command(sqlquery, % sqlconn);
+			int count = (int)command.ExecuteScalar();
+
+			sqlconn.Close();
+
+			return count;
+		}
+		catch (Exception^ e) {
+			MessageBox::Show(e->Message, "Error", MessageBoxButtons::OK);
+			return -1;
+		}
+	}
+	int getCities() {
+		int city = 7;
+		return city;
+	}
 	bool insert() {
 		try{
 			String^ connStr = "Data Source=localhost\\SQLEXPRESS;Initial Catalog=Bus;Integrated Security=True";

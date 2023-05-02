@@ -146,6 +146,9 @@
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="busClass.h" />
+    <ClInclude Include="Comp_Feed.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="Login.h">
       <FileType>CppForm</FileType>
     </ClInclude>
@@ -178,6 +181,7 @@
     <ClCompile Include="adminMenu.cpp" />
     <ClCompile Include="AssemblyInfo.cpp" />
     <ClCompile Include="Bus_Service_App.cpp" />
+    <ClCompile Include="Comp_Feed.cpp" />
     <ClCompile Include="Login.cpp" />
     <ClCompile Include="menu.cpp" />
     <ClCompile Include="ModRoute.cpp" />
@@ -198,6 +202,7 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Messaging" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
   </ItemGroup>
@@ -213,6 +218,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="adminLogin.resx" />
     <EmbeddedResource Include="adminMenu.resx" />
+    <EmbeddedResource Include="Comp_Feed.resx">
+      <DependentUpon>Comp_Feed.h</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.h</DependentUpon>
     </EmbeddedResource>

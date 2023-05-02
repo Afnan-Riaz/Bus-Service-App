@@ -1,5 +1,6 @@
 #pragma once
 #include"userClass.h"
+#include "busClass.h"
 namespace Bus_Service_App {
 
 	using namespace System;
@@ -21,7 +22,13 @@ namespace Bus_Service_App {
 			//
 			//TODO: Add the constructor code here
 			//
+			Passenger^ pass = gcnew Passenger;
+			BusData^ bus = gcnew BusData;
 			AdName->Text = admin->name;
+			userlabel->Text = (pass->countUsers()).ToString();
+			buslabel->Text = (bus->countBuses()).ToString();
+			revenuelabel->Text = (pass->countBalance()).ToString();
+			citylabel->Text = (bus->getCities()).ToString();
 		}
 
 	protected:
@@ -41,8 +48,6 @@ namespace Bus_Service_App {
 	private: System::Windows::Forms::Button^ ModRtButton;
 	private: System::Windows::Forms::Button^ ModScedButton;
 
-
-
 	private: System::Windows::Forms::Button^ AddRemUserButton;
 	private: System::Windows::Forms::Panel^ panel1;
 	private: System::Windows::Forms::Panel^ panel2;
@@ -50,6 +55,40 @@ namespace Bus_Service_App {
 	private: System::Windows::Forms::Button^ AdLogoutButton;
 	private: System::Windows::Forms::Panel^ panel3;
 	private: System::Windows::Forms::Label^ label1;
+	private: System::Windows::Forms::Label^ label2;
+	private: System::Windows::Forms::Label^ label3;
+	private: System::Windows::Forms::Label^ label4;
+	private: System::Windows::Forms::Label^ label5;
+	private: System::Windows::Forms::Label^ label6;
+
+	private: System::Windows::Forms::Label^ label8;
+	private: System::Windows::Forms::Button^ compFeedButton;
+
+	private: System::Windows::Forms::Label^ userlabel;
+	private: System::Windows::Forms::Label^ seatlabel;
+	private: System::Windows::Forms::Label^ citylabel;
+
+
+
+	private: System::Windows::Forms::Label^ buslabel;
+	private: System::Windows::Forms::Label^ complabel;
+
+	private: System::Windows::Forms::Panel^ panel4;
+	private: System::Windows::Forms::Panel^ panel5;
+	private: System::Windows::Forms::Panel^ panel6;
+	private: System::Windows::Forms::Panel^ panel7;
+	private: System::Windows::Forms::Panel^ panel8;
+	private: System::Windows::Forms::Panel^ panel9;
+	private: System::Windows::Forms::Label^ revenuelabel;
+	private: System::Windows::Forms::Label^ label7;
+	private: System::Windows::Forms::Panel^ panel10;
+
+
+
+
+
+
+
 
 
 
@@ -75,11 +114,38 @@ namespace Bus_Service_App {
 			this->panel2 = (gcnew System::Windows::Forms::Panel());
 			this->AdName = (gcnew System::Windows::Forms::Label());
 			this->AdLogoutButton = (gcnew System::Windows::Forms::Button());
+			this->compFeedButton = (gcnew System::Windows::Forms::Button());
 			this->panel3 = (gcnew System::Windows::Forms::Panel());
 			this->label1 = (gcnew System::Windows::Forms::Label());
+			this->label2 = (gcnew System::Windows::Forms::Label());
+			this->label3 = (gcnew System::Windows::Forms::Label());
+			this->label4 = (gcnew System::Windows::Forms::Label());
+			this->label5 = (gcnew System::Windows::Forms::Label());
+			this->label6 = (gcnew System::Windows::Forms::Label());
+			this->label8 = (gcnew System::Windows::Forms::Label());
+			this->userlabel = (gcnew System::Windows::Forms::Label());
+			this->seatlabel = (gcnew System::Windows::Forms::Label());
+			this->citylabel = (gcnew System::Windows::Forms::Label());
+			this->buslabel = (gcnew System::Windows::Forms::Label());
+			this->complabel = (gcnew System::Windows::Forms::Label());
+			this->panel4 = (gcnew System::Windows::Forms::Panel());
+			this->panel5 = (gcnew System::Windows::Forms::Panel());
+			this->panel6 = (gcnew System::Windows::Forms::Panel());
+			this->panel7 = (gcnew System::Windows::Forms::Panel());
+			this->panel8 = (gcnew System::Windows::Forms::Panel());
+			this->panel9 = (gcnew System::Windows::Forms::Panel());
+			this->revenuelabel = (gcnew System::Windows::Forms::Label());
+			this->label7 = (gcnew System::Windows::Forms::Label());
+			this->panel10 = (gcnew System::Windows::Forms::Panel());
 			this->panel1->SuspendLayout();
 			this->panel2->SuspendLayout();
 			this->panel3->SuspendLayout();
+			this->panel5->SuspendLayout();
+			this->panel6->SuspendLayout();
+			this->panel7->SuspendLayout();
+			this->panel8->SuspendLayout();
+			this->panel9->SuspendLayout();
+			this->panel10->SuspendLayout();
 			this->SuspendLayout();
 			// 
 			// MngBusButton
@@ -174,6 +240,7 @@ namespace Bus_Service_App {
 			this->panel1->Controls->Add(this->MngBusButton);
 			this->panel1->Controls->Add(this->ModRtButton);
 			this->panel1->Controls->Add(this->AdLogoutButton);
+			this->panel1->Controls->Add(this->compFeedButton);
 			this->panel1->Controls->Add(this->AddRemUserButton);
 			this->panel1->Controls->Add(this->ModScedButton);
 			this->panel1->Dock = System::Windows::Forms::DockStyle::Left;
@@ -225,6 +292,27 @@ namespace Bus_Service_App {
 			this->AdLogoutButton->UseVisualStyleBackColor = true;
 			this->AdLogoutButton->Click += gcnew System::EventHandler(this, &adminMenu::AdLogoutButton_Click);
 			// 
+			// compFeedButton
+			// 
+			this->compFeedButton->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->compFeedButton->FlatAppearance->BorderSize = 0;
+			this->compFeedButton->FlatAppearance->MouseOverBackColor = System::Drawing::SystemColors::GradientActiveCaption;
+			this->compFeedButton->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->compFeedButton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->compFeedButton->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"compFeedButton.Image")));
+			this->compFeedButton->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
+			this->compFeedButton->Location = System::Drawing::Point(0, 367);
+			this->compFeedButton->Name = L"compFeedButton";
+			this->compFeedButton->Padding = System::Windows::Forms::Padding(10);
+			this->compFeedButton->Size = System::Drawing::Size(289, 70);
+			this->compFeedButton->TabIndex = 6;
+			this->compFeedButton->Text = L"   Customer Feedback";
+			this->compFeedButton->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
+			this->compFeedButton->TextImageRelation = System::Windows::Forms::TextImageRelation::ImageBeforeText;
+			this->compFeedButton->UseVisualStyleBackColor = true;
+			this->compFeedButton->Click += gcnew System::EventHandler(this, &adminMenu::compFeedButton_Click);
+			// 
 			// panel3
 			// 
 			this->panel3->BackColor = System::Drawing::SystemColors::MenuHighlight;
@@ -248,15 +336,236 @@ namespace Bus_Service_App {
 			this->label1->TabIndex = 0;
 			this->label1->Text = L"HOME";
 			// 
+			// label2
+			// 
+			this->label2->AutoSize = true;
+			this->label2->Font = (gcnew System::Drawing::Font(L"Poppins Medium", 16, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label2->Location = System::Drawing::Point(426, 129);
+			this->label2->Name = L"label2";
+			this->label2->Size = System::Drawing::Size(278, 48);
+			this->label2->TabIndex = 9;
+			this->label2->Text = L"Analytics Overview";
+			// 
+			// label3
+			// 
+			this->label3->AutoSize = true;
+			this->label3->Font = (gcnew System::Drawing::Font(L"Poppins Medium", 10, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label3->Location = System::Drawing::Point(37, 129);
+			this->label3->Name = L"label3";
+			this->label3->Size = System::Drawing::Size(155, 30);
+			this->label3->TabIndex = 10;
+			this->label3->Text = L"Users Registered";
+			// 
+			// label4
+			// 
+			this->label4->AutoSize = true;
+			this->label4->Font = (gcnew System::Drawing::Font(L"Poppins Medium", 10, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label4->Location = System::Drawing::Point(35, 129);
+			this->label4->Name = L"label4";
+			this->label4->Size = System::Drawing::Size(158, 30);
+			this->label4->TabIndex = 10;
+			this->label4->Text = L"Buses Registered";
+			// 
+			// label5
+			// 
+			this->label5->AutoSize = true;
+			this->label5->Font = (gcnew System::Drawing::Font(L"Poppins Medium", 10, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label5->Location = System::Drawing::Point(44, 129);
+			this->label5->Name = L"label5";
+			this->label5->Size = System::Drawing::Size(136, 30);
+			this->label5->TabIndex = 10;
+			this->label5->Text = L"Cities Covered";
+			// 
+			// label6
+			// 
+			this->label6->AutoSize = true;
+			this->label6->Font = (gcnew System::Drawing::Font(L"Poppins Medium", 10, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label6->Location = System::Drawing::Point(51, 131);
+			this->label6->Name = L"label6";
+			this->label6->Size = System::Drawing::Size(128, 30);
+			this->label6->TabIndex = 10;
+			this->label6->Text = L"Seats Booked";
+			// 
+			// label8
+			// 
+			this->label8->AutoSize = true;
+			this->label8->Font = (gcnew System::Drawing::Font(L"Poppins Medium", 10, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label8->Location = System::Drawing::Point(16, 131);
+			this->label8->Name = L"label8";
+			this->label8->Size = System::Drawing::Size(195, 30);
+			this->label8->TabIndex = 10;
+			this->label8->Text = L"Customer Feedbacks";
+			// 
+			// userlabel
+			// 
+			this->userlabel->Font = (gcnew System::Drawing::Font(L"Poppins Medium", 30, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->userlabel->Location = System::Drawing::Point(16, 29);
+			this->userlabel->Name = L"userlabel";
+			this->userlabel->Size = System::Drawing::Size(192, 68);
+			this->userlabel->TabIndex = 10;
+			this->userlabel->Text = L"Users";
+			this->userlabel->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
+			// 
+			// seatlabel
+			// 
+			this->seatlabel->Font = (gcnew System::Drawing::Font(L"Poppins Medium", 30, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->seatlabel->Location = System::Drawing::Point(16, 29);
+			this->seatlabel->Name = L"seatlabel";
+			this->seatlabel->Size = System::Drawing::Size(192, 68);
+			this->seatlabel->TabIndex = 10;
+			this->seatlabel->Text = L"Seats";
+			this->seatlabel->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
+			// 
+			// citylabel
+			// 
+			this->citylabel->Font = (gcnew System::Drawing::Font(L"Poppins Medium", 30, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->citylabel->Location = System::Drawing::Point(16, 29);
+			this->citylabel->Name = L"citylabel";
+			this->citylabel->Size = System::Drawing::Size(192, 68);
+			this->citylabel->TabIndex = 10;
+			this->citylabel->Text = L"Cities";
+			this->citylabel->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
+			// 
+			// buslabel
+			// 
+			this->buslabel->Font = (gcnew System::Drawing::Font(L"Poppins Medium", 30, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->buslabel->Location = System::Drawing::Point(16, 29);
+			this->buslabel->Name = L"buslabel";
+			this->buslabel->Size = System::Drawing::Size(192, 68);
+			this->buslabel->TabIndex = 10;
+			this->buslabel->Text = L"Buses";
+			this->buslabel->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
+			// 
+			// complabel
+			// 
+			this->complabel->Font = (gcnew System::Drawing::Font(L"Poppins Medium", 30, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->complabel->Location = System::Drawing::Point(16, 29);
+			this->complabel->Name = L"complabel";
+			this->complabel->Size = System::Drawing::Size(192, 68);
+			this->complabel->TabIndex = 10;
+			this->complabel->Text = L"Feedback/Complain";
+			this->complabel->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
+			// 
+			// panel4
+			// 
+			this->panel4->BackColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->panel4->Location = System::Drawing::Point(434, 171);
+			this->panel4->Name = L"panel4";
+			this->panel4->Size = System::Drawing::Size(260, 3);
+			this->panel4->TabIndex = 11;
+			// 
+			// panel5
+			// 
+			this->panel5->BackColor = System::Drawing::SystemColors::ButtonHighlight;
+			this->panel5->Controls->Add(this->label3);
+			this->panel5->Controls->Add(this->userlabel);
+			this->panel5->Location = System::Drawing::Point(434, 225);
+			this->panel5->Name = L"panel5";
+			this->panel5->Size = System::Drawing::Size(224, 184);
+			this->panel5->TabIndex = 12;
+			// 
+			// panel6
+			// 
+			this->panel6->BackColor = System::Drawing::SystemColors::ButtonHighlight;
+			this->panel6->Controls->Add(this->label4);
+			this->panel6->Controls->Add(this->buslabel);
+			this->panel6->Location = System::Drawing::Point(733, 225);
+			this->panel6->Name = L"panel6";
+			this->panel6->Size = System::Drawing::Size(224, 184);
+			this->panel6->TabIndex = 13;
+			// 
+			// panel7
+			// 
+			this->panel7->BackColor = System::Drawing::SystemColors::ButtonHighlight;
+			this->panel7->Controls->Add(this->label5);
+			this->panel7->Controls->Add(this->citylabel);
+			this->panel7->Location = System::Drawing::Point(1036, 225);
+			this->panel7->Name = L"panel7";
+			this->panel7->Size = System::Drawing::Size(224, 184);
+			this->panel7->TabIndex = 13;
+			// 
+			// panel8
+			// 
+			this->panel8->BackColor = System::Drawing::SystemColors::ButtonHighlight;
+			this->panel8->Controls->Add(this->label8);
+			this->panel8->Controls->Add(this->complabel);
+			this->panel8->Location = System::Drawing::Point(733, 466);
+			this->panel8->Name = L"panel8";
+			this->panel8->Size = System::Drawing::Size(224, 184);
+			this->panel8->TabIndex = 13;
+			// 
+			// panel9
+			// 
+			this->panel9->BackColor = System::Drawing::SystemColors::ButtonHighlight;
+			this->panel9->Controls->Add(this->label6);
+			this->panel9->Controls->Add(this->seatlabel);
+			this->panel9->Location = System::Drawing::Point(434, 466);
+			this->panel9->Name = L"panel9";
+			this->panel9->Size = System::Drawing::Size(224, 184);
+			this->panel9->TabIndex = 13;
+			// 
+			// revenuelabel
+			// 
+			this->revenuelabel->Font = (gcnew System::Drawing::Font(L"Poppins Medium", 25, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->revenuelabel->Location = System::Drawing::Point(3, 37);
+			this->revenuelabel->Name = L"revenuelabel";
+			this->revenuelabel->Size = System::Drawing::Size(218, 68);
+			this->revenuelabel->TabIndex = 10;
+			this->revenuelabel->Text = L"Revenue";
+			this->revenuelabel->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
+			// 
+			// label7
+			// 
+			this->label7->AutoSize = true;
+			this->label7->BackColor = System::Drawing::SystemColors::ButtonHighlight;
+			this->label7->Font = (gcnew System::Drawing::Font(L"Poppins Medium", 10, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label7->Location = System::Drawing::Point(1061, 597);
+			this->label7->Name = L"label7";
+			this->label7->Size = System::Drawing::Size(181, 30);
+			this->label7->TabIndex = 10;
+			this->label7->Text = L"Revenue Generated";
+			// 
+			// panel10
+			// 
+			this->panel10->BackColor = System::Drawing::SystemColors::ButtonHighlight;
+			this->panel10->Controls->Add(this->revenuelabel);
+			this->panel10->Location = System::Drawing::Point(1036, 466);
+			this->panel10->Name = L"panel10";
+			this->panel10->Size = System::Drawing::Size(224, 184);
+			this->panel10->TabIndex = 14;
+			// 
 			// adminMenu
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->AutoScroll = true;
 			this->AutoSize = true;
+			this->BackColor = System::Drawing::Color::AliceBlue;
 			this->ClientSize = System::Drawing::Size(1414, 749);
+			this->Controls->Add(this->panel7);
+			this->Controls->Add(this->panel4);
+			this->Controls->Add(this->label7);
+			this->Controls->Add(this->label2);
 			this->Controls->Add(this->panel3);
 			this->Controls->Add(this->panel1);
+			this->Controls->Add(this->panel5);
+			this->Controls->Add(this->panel6);
+			this->Controls->Add(this->panel9);
+			this->Controls->Add(this->panel8);
+			this->Controls->Add(this->panel10);
 			this->MinimumSize = System::Drawing::Size(289, 749);
 			this->Name = L"adminMenu";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
@@ -265,7 +574,19 @@ namespace Bus_Service_App {
 			this->panel2->ResumeLayout(false);
 			this->panel3->ResumeLayout(false);
 			this->panel3->PerformLayout();
+			this->panel5->ResumeLayout(false);
+			this->panel5->PerformLayout();
+			this->panel6->ResumeLayout(false);
+			this->panel6->PerformLayout();
+			this->panel7->ResumeLayout(false);
+			this->panel7->PerformLayout();
+			this->panel8->ResumeLayout(false);
+			this->panel8->PerformLayout();
+			this->panel9->ResumeLayout(false);
+			this->panel9->PerformLayout();
+			this->panel10->ResumeLayout(false);
 			this->ResumeLayout(false);
+			this->PerformLayout();
 
 		}
 #pragma endregion
@@ -298,6 +619,13 @@ public: bool toUsers = false;
 private: System::Void AddRemUserButton_Click(System::Object^ sender, System::EventArgs^ e) {
 	this->BackColor = Color::CornflowerBlue;
 	this->toUsers = true;
+	this->Close();
+}
+
+public: bool toFeedback = false;
+private: System::Void compFeedButton_Click(System::Object^ sender, System::EventArgs^ e) {
+	this->BackColor = Color::CornflowerBlue;
+	this->toFeedback = true;
 	this->Close();
 }
 };

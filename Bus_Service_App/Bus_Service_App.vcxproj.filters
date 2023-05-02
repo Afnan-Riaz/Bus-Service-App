@@ -71,6 +71,9 @@
     <ClInclude Include="routeClass.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Comp_Feed.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AssemblyInfo.cpp">
@@ -113,6 +116,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="ModRoute.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Comp_Feed.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
