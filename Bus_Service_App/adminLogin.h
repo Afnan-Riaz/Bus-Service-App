@@ -118,6 +118,7 @@ namespace Bus_Service_App {
 			this->usernametbAdmin->TabIndex = 0;
 			this->usernametbAdmin->TabStop = false;
 			this->usernametbAdmin->Text = L"Enter Username";
+			this->usernametbAdmin->TextChanged += gcnew System::EventHandler(this, &adminLogin::usernametbAdmin_TextChanged);
 			this->usernametbAdmin->Enter += gcnew System::EventHandler(this, &adminLogin::usernametbAdmin_Enter);
 			this->usernametbAdmin->KeyDown += gcnew System::Windows::Forms::KeyEventHandler(this, &adminLogin::usernametbAdmin_KeyDown);
 			this->usernametbAdmin->Leave += gcnew System::EventHandler(this, &adminLogin::usernametbAdmin_Leave);
@@ -132,6 +133,7 @@ namespace Bus_Service_App {
 			this->passtbAdmin->TabIndex = 1;
 			this->passtbAdmin->TabStop = false;
 			this->passtbAdmin->Text = L"Enter Password";
+			this->passtbAdmin->TextChanged += gcnew System::EventHandler(this, &adminLogin::passtbAdmin_TextChanged);
 			this->passtbAdmin->Enter += gcnew System::EventHandler(this, &adminLogin::passtbAdmin_Enter);
 			this->passtbAdmin->KeyDown += gcnew System::Windows::Forms::KeyEventHandler(this, &adminLogin::passtbAdmin_KeyDown);
 			this->passtbAdmin->Leave += gcnew System::EventHandler(this, &adminLogin::passtbAdmin_Leave);
@@ -290,5 +292,9 @@ namespace Bus_Service_App {
 		}
 
 	}
-	};
+	private: System::Void usernametbAdmin_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+	}
+private: System::Void passtbAdmin_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+};
 }

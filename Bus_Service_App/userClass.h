@@ -91,6 +91,31 @@ public:
 		}
 	}
 
+	bool addbalance(int amount,String^user) {
+		try{
+		String^ connStr = "Data Source=localhost\\SQLEXPRESS;Initial Catalog=Bus;Integrated Security=True";
+		SqlConnection additionConn(connStr);
+		additionConn.Open();
+
+		String^ querry = "SELECT balance FROM passengers WHERE username=@user;";
+		SqlCommand command(querry, % additionConn);
+		command.Parameters->AddWithValue("@user", user);
+		
+		int balance = (int)command.ExecuteScalar();
+		balance += amount; 
+		String^ querry1 = "UPDATE passengers SET balance = @balance WHERE username = @user;";
+		SqlCommand command1(querry1, % additionConn);
+		command1.Parameters->AddWithValue("@user", user);
+		command1.Parameters->AddWithValue("@balance", balance);
+	
+		command1.ExecuteNonQuery();
+
+		return true;
+	}
+	catch (Exception^) {
+		return false;
+	}
+	}
 	bool addPassenger() {
 		try {
 			String^ connStr = "Data Source=localhost\\SQLEXPRESS;Initial Catalog=Bus;Integrated Security=True";

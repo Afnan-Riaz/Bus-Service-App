@@ -14,6 +14,8 @@ using namespace System;
 #include "adminLogin.h"
 #include "menu.h"
 #include "adminMenu.h"
+#include "payment.h"
+
 using namespace System::Windows::Forms;
 
 bool adminmenu(Admin^& admin) {
@@ -64,6 +66,7 @@ bool adminmenu(Admin^& admin) {
 	}
 
 }
+
 [STAThread]
 int main()
 {

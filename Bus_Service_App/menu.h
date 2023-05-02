@@ -3,6 +3,10 @@
 #include"userClass.h"
 #include"cancelTicket.h"
 #include"ticketClass.h"
+#include "CustomerCareForm.h" 
+#include"complaintsForm.h"
+#include"payment.h"
+using namespace System::Windows::Forms;
 
 namespace Bus_Service_App {
 
@@ -68,6 +72,7 @@ namespace Bus_Service_App {
 	private: System::Windows::Forms::Panel^ panel3;
 	private: System::Windows::Forms::Label^ cprt;
 	private: System::Windows::Forms::Button^ walletBtn;
+	//private: System::Windows::Forms::Button^ button1;
 
 
 
@@ -260,6 +265,7 @@ namespace Bus_Service_App {
 			this->customerBtn->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
 			this->customerBtn->TextImageRelation = System::Windows::Forms::TextImageRelation::ImageBeforeText;
 			this->customerBtn->UseVisualStyleBackColor = true;
+			this->customerBtn->Click += gcnew System::EventHandler(this, &menu::customerBtn_Click);
 			// 
 			// label3
 			// 
@@ -349,6 +355,7 @@ namespace Bus_Service_App {
 			this->walletBtn->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
 			this->walletBtn->TextImageRelation = System::Windows::Forms::TextImageRelation::ImageBeforeText;
 			this->walletBtn->UseVisualStyleBackColor = true;
+			this->walletBtn->Click += gcnew System::EventHandler(this, &menu::walletBtn_Click);
 			// 
 			// menu
 			// 
@@ -368,10 +375,11 @@ namespace Bus_Service_App {
 			this->Controls->Add(this->menuStrip1);
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::None;
 			this->MainMenuStrip = this->menuStrip1;
-			this->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->Margin = System::Windows::Forms::Padding(5, 5, 5, 5);
 			this->Name = L"menu";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"Bus Service Application";
+			this->Load += gcnew System::EventHandler(this, &menu::menu_Load);
 			this->menuStrip1->ResumeLayout(false);
 			this->menuStrip1->PerformLayout();
 			this->panel1->ResumeLayout(false);
@@ -391,6 +399,22 @@ namespace Bus_Service_App {
 		this->logout = true;
 		this->Close();
 	}
+	private: System::Void customerBtn_Click(System::Object^ sender, System::EventArgs^ e) {
+		CustomerCareForm^ customerCareForm = gcnew CustomerCareForm(user);
+		customerCareForm->ShowDialog();
+		if (customerCareForm->maaz) {
+			Bus_Service_App::complaintsForm cf(user);
+			cf.ShowDialog();
+		}
+	}
+
+	private: System::Void menu_Load(System::Object^ sender, System::EventArgs^ e) {
+	}
+		   //private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
+		   //	payment^ Payment = gcnew payment(pass);
+		   //	Payment->ShowDialog();
+		   //
+		   //}
 
 
 	private: System::Void cancelBtn_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -398,6 +422,11 @@ namespace Bus_Service_App {
 		//this->Close();
 		cancelform.ShowDialog();
 		balanceLabel->Text = "Rs. " + user->balance;
+	}
+	private: System::Void walletBtn_Click(System::Object^ sender, System::EventArgs^ e) {
+		payment^ Payment = gcnew payment(user);
+		Payment->ShowDialog();
+
 	}
 };
 }
