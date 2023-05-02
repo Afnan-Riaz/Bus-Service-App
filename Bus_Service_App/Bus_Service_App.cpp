@@ -11,6 +11,10 @@ using namespace System;
 #include "adminLogin.h"
 #include "menu.h"
 #include "adminMenu.h"
+#include"Book_ticket.h"
+#include"Show_Bus_Details.h"
+#include"Select_Seats.h"
+
 using namespace System::Windows::Forms;
 int countUsers() {	//Returns the total users in database.
 	try {
@@ -67,50 +71,60 @@ int main()
 
 	Passenger^ user = nullptr;
 	Admin^ admin = nullptr;
+	Ticket^ t = nullptr;
+	//while (true) {
+	//	Bus_Service_App::Login loginform;
+	//	loginform.ShowDialog();
+	//	
+	//	if (loginform.toSignup == true) {
+	//		Bus_Service_App::Signup signform;
+	//		signform.ShowDialog();
 
-	while (true) {
-		Bus_Service_App::Login loginform;
-		loginform.ShowDialog();
-		
-		if (loginform.toSignup == true) {
-			Bus_Service_App::Signup signform;
-			signform.ShowDialog();
+	//		if (signform.toLogin)
+	//			continue;
+	//		else {
+	//			user = signform.user;
+	//		}
+	//	}
+	//	else if (loginform.adminLogin) {
+	//		Bus_Service_App::adminLogin adminlog;
+	//		adminlog.ShowDialog();
 
-			if (signform.toLogin)
-				continue;
-			else {
-				user = signform.user;
-			}
-		}
-		else if (loginform.adminLogin) {
-			Bus_Service_App::adminLogin adminlog;
-			adminlog.ShowDialog();
+	//		if (adminlog.back)
+	//			continue;
+	//		else {
+	//			admin = adminlog.admin;
+	//		}
+	//	}
+	//	else {
+	//		user = loginform.user;
+	//	}
+		//if (user != nullptr) {
 
-			if (adminlog.back)
-				continue;
-			else {
-				admin = adminlog.admin;
-			}
-		}
-		else {
-			user = loginform.user;
-		}
 
-		if (user != nullptr) { //Means Login is successful.
-			Bus_Service_App::menu Menu(user);
-			Menu.ShowDialog();
-			if (Menu.logout) {
-				user = nullptr;
-				continue;
-			}
-		}
-		if (admin != nullptr) {
-			if (adminmenu(admin)) {
-				continue;
-			}
-		}
-		break;
-	}
+
+	Bus_Service_App::Show_Bus_Details d;
+	d.ShowDialog();
+	//Bus_Service_App::Select_Seats s;
+	//s.ShowDialog();
+
+			//user = ticket.user;
+		//}
+		//if (user != nullptr) { //Means Login is successful.
+		//	Bus_Service_App::menu Menu(user);
+		//	Menu.ShowDialog();
+		//	if (Menu.logout) {
+		//		user = nullptr;
+		//		continue;
+		//	}
+		//}
+		//if (admin != nullptr) {
+		//	if (adminmenu(admin)) {
+		//		continue;
+		//	}
+		//}
+		//break;
+	//}
 
 	return 0;
 }

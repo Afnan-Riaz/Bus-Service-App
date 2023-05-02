@@ -145,7 +145,7 @@ namespace Bus_Service_App {
 			// 
 			// label2
 			// 
-			this->label2->Font = (gcnew System::Drawing::Font(L"Poppins", 13.8F, static_cast<System::Drawing::FontStyle>((System::Drawing::FontStyle::Bold | System::Drawing::FontStyle::Italic)),
+			this->label2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, static_cast<System::Drawing::FontStyle>((System::Drawing::FontStyle::Bold | System::Drawing::FontStyle::Italic)),
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			this->label2->Location = System::Drawing::Point(766, 75);
 			this->label2->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
@@ -156,7 +156,7 @@ namespace Bus_Service_App {
 			// 
 			// label3
 			// 
-			this->label3->Font = (gcnew System::Drawing::Font(L"Poppins", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->label3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label3->Location = System::Drawing::Point(767, 129);
 			this->label3->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
@@ -183,7 +183,7 @@ namespace Bus_Service_App {
 			// 
 			// label4
 			// 
-			this->label4->Font = (gcnew System::Drawing::Font(L"Poppins", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->label4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label4->Location = System::Drawing::Point(767, 214);
 			this->label4->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
@@ -194,7 +194,7 @@ namespace Bus_Service_App {
 			// 
 			// label5
 			// 
-			this->label5->Font = (gcnew System::Drawing::Font(L"Poppins", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->label5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label5->Location = System::Drawing::Point(767, 296);
 			this->label5->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
@@ -221,7 +221,7 @@ namespace Bus_Service_App {
 			// 
 			// label6
 			// 
-			this->label6->Font = (gcnew System::Drawing::Font(L"Poppins", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->label6->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label6->Location = System::Drawing::Point(767, 380);
 			this->label6->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
@@ -248,7 +248,7 @@ namespace Bus_Service_App {
 			// 
 			// label7
 			// 
-			this->label7->Font = (gcnew System::Drawing::Font(L"Poppins", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->label7->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label7->Location = System::Drawing::Point(767, 545);
 			this->label7->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
@@ -275,7 +275,7 @@ namespace Bus_Service_App {
 			// 
 			// label8
 			// 
-			this->label8->Font = (gcnew System::Drawing::Font(L"Poppins", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->label8->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label8->Location = System::Drawing::Point(767, 635);
 			this->label8->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
@@ -347,7 +347,7 @@ namespace Bus_Service_App {
 			// 
 			// label9
 			// 
-			this->label9->Font = (gcnew System::Drawing::Font(L"Poppins", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->label9->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label9->Location = System::Drawing::Point(767, 460);
 			this->label9->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
@@ -397,6 +397,7 @@ namespace Bus_Service_App {
 			this->pictureBox1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
 			this->pictureBox1->TabIndex = 19;
 			this->pictureBox1->TabStop = false;
+			this->pictureBox1->Click += gcnew System::EventHandler(this, &Signup::pictureBox1_Click);
 			// 
 			// pictureBox2
 			// 
@@ -658,5 +659,7 @@ namespace Bus_Service_App {
 		}
 
 	}
-	};
+	private: System::Void pictureBox1_Click(System::Object^ sender, System::EventArgs^ e) {
+	}
+};
 }

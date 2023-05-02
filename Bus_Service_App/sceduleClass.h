@@ -11,7 +11,7 @@ public:
 	DateTime^ depTime;
 	Scedule() {
 		arrTime = nullptr;
-		depTime = nullptr;
+		depTime = nullptr;	
 	}
 
 };

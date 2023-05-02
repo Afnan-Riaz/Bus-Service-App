@@ -124,6 +124,7 @@ namespace Bus_Service_App {
 			this->tbusername->TabIndex = 0;
 			this->tbusername->TabStop = false;
 			this->tbusername->Text = L"Enter Username";
+			this->tbusername->TextChanged += gcnew System::EventHandler(this, &Login::tbusername_TextChanged);
 			this->tbusername->Enter += gcnew System::EventHandler(this, &Login::tbusername_Enter);
 			this->tbusername->KeyDown += gcnew System::Windows::Forms::KeyEventHandler(this, &Login::tbusername_KeyDown);
 			this->tbusername->Leave += gcnew System::EventHandler(this, &Login::tbusername_Leave);
@@ -231,6 +232,7 @@ namespace Bus_Service_App {
 			this->Margin = System::Windows::Forms::Padding(4);
 			this->Name = L"Login";
 			this->Text = L"Login";
+			this->Load += gcnew System::EventHandler(this, &Login::Login_Load);
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -339,5 +341,9 @@ namespace Bus_Service_App {
 
 	}
 
-	};
+	private: System::Void tbusername_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+	}
+private: System::Void Login_Load(System::Object^ sender, System::EventArgs^ e) {
+}
+};
 }

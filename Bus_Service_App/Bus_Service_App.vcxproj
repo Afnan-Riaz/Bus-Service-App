@@ -139,6 +139,16 @@
     <ClInclude Include="adminMenu.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="Select_Seats.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="Show_Bus_Details.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="ticketClass.h" />
+    <ClInclude Include="Book_ticket.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="busClass.h" />
     <ClInclude Include="Login.h">
       <FileType>CppForm</FileType>
@@ -162,6 +172,7 @@
     <ClCompile Include="adminLogin.cpp" />
     <ClCompile Include="adminMenu.cpp" />
     <ClCompile Include="AssemblyInfo.cpp" />
+    <ClCompile Include="Book_ticket.cpp" />
     <ClCompile Include="Bus_Service_App.cpp" />
     <ClCompile Include="Login.cpp" />
     <ClCompile Include="menu.cpp" />
@@ -172,6 +183,8 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="Select_Seats.cpp" />
+    <ClCompile Include="Show_Bus_Details.cpp" />
     <ClCompile Include="Signup.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -190,6 +203,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="adminLogin.resx" />
     <EmbeddedResource Include="adminMenu.resx" />
+    <EmbeddedResource Include="Book_ticket.resx">
+      <DependentUpon>Book_ticket.h</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.h</DependentUpon>
     </EmbeddedResource>
@@ -198,6 +214,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ModSced.resx">
       <DependentUpon>ModSced.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Select_Seats.resx">
+      <DependentUpon>Select_Seats.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Show_Bus_Details.resx">
+      <DependentUpon>Show_Bus_Details.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Signup.resx">
       <DependentUpon>Signup.h</DependentUpon>

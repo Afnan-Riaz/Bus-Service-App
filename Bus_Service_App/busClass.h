@@ -2,6 +2,7 @@
 
 
 #include "sceduleClass.h"
+#include"ticketClass.h"
 using namespace System;
 using namespace System::Windows::Forms;
 using namespace System::Data::SqlClient;
@@ -81,7 +82,7 @@ public:
 		String^ connStr = "Data Source=localhost\\SQLEXPRESS;Initial Catalog=Bus;Integrated Security=True";
 		SqlConnection sqlconn(connStr);
 		sqlconn.Open();
-		String^ que = "SELECT Id, servProv, classTr, totSeat, avSeat FROM BusInfo;";
+		String^ que = "SELECT Id, servProv, classTr, totSeat, avSeat, FROM BusInfo;";
 		SqlCommand cmd(que, % sqlconn);
 		SqlDataAdapter^ da = gcnew SqlDataAdapter(% cmd);
 		System::Data::DataTable^ dt = gcnew System::Data::DataTable();
@@ -94,6 +95,8 @@ public:
 		grid->Columns[4]->HeaderText = "Available Seats";
 		return 1;
 	}
+
+
 	bool addSced() {
 		String^ connStr = "Data Source=localhost\\SQLEXPRESS;Initial Catalog=Bus;Integrated Security=True";
 		SqlConnection sqlconn(connStr);
@@ -163,4 +166,5 @@ public:
 		return 1;
 
 	}
+
 };
