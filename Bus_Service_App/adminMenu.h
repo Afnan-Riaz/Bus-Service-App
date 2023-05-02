@@ -608,5 +608,25 @@ private: System::Void ModScedButton_Click(System::Object^ sender, System::EventA
 	this->toSced = true;
 	this->Close();
 }
+public: bool toRoute = false;
+private: System::Void ModRtButton_Click(System::Object^ sender, System::EventArgs^ e) {
+	this->BackColor = Color::CornflowerBlue;
+	this->toRoute = true;
+	this->Close();
+
+}
+	   public: bool toUsers = false;
+private: System::Void AddRemUserButton_Click(System::Object^ sender, System::EventArgs^ e) {
+	this->BackColor = Color::CornflowerBlue;
+	this->toUsers = true;
+	this->Close();
+}
+
+public: bool toFeedback = false;
+private: System::Void compFeedButton_Click(System::Object^ sender, System::EventArgs^ e) {
+	this->BackColor = Color::CornflowerBlue;
+	this->toFeedback = true;
+	this->Close();
+}
 };
 };
