@@ -4,6 +4,9 @@
 
 #pragma comment(lib, "Shcore.lib")
 using namespace System;
+#include "Comp_Feed.h"
+#include "AddRemAdm.h"
+#include "ModRoute.h"
 #include "ModSced.h"
 #include "AddRemBus.h"
 #include "Login.h"
@@ -12,25 +15,6 @@ using namespace System;
 #include "menu.h"
 #include "adminMenu.h"
 using namespace System::Windows::Forms;
-int countUsers() {	//Returns the total users in database.
-	try {
-		String^ connString = "Data Source=localhost\\SQLEXPRESS;Initial Catalog=Bus;Integrated Security=True";
-		SqlConnection sqlconn(connString);
-		sqlconn.Open();
-
-		String^ sqlquery = "SELECT COUNT(*) FROM passengers;";
-		SqlCommand command(sqlquery, % sqlconn); 
-		int count = (int)command.ExecuteScalar();
-
-		sqlconn.Close();
-
-		return count;
-	}
-	catch (Exception^ e) {
-		MessageBox::Show(e->Message, "Error", MessageBoxButtons::OK);
-		return -1;
-	}
-}
 
 bool adminmenu(Admin^& admin) {
 	while (true) {
@@ -53,6 +37,28 @@ bool adminmenu(Admin^& admin) {
 			if (modSd.go_back) {
 				continue;
 			}
+		}
+		else if (adMenu.toRoute) {
+			Bus_Service_App::ModRoute modRt(admin);
+			modRt.ShowDialog();
+			if (modRt.go_back) {
+				continue;
+			}
+		}
+		else if (adMenu.toUsers) {
+			Bus_Service_App::AddRemAdm mnguser(admin);
+			mnguser.ShowDialog();
+			if (mnguser.go_back) {
+				continue;
+			}
+		}
+		else if (adMenu.toFeedback) {
+			Bus_Service_App::Comp_Feed feedback(admin);
+			feedback.ShowDialog();
+			if (feedback.go_back) {
+				continue;
+			}
+
 		}
 		return 0;
 	}

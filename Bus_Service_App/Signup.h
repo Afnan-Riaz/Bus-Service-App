@@ -552,9 +552,6 @@ namespace Bus_Service_App {
 			MessageBox::Show("Signup Successful.", "Congratulations", MessageBoxButtons::OK);
 			user = temp;
 		}
-		else
-			MessageBox::Show("Unable to write to the database.", "Database Error", MessageBoxButtons::OK);
-
 		this->Close();
 	}
 	private: System::Void usernametb_Enter(System::Object^ sender, System::EventArgs^ e) {
