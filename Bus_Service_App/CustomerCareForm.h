@@ -334,11 +334,10 @@ namespace Bus_Service_App {
 			// radioButton16
 			// 
 			this->radioButton16->AutoSize = true;
-			this->radioButton16->Location = System::Drawing::Point(331, 26);
+			this->radioButton16->Location = System::Drawing::Point(331, 31);
 			this->radioButton16->Name = L"radioButton16";
 			this->radioButton16->Size = System::Drawing::Size(71, 28);
 			this->radioButton16->TabIndex = 3;
-			this->radioButton16->TabStop = true;
 			this->radioButton16->Text = L"Poor";
 			this->radioButton16->UseVisualStyleBackColor = true;
 			// 
@@ -359,21 +358,18 @@ namespace Bus_Service_App {
 			this->radioButton14->Location = System::Drawing::Point(130, 31);
 			this->radioButton14->Name = L"radioButton14";
 			this->radioButton14->Size = System::Drawing::Size(78, 28);
-			this->radioButton14->TabIndex = 1;
-			this->radioButton14->TabStop = true;
+			this->radioButton14->TabIndex = 21;
 			this->radioButton14->Text = L"Good";
 			this->radioButton14->UseVisualStyleBackColor = true;
 			this->radioButton14->CheckedChanged += gcnew System::EventHandler(this, &CustomerCareForm::radioButton14_CheckedChanged);
 			// 
 			// radioButton13
 			// 
-			this->radioButton13->AutoCheck = false;
 			this->radioButton13->AutoSize = true;
 			this->radioButton13->Location = System::Drawing::Point(3, 31);
 			this->radioButton13->Name = L"radioButton13";
 			this->radioButton13->Size = System::Drawing::Size(109, 28);
-			this->radioButton13->TabIndex = 0;
-			this->radioButton13->TabStop = true;
+			this->radioButton13->TabIndex = 20;
 			this->radioButton13->Text = L"Excellent";
 			this->radioButton13->UseVisualStyleBackColor = true;
 			this->radioButton13->CheckedChanged += gcnew System::EventHandler(this, &CustomerCareForm::radioButton13_CheckedChanged);

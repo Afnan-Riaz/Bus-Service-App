@@ -177,7 +177,6 @@ namespace Bus_Service_App {
 			this->nametb->TabIndex = 4;
 			this->nametb->TabStop = false;
 			this->nametb->Text = L"Enter Name";
-			this->nametb->TextChanged += gcnew System::EventHandler(this, &Signup::nametb_TextChanged);
 			this->nametb->Enter += gcnew System::EventHandler(this, &Signup::nametb_Enter);
 			this->nametb->Leave += gcnew System::EventHandler(this, &Signup::nametb_Leave);
 			// 
@@ -354,7 +353,6 @@ namespace Bus_Service_App {
 			this->pictureBox1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
 			this->pictureBox1->TabIndex = 19;
 			this->pictureBox1->TabStop = false;
-			this->pictureBox1->Click += gcnew System::EventHandler(this, &Signup::pictureBox1_Click);
 			// 
 			// pictureBox2
 			// 
