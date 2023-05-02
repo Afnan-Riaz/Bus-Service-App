@@ -56,6 +56,13 @@
     <ClInclude Include="sceduleClass.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="ModRoute.h">
+    <ClInclude Include="ModSced.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="sceduleClass.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="CustomerCareForm.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -69,6 +76,33 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="cards.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ModSced.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="sceduleClass.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ticketClass.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cancelTicket.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AddRemAdm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AdminControl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PassengerControl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="routeClass.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Comp_Feed.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -100,6 +134,29 @@
     <ClCompile Include="AddRemBus.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="ModSced.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AddRemAdm.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AdminControl.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PassengerControl.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ModRoute.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ModSced.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="cancelTicket.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Comp_Feed.cpp">
+      <Filter>Source Files</Filter>
     <ClCompile Include="ModSced.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>

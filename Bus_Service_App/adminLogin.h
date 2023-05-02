@@ -46,6 +46,7 @@ namespace Bus_Service_App {
 	private: System::Windows::Forms::Button^ button2;
 	private: System::Windows::Forms::LinkLabel^ adminlink;
 
+
 	protected:
 
 	private:

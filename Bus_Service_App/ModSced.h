@@ -112,15 +112,16 @@ namespace Bus_Service_App {
 			// 
 			// AdName
 			// 
-			this->AdName->AutoSize = true;
+			this->AdName->Dock = System::Windows::Forms::DockStyle::Fill;
 			this->AdName->Font = (gcnew System::Drawing::Font(L"Poppins", 13, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->AdName->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
-			this->AdName->Location = System::Drawing::Point(102, 29);
+			this->AdName->Location = System::Drawing::Point(0, 0);
 			this->AdName->Name = L"AdName";
-			this->AdName->Size = System::Drawing::Size(84, 39);
+			this->AdName->Size = System::Drawing::Size(292, 94);
 			this->AdName->TabIndex = 0;
 			this->AdName->Text = L"Name";
+			this->AdName->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
 			// 
 			// panel1
 			// 
@@ -390,7 +391,6 @@ namespace Bus_Service_App {
 			this->Text = L"Bus Service Application";
 			this->Load += gcnew System::EventHandler(this, &ModSced::ModSced_Load);
 			this->panel2->ResumeLayout(false);
-			this->panel2->PerformLayout();
 			this->panel1->ResumeLayout(false);
 			this->panel3->ResumeLayout(false);
 			this->panel3->PerformLayout();

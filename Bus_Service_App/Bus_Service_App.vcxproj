@@ -130,8 +130,14 @@
     <ResourceCompile Include="app.rc" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AddRemAdm.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="AddRemBus.h">
       <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="AdminControl.h">
+      <FileType>CppControl</FileType>
     </ClInclude>
     <ClInclude Include="adminLogin.h">
       <FileType>CppForm</FileType>
@@ -140,6 +146,12 @@
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="busClass.h" />
+    <ClInclude Include="Comp_Feed.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="cancelTicket.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="cards.h" />
     <ClInclude Include="complaintsForm.h">
       <FileType>CppForm</FileType>
@@ -154,31 +166,45 @@
     <ClInclude Include="menu.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="ModRoute.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="ModSced.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="payment.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="PassengerControl.h">
+      <FileType>CppControl</FileType>
+    </ClInclude>
     <ClInclude Include="pch.h" />
     <ClInclude Include="Resource.h" />
+    <ClInclude Include="routeClass.h" />
     <ClInclude Include="sceduleClass.h" />
     <ClInclude Include="Signup.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="ticketClass.h" />
     <ClInclude Include="userClass.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="AddRemAdm.cpp" />
     <ClCompile Include="AddRemBus.cpp" />
+    <ClCompile Include="AdminControl.cpp" />
     <ClCompile Include="adminLogin.cpp" />
     <ClCompile Include="adminMenu.cpp" />
     <ClCompile Include="AssemblyInfo.cpp" />
     <ClCompile Include="Bus_Service_App.cpp" />
+    <ClCompile Include="Comp_Feed.cpp" />
+    <ClCompile Include="cancelTicket.cpp" />
     <ClCompile Include="complaintsForm.cpp" />
     <ClCompile Include="CustomerCareForm.cpp" />
     <ClCompile Include="Login.cpp" />
     <ClCompile Include="menu.cpp" />
+    <ClCompile Include="ModRoute.cpp" />
     <ClCompile Include="ModSced.cpp" />
+    <ClCompile Include="PassengerControl.cpp" />
     <ClCompile Include="payment.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
@@ -195,15 +221,28 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Messaging" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="AddRemAdm.resx">
+      <DependentUpon>AddRemAdm.h</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AddRemBus.resx">
       <DependentUpon>AddRemBus.h</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AdminControl.resx">
+      <DependentUpon>AdminControl.h</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="adminLogin.resx" />
     <EmbeddedResource Include="adminMenu.resx" />
+    <EmbeddedResource Include="Comp_Feed.resx">
+      <DependentUpon>Comp_Feed.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cancelTicket.resx">
+      <DependentUpon>cancelTicket.h</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="complaintsForm.resx">
       <DependentUpon>complaintsForm.h</DependentUpon>
     </EmbeddedResource>
@@ -216,8 +255,14 @@
     <EmbeddedResource Include="menu.resx">
       <DependentUpon>menu.h</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ModRoute.resx">
+      <DependentUpon>ModRoute.h</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ModSced.resx">
       <DependentUpon>ModSced.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PassengerControl.resx">
+      <DependentUpon>PassengerControl.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="payment.resx">
       <DependentUpon>payment.h</DependentUpon>
