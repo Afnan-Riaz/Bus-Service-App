@@ -11,6 +11,8 @@ using namespace System;
 #include "adminLogin.h"
 #include "menu.h"
 #include "adminMenu.h"
+#include "payment.h"
+
 using namespace System::Windows::Forms;
 int countUsers() {	//Returns the total users in database.
 	try {
@@ -58,6 +60,7 @@ bool adminmenu(Admin^& admin) {
 	}
 
 }
+
 [STAThread]
 int main()
 {

@@ -1,6 +1,10 @@
 #pragma once
 
 #include"userClass.h"
+#include "CustomerCareForm.h" 
+#include"complaintsForm.h"
+#include"payment.h"
+using namespace System::Windows::Forms;
 
 namespace Bus_Service_App {
 
@@ -17,7 +21,9 @@ namespace Bus_Service_App {
 	public ref class menu : public System::Windows::Forms::Form
 	{
 	public:
+		Passenger^ pass=gcnew Passenger;
 		menu(Passenger^ user)
+
 		{
 			InitializeComponent();
 			//
@@ -25,6 +31,7 @@ namespace Bus_Service_App {
 			//
 			nameLabel->Text = user->name;
 			balanceLabel->Text = "Rs. " + user->balance;
+			pass->username = user->username;
 		}
 
 	protected:
@@ -58,6 +65,7 @@ namespace Bus_Service_App {
 
 	private: System::Windows::Forms::Label^ label3;
 	private: System::Windows::Forms::Label^ nameLabel;
+	private: System::Windows::Forms::Button^ button1;
 
 	private:
 		/// <summary>
@@ -86,6 +94,7 @@ namespace Bus_Service_App {
 			this->customerBtn = (gcnew System::Windows::Forms::Button());
 			this->label3 = (gcnew System::Windows::Forms::Label());
 			this->nameLabel = (gcnew System::Windows::Forms::Label());
+			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->menuStrip1->SuspendLayout();
 			this->SuspendLayout();
 			// 
@@ -147,14 +156,14 @@ namespace Bus_Service_App {
 			// logOutToolStripMenuItem
 			// 
 			this->logOutToolStripMenuItem->Name = L"logOutToolStripMenuItem";
-			this->logOutToolStripMenuItem->Size = System::Drawing::Size(224, 26);
+			this->logOutToolStripMenuItem->Size = System::Drawing::Size(204, 26);
 			this->logOutToolStripMenuItem->Text = L"Log Out";
 			this->logOutToolStripMenuItem->Click += gcnew System::EventHandler(this, &menu::logOutToolStripMenuItem_Click);
 			// 
 			// manageAccountToolStripMenuItem
 			// 
 			this->manageAccountToolStripMenuItem->Name = L"manageAccountToolStripMenuItem";
-			this->manageAccountToolStripMenuItem->Size = System::Drawing::Size(224, 26);
+			this->manageAccountToolStripMenuItem->Size = System::Drawing::Size(204, 26);
 			this->manageAccountToolStripMenuItem->Text = L"Manage Account";
 			// 
 			// bookBtn
@@ -162,7 +171,7 @@ namespace Bus_Service_App {
 			this->bookBtn->Font = (gcnew System::Drawing::Font(L"Arial", 11.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->bookBtn->Location = System::Drawing::Point(217, 198);
-			this->bookBtn->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->bookBtn->Margin = System::Windows::Forms::Padding(4);
 			this->bookBtn->Name = L"bookBtn";
 			this->bookBtn->Size = System::Drawing::Size(240, 80);
 			this->bookBtn->TabIndex = 4;
@@ -174,7 +183,7 @@ namespace Bus_Service_App {
 			this->seeBtn->Font = (gcnew System::Drawing::Font(L"Arial", 11.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->seeBtn->Location = System::Drawing::Point(543, 198);
-			this->seeBtn->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->seeBtn->Margin = System::Windows::Forms::Padding(4);
 			this->seeBtn->Name = L"seeBtn";
 			this->seeBtn->Size = System::Drawing::Size(240, 80);
 			this->seeBtn->TabIndex = 5;
@@ -186,7 +195,7 @@ namespace Bus_Service_App {
 			this->ticketsBtn->Font = (gcnew System::Drawing::Font(L"Arial", 11.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->ticketsBtn->Location = System::Drawing::Point(217, 320);
-			this->ticketsBtn->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->ticketsBtn->Margin = System::Windows::Forms::Padding(4);
 			this->ticketsBtn->Name = L"ticketsBtn";
 			this->ticketsBtn->Size = System::Drawing::Size(240, 80);
 			this->ticketsBtn->TabIndex = 6;
@@ -198,7 +207,7 @@ namespace Bus_Service_App {
 			this->cancelBtn->Font = (gcnew System::Drawing::Font(L"Arial", 11.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->cancelBtn->Location = System::Drawing::Point(543, 320);
-			this->cancelBtn->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->cancelBtn->Margin = System::Windows::Forms::Padding(4);
 			this->cancelBtn->Name = L"cancelBtn";
 			this->cancelBtn->Size = System::Drawing::Size(240, 80);
 			this->cancelBtn->TabIndex = 7;
@@ -210,12 +219,13 @@ namespace Bus_Service_App {
 			this->customerBtn->Font = (gcnew System::Drawing::Font(L"Arial", 11.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->customerBtn->Location = System::Drawing::Point(381, 442);
-			this->customerBtn->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->customerBtn->Margin = System::Windows::Forms::Padding(4);
 			this->customerBtn->Name = L"customerBtn";
 			this->customerBtn->Size = System::Drawing::Size(240, 80);
 			this->customerBtn->TabIndex = 8;
 			this->customerBtn->Text = L"Customer Care";
 			this->customerBtn->UseVisualStyleBackColor = true;
+			this->customerBtn->Click += gcnew System::EventHandler(this, &menu::customerBtn_Click);
 			// 
 			// label3
 			// 
@@ -241,11 +251,22 @@ namespace Bus_Service_App {
 			this->nameLabel->TabIndex = 10;
 			this->nameLabel->Text = L"Name";
 			// 
+			// button1
+			// 
+			this->button1->Location = System::Drawing::Point(742, 453);
+			this->button1->Name = L"button1";
+			this->button1->Size = System::Drawing::Size(126, 53);
+			this->button1->TabIndex = 11;
+			this->button1->Text = L"Payment";
+			this->button1->UseVisualStyleBackColor = true;
+			this->button1->Click += gcnew System::EventHandler(this, &menu::button1_Click);
+			// 
 			// menu
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(1021, 592);
+			this->Controls->Add(this->button1);
 			this->Controls->Add(this->nameLabel);
 			this->Controls->Add(this->label3);
 			this->Controls->Add(this->customerBtn);
@@ -258,9 +279,10 @@ namespace Bus_Service_App {
 			this->Controls->Add(this->label1);
 			this->Controls->Add(this->menuStrip1);
 			this->MainMenuStrip = this->menuStrip1;
-			this->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->Margin = System::Windows::Forms::Padding(4);
 			this->Name = L"menu";
 			this->Text = L"menu";
+			this->Load += gcnew System::EventHandler(this, &menu::menu_Load);
 			this->menuStrip1->ResumeLayout(false);
 			this->menuStrip1->PerformLayout();
 			this->ResumeLayout(false);
@@ -275,5 +297,21 @@ namespace Bus_Service_App {
 		this->logout = true;
 		this->Close();
 	}
-	};
+	private: System::Void customerBtn_Click(System::Object^ sender, System::EventArgs^ e) {
+		CustomerCareForm^ customerCareForm = gcnew CustomerCareForm(pass); 
+		customerCareForm->ShowDialog();
+		if (customerCareForm->maaz) {
+			Bus_Service_App::complaintsForm cf(pass);
+			cf.ShowDialog();
+		}
+	}
+
+private: System::Void menu_Load(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
+	payment^ Payment = gcnew payment(pass);
+	Payment->ShowDialog();
+
+}
+};
 }

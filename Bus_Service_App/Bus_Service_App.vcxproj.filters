@@ -50,7 +50,25 @@
     <ClInclude Include="busClass.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="ModRoute.h">
+    <ClInclude Include="ModSced.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="sceduleClass.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CustomerCareForm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="complaintsForm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="payment.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="feedback.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cards.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -82,8 +100,17 @@
     <ClCompile Include="AddRemBus.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="ModRoute.cpp">
-      <Filter>Header Files</Filter>
+    <ClCompile Include="ModSced.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="payment.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CustomerCareForm.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="complaintsForm.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -96,9 +123,6 @@
       <Filter>Resource Files</Filter>
     </EmbeddedResource>
     <EmbeddedResource Include="adminMenu.resx">
-      <Filter>Resource Files</Filter>
-    </EmbeddedResource>
-    <EmbeddedResource Include="..\..\Bus Service Application\Bus Service App\menu.resx">
       <Filter>Resource Files</Filter>
     </EmbeddedResource>
   </ItemGroup>

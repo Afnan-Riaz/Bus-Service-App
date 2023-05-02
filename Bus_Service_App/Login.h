@@ -231,6 +231,7 @@ namespace Bus_Service_App {
 			this->Margin = System::Windows::Forms::Padding(4);
 			this->Name = L"Login";
 			this->Text = L"Login";
+			this->Load += gcnew System::EventHandler(this, &Login::Login_Load);
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -339,5 +340,7 @@ namespace Bus_Service_App {
 
 	}
 
-	};
+	private: System::Void Login_Load(System::Object^ sender, System::EventArgs^ e) {
+	}
+};
 }
