@@ -112,15 +112,16 @@ namespace Bus_Service_App {
 			// 
 			// AdName
 			// 
-			this->AdName->AutoSize = true;
-			this->AdName->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
+			this->AdName->Dock = System::Windows::Forms::DockStyle::Fill;
+			this->AdName->Font = (gcnew System::Drawing::Font(L"Poppins", 13, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->AdName->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
-			this->AdName->Location = System::Drawing::Point(102, 29);
+			this->AdName->Location = System::Drawing::Point(0, 0);
 			this->AdName->Name = L"AdName";
-			this->AdName->Size = System::Drawing::Size(71, 26);
+			this->AdName->Size = System::Drawing::Size(292, 94);
 			this->AdName->TabIndex = 0;
 			this->AdName->Text = L"Name";
+			this->AdName->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
 			// 
 			// panel1
 			// 
@@ -261,7 +262,6 @@ namespace Bus_Service_App {
 			this->button1->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			this->button1->TextImageRelation = System::Windows::Forms::TextImageRelation::ImageBeforeText;
 			this->button1->UseVisualStyleBackColor = false;
-			this->button1->Click += gcnew System::EventHandler(this, &ModSced::button1_Click);
 			// 
 			// panel3
 			// 
@@ -288,12 +288,12 @@ namespace Bus_Service_App {
 			// label1
 			// 
 			this->label1->AutoSize = true;
-			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->label1->Font = (gcnew System::Drawing::Font(L"Poppins Medium", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label1->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
 			this->label1->Location = System::Drawing::Point(408, 24);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(313, 36);
+			this->label1->Size = System::Drawing::Size(304, 53);
 			this->label1->TabIndex = 0;
 			this->label1->Text = L"MODIFY SCEDULES";
 			// 
@@ -311,11 +311,11 @@ namespace Bus_Service_App {
 			// label5
 			// 
 			this->label5->AutoSize = true;
-			this->label5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->label5->Font = (gcnew System::Drawing::Font(L"Poppins Medium", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label5->Location = System::Drawing::Point(352, 224);
 			this->label5->Name = L"label5";
-			this->label5->Size = System::Drawing::Size(199, 18);
+			this->label5->Size = System::Drawing::Size(222, 26);
 			this->label5->TabIndex = 14;
 			this->label5->Text = L"Bus Id (eg. DW-22-LEX3421)";
 			// 
@@ -350,22 +350,22 @@ namespace Bus_Service_App {
 			// label2
 			// 
 			this->label2->AutoSize = true;
-			this->label2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->label2->Font = (gcnew System::Drawing::Font(L"Poppins Medium", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label2->Location = System::Drawing::Point(662, 224);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(127, 18);
+			this->label2->Size = System::Drawing::Size(149, 26);
 			this->label2->TabIndex = 16;
 			this->label2->Text = L"Time of Departure";
 			// 
 			// label3
 			// 
 			this->label3->AutoSize = true;
-			this->label3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->label3->Font = (gcnew System::Drawing::Font(L"Poppins Medium", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label3->Location = System::Drawing::Point(978, 224);
 			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(102, 18);
+			this->label3->Size = System::Drawing::Size(121, 26);
 			this->label3->TabIndex = 17;
 			this->label3->Text = L"Time of Arrival";
 			// 
@@ -391,7 +391,6 @@ namespace Bus_Service_App {
 			this->Text = L"Bus Service Application";
 			this->Load += gcnew System::EventHandler(this, &ModSced::ModSced_Load);
 			this->panel2->ResumeLayout(false);
-			this->panel2->PerformLayout();
 			this->panel1->ResumeLayout(false);
 			this->panel3->ResumeLayout(false);
 			this->panel3->PerformLayout();
@@ -461,7 +460,5 @@ private: System::Void ModSced_Load(System::Object^ sender, System::EventArgs^ e)
 	showbutton->PerformClick();
 }
 
-private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
-}
 };
 }
