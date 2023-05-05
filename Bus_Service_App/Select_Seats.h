@@ -1,6 +1,7 @@
 #pragma once
 #include"ticketClass.h"
 #include"Book_ticket.h"
+#include"busClass.h"
 
 namespace Bus_Service_App {
 
@@ -17,7 +18,9 @@ namespace Bus_Service_App {
 	{
 	public:
 		array<int>^ intarr = gcnew array<int>(40);
-		int row = 0,len;
+		array<int>^ selArr = gcnew array<int>(40);
+
+		int row = 0,len,len1=0;
 	private: System::Windows::Forms::Button^ modButton;
 	public:
 		int col = 0;
@@ -28,14 +31,16 @@ namespace Bus_Service_App {
 	private: System::Windows::Forms::Label^ deplabel;
 	private: System::Windows::Forms::Panel^ panel;
 		   String^ ID;
+		   String^ username;
 	public:
-		Select_Seats(String^ id)
+		Select_Seats(String^ id, String^name)
 		{
 			InitializeComponent();
 			//
 			//TODO: Add the	 constructor code here
 			//
 			ID=id;
+			username = name;
 		}
 
 	protected:
@@ -215,6 +220,8 @@ private: System::Void Select_Seats::SeatButton_Click(System::Object^ sender, Sys
 		seatButton->BackColor = Color::Blue; 
 		seatButton->Tag = "Selected";
 		intarr[len++] = System::Convert::ToInt32(seatButton->Text);
+		selArr[len1++] = System::Convert::ToInt32(seatButton->Text);
+
 	}
 	else if (seatButton->Tag->ToString() == "Selected")
 	{
@@ -231,27 +238,35 @@ private: System::Void Select_Seats::SeatButton_Click(System::Object^ sender, Sys
 private: System::Void Selectbutton_Click(System::Object^ sender, System::EventArgs^ e) {
 }
 private: System::Void modButton_Click(System::Object^ sender, System::EventArgs^ e) {
+	Ticket^ t = gcnew Ticket();
+	t->Id = ID;
+	t->passengerName = username;
+
+	float f = len1 * 500;	//fare
+
+	t->fare = f;
+
+	//t->setinfo();
 	String^ s="";
 	for (int i = 0; i < len; i++) {
 		s +=   intarr[i].ToString();
 		if (i != len&&i<len-1)
 			s += ",";
 	}
-	String^ connstring = "Data Source=localhost\\SQLEXPRESS;Initial Catalog=Bus;Integrated Security=True";
-	SqlConnection sqlconn(connstring);
-	sqlconn.Open();
+	String^ s1 = "";
+	for (int i = 0; i < len1; i++) {
+		s1 += selArr[i].ToString();
+		if (i != len1 && i < len1 - 1)
+			s1 += ",";
+	}
 
-
-	String^ que = "UPDATE ticket SET Booked_Seats = @Booked_Seats WHERE Bus_id = @Bus_id;";
-	SqlCommand cmd(que, % sqlconn);
-	cmd.Parameters->AddWithValue("@Bus_id", ID);
-	cmd.Parameters->AddWithValue("@Booked_Seats",s);
-	cmd.ExecuteNonQuery();
-
-	sqlconn.Close();
+	//Ticket^ t = gcnew Ticket;
+	//t->Id = ID;
+	t->setbookedseats(s, s1);
 	Bus_Service_App::Book_ticket ticket(ID);
-ticket.ShowDialog();
-this->Close();
+	this->Close();
+	//ticket.ShowDialog();
+	MessageBox::Show("Seats booked Successfully.", "Success", MessageBoxButtons::OK, MessageBoxIcon::Information);
 
 }
 private: System::Void Select_Seats_Load(System::Object^ sender, System::EventArgs^ e) {
@@ -262,12 +277,12 @@ private: System::Void Select_Seats_Load(System::Object^ sender, System::EventArg
 	SqlConnection sqlconn(connstring);
 	sqlconn.Open();
 
-	String^ que = "SELECT tot_seats,Booked_Seats FROM ticket WHERE Bus_id=@Bus_Id;";
+	String^ que = "SELECT totSeat,Booked_Seats FROM BusInfo WHERE Id=@Id;";
 	SqlCommand cmd(que, % sqlconn);
-	cmd.Parameters->AddWithValue("@Bus_id", ID);
+	cmd.Parameters->AddWithValue("@Id", ID);
 	SqlDataReader^ reader = cmd.ExecuteReader();
 	if (reader->Read()) {
-		ss = reader["tot_seats"]->ToString();
+		ss = reader["totSeat"]->ToString();
 		bookedSeats = reader["Booked_Seats"]->ToString();
 	}
 	reader->Close();
@@ -305,7 +320,6 @@ private: System::Void Select_Seats_Load(System::Object^ sender, System::EventArg
 	for (int i = 0; i < exseats; i++) {
 		Button^ seatButton = gcnew Button();
 		seatButton->Text = (count).ToString();
-
 		seatButton->Tag = "Available";
 		seatButton->Click += gcnew EventHandler(this, &Select_Seats::SeatButton_Click);
 		for (int i = 0; i < len; i++) {

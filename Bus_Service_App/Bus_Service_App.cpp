@@ -102,8 +102,8 @@ int main()
 		//if (user != nullptr) {
 
 
-
-	Bus_Service_App::Show_Bus_Details d;
+	String^ username = "Maaz";
+	Bus_Service_App::Show_Bus_Details d(username);
 	d.ShowDialog();
 	//Bus_Service_App::Select_Seats s;
 	//s.ShowDialog();

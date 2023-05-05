@@ -90,13 +90,13 @@ namespace Bus_Service_App {
 			// 
 			// label1
 			// 
-			this->label1->BackColor = System::Drawing::SystemColors::MenuHighlight;
+			this->label1->BackColor = System::Drawing::Color::LightSkyBlue;
 			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 19.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label1->ForeColor = System::Drawing::SystemColors::MenuText;
-			this->label1->Location = System::Drawing::Point(14, 9);
+			this->label1->Location = System::Drawing::Point(3, 0);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(1268, 41);
+			this->label1->Size = System::Drawing::Size(1100, 64);
 			this->label1->TabIndex = 0;
 			this->label1->Text = L"TICKET BOOKING";
 			this->label1->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
@@ -145,7 +145,7 @@ namespace Bus_Service_App {
 			// 
 			// button1
 			// 
-			this->button1->BackColor = System::Drawing::SystemColors::MenuHighlight;
+			this->button1->BackColor = System::Drawing::Color::SkyBlue;
 			this->button1->Font = (gcnew System::Drawing::Font(L"Book Antiqua", 13, System::Drawing::FontStyle::Italic));
 			this->button1->ForeColor = System::Drawing::SystemColors::MenuText;
 			this->button1->Location = System::Drawing::Point(126, 339);
@@ -170,7 +170,7 @@ namespace Bus_Service_App {
 			// 
 			// backButton
 			// 
-			this->backButton->BackColor = System::Drawing::SystemColors::MenuHighlight;
+			this->backButton->BackColor = System::Drawing::Color::LightSkyBlue;
 			this->backButton->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"backButton.Image")));
 			this->backButton->Location = System::Drawing::Point(21, 9);
 			this->backButton->Name = L"backButton";
@@ -216,8 +216,8 @@ namespace Bus_Service_App {
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(9, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->BackColor = System::Drawing::SystemColors::MenuBar;
-			this->ClientSize = System::Drawing::Size(1042, 455);
+			this->BackColor = System::Drawing::Color::SteelBlue;
+			this->ClientSize = System::Drawing::Size(1103, 455);
 			this->Controls->Add(this->emaillabel);
 			this->Controls->Add(this->phonelabel);
 			this->Controls->Add(this->namelabel);
@@ -233,8 +233,8 @@ namespace Bus_Service_App {
 			this->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->ForeColor = System::Drawing::SystemColors::MenuText;
-			//this->Name = L"Book_ticket";
 			this->Text = L"Book_ticket";
+			this->Load += gcnew System::EventHandler(this, &Book_ticket::Book_ticket_Load);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->backButton))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();
@@ -264,29 +264,17 @@ private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e
 			phonelabel->ForeColor = Color::Red;
 		}
 	}
-	try {
-		String^ connstring = "Data Source=localhost\\SQLEXPRESS;Initial Catalog=Bus;Integrated Security=True";
-		SqlConnection sqlconn(connstring);
-		sqlconn.Open();
-
-
-		String^ que = "UPDATE ticket SET passenger_name = @passenger_name,email=@email,phone=@phone WHERE Bus_id = @Bus_id;";
-		SqlCommand cmd(que, % sqlconn);
-		cmd.Parameters->AddWithValue("@Bus_id", ID);
-		cmd.Parameters->AddWithValue("@passenger_name", name);
-		cmd.Parameters->AddWithValue("@email", email);
-		cmd.Parameters->AddWithValue("@phone", phoneno);
-		cmd.ExecuteNonQuery();
-
-		sqlconn.Close();
-
-	}
-	catch (Exception^ e) {
-		MessageBox::Show(e->Message, "Database Connection Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
-	}
+	Ticket^ t = gcnew Ticket();
+	t->Id = ID;
+	t->passengerName = name;
+	//t->Email = email;
+	//t->Phone = phoneno;
+	t->setinfo();
 
 }
 private: System::Void Name_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void Book_ticket_Load(System::Object^ sender, System::EventArgs^ e) {
 }
 };
 }

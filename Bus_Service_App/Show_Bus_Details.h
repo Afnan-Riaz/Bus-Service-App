@@ -21,14 +21,15 @@ namespace Bus_Service_App {
 	public ref class Show_Bus_Details : public System::Windows::Forms::Form
 	{
 	
-
+	public:String^ username;
 	public:
-		Show_Bus_Details(void)
+		Show_Bus_Details(String^name)
 		{
 			InitializeComponent();
 			//
 			//TODO: Add the constructor code here
 			//
+			username = name;
 		}
 
 	protected:
@@ -42,7 +43,7 @@ namespace Bus_Service_App {
 				delete components;
 			}
 		}
-	private: System::Windows::Forms::Label^ mainlabel;
+
 	private: System::Windows::Forms::TextBox^ deplabel;
 	private: System::Windows::Forms::Label^ Depar;
 
@@ -59,7 +60,7 @@ namespace Bus_Service_App {
 	private: System::Windows::Forms::DateTimePicker^ depTimePick;
 	private: System::Windows::Forms::Label^ label3;
 	private: System::Windows::Forms::Button^ showbutton;
-	private: System::Windows::Forms::Label^ Aftersearchlabel;
+
 	private: System::ComponentModel::BackgroundWorker^ backgroundWorker1;
 	private: System::Windows::Forms::DataGridView^ grid;
 	private: System::Windows::Forms::Button^ modButton;
@@ -69,6 +70,7 @@ namespace Bus_Service_App {
 
 
 	private: System::Windows::Forms::Label^ label4;
+	private: System::Windows::Forms::Panel^ panel1;
 
 
 
@@ -91,10 +93,9 @@ namespace Bus_Service_App {
 		void InitializeComponent(void)
 		{
 			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(Show_Bus_Details::typeid));
-			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle4 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
-			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle5 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
-			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle6 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
-			this->mainlabel = (gcnew System::Windows::Forms::Label());
+			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle1 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle2 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle3 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
 			this->deplabel = (gcnew System::Windows::Forms::TextBox());
 			this->Depar = (gcnew System::Windows::Forms::Label());
 			this->arrlabel = (gcnew System::Windows::Forms::TextBox());
@@ -102,28 +103,15 @@ namespace Bus_Service_App {
 			this->depTimePick = (gcnew System::Windows::Forms::DateTimePicker());
 			this->label3 = (gcnew System::Windows::Forms::Label());
 			this->showbutton = (gcnew System::Windows::Forms::Button());
-			this->Aftersearchlabel = (gcnew System::Windows::Forms::Label());
 			this->backgroundWorker1 = (gcnew System::ComponentModel::BackgroundWorker());
 			this->grid = (gcnew System::Windows::Forms::DataGridView());
 			this->modButton = (gcnew System::Windows::Forms::Button());
 			this->busidlabel = (gcnew System::Windows::Forms::TextBox());
 			this->idlabel = (gcnew System::Windows::Forms::Label());
 			this->label4 = (gcnew System::Windows::Forms::Label());
+			this->panel1 = (gcnew System::Windows::Forms::Panel());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->grid))->BeginInit();
 			this->SuspendLayout();
-			// 
-			// mainlabel
-			// 
-			this->mainlabel->BackColor = System::Drawing::SystemColors::MenuHighlight;
-			this->mainlabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 19.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->mainlabel->ForeColor = System::Drawing::SystemColors::MenuText;
-			this->mainlabel->Location = System::Drawing::Point(2, 0);
-			this->mainlabel->Name = L"mainlabel";
-			this->mainlabel->Size = System::Drawing::Size(925, 239);
-			this->mainlabel->TabIndex = 1;
-			this->mainlabel->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
-			this->mainlabel->Click += gcnew System::EventHandler(this, &Show_Bus_Details::mainlabel_Click);
 			// 
 			// deplabel
 			// 
@@ -137,7 +125,7 @@ namespace Bus_Service_App {
 			// 
 			// Depar
 			// 
-			this->Depar->BackColor = System::Drawing::SystemColors::MenuHighlight;
+			this->Depar->BackColor = System::Drawing::Color::LightSkyBlue;
 			this->Depar->Font = (gcnew System::Drawing::Font(L"Book Antiqua", 12, System::Drawing::FontStyle::Italic));
 			this->Depar->Location = System::Drawing::Point(4, 33);
 			this->Depar->Name = L"Depar";
@@ -159,7 +147,7 @@ namespace Bus_Service_App {
 			// 
 			// Arival
 			// 
-			this->Arival->BackColor = System::Drawing::SystemColors::MenuHighlight;
+			this->Arival->BackColor = System::Drawing::Color::LightSkyBlue;
 			this->Arival->Font = (gcnew System::Drawing::Font(L"Book Antiqua", 12.2F, System::Drawing::FontStyle::Italic));
 			this->Arival->Location = System::Drawing::Point(4, 72);
 			this->Arival->Name = L"Arival";
@@ -182,7 +170,7 @@ namespace Bus_Service_App {
 			// 
 			// label3
 			// 
-			this->label3->BackColor = System::Drawing::SystemColors::MenuHighlight;
+			this->label3->BackColor = System::Drawing::Color::LightSkyBlue;
 			this->label3->Font = (gcnew System::Drawing::Font(L"Book Antiqua", 13.2F, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label3->Location = System::Drawing::Point(4, 112);
@@ -212,45 +200,36 @@ namespace Bus_Service_App {
 			this->showbutton->UseVisualStyleBackColor = true;
 			this->showbutton->Click += gcnew System::EventHandler(this, &Show_Bus_Details::showbutton_Click);
 			// 
-			// Aftersearchlabel
-			// 
-			this->Aftersearchlabel->BackColor = System::Drawing::SystemColors::Window;
-			this->Aftersearchlabel->Location = System::Drawing::Point(-3, 239);
-			this->Aftersearchlabel->Name = L"Aftersearchlabel";
-			this->Aftersearchlabel->Size = System::Drawing::Size(930, 361);
-			this->Aftersearchlabel->TabIndex = 24;
-			this->Aftersearchlabel->Click += gcnew System::EventHandler(this, &Show_Bus_Details::Aftersearchlabel_Click);
-			// 
 			// grid
 			// 
 			this->grid->AutoSizeColumnsMode = System::Windows::Forms::DataGridViewAutoSizeColumnsMode::AllCells;
 			this->grid->AutoSizeRowsMode = System::Windows::Forms::DataGridViewAutoSizeRowsMode::AllCells;
-			this->grid->BackgroundColor = System::Drawing::SystemColors::Window;
+			this->grid->BackgroundColor = System::Drawing::Color::LightSkyBlue;
 			this->grid->BorderStyle = System::Windows::Forms::BorderStyle::None;
 			this->grid->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			dataGridViewCellStyle4->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
-			dataGridViewCellStyle4->BackColor = System::Drawing::SystemColors::Window;
-			dataGridViewCellStyle4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.5F));
-			dataGridViewCellStyle4->ForeColor = System::Drawing::SystemColors::ControlText;
-			dataGridViewCellStyle4->SelectionBackColor = System::Drawing::SystemColors::Highlight;
-			dataGridViewCellStyle4->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
-			dataGridViewCellStyle4->WrapMode = System::Windows::Forms::DataGridViewTriState::False;
-			this->grid->DefaultCellStyle = dataGridViewCellStyle4;
+			dataGridViewCellStyle1->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
+			dataGridViewCellStyle1->BackColor = System::Drawing::SystemColors::Window;
+			dataGridViewCellStyle1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.5F));
+			dataGridViewCellStyle1->ForeColor = System::Drawing::SystemColors::ControlText;
+			dataGridViewCellStyle1->SelectionBackColor = System::Drawing::SystemColors::Highlight;
+			dataGridViewCellStyle1->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
+			dataGridViewCellStyle1->WrapMode = System::Windows::Forms::DataGridViewTriState::False;
+			this->grid->DefaultCellStyle = dataGridViewCellStyle1;
 			this->grid->GridColor = System::Drawing::SystemColors::Window;
 			this->grid->Location = System::Drawing::Point(33, 242);
 			this->grid->Name = L"grid";
-			dataGridViewCellStyle5->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
-			dataGridViewCellStyle5->BackColor = System::Drawing::SystemColors::Control;
-			dataGridViewCellStyle5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F));
-			dataGridViewCellStyle5->ForeColor = System::Drawing::SystemColors::WindowText;
-			dataGridViewCellStyle5->SelectionBackColor = System::Drawing::SystemColors::Highlight;
-			dataGridViewCellStyle5->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
-			dataGridViewCellStyle5->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
-			this->grid->RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
+			dataGridViewCellStyle2->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
+			dataGridViewCellStyle2->BackColor = System::Drawing::SystemColors::Control;
+			dataGridViewCellStyle2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F));
+			dataGridViewCellStyle2->ForeColor = System::Drawing::SystemColors::WindowText;
+			dataGridViewCellStyle2->SelectionBackColor = System::Drawing::SystemColors::Highlight;
+			dataGridViewCellStyle2->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
+			dataGridViewCellStyle2->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
+			this->grid->RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
 			this->grid->RowHeadersWidth = 60;
-			dataGridViewCellStyle6->BackColor = System::Drawing::Color::Turquoise;
-			dataGridViewCellStyle6->ForeColor = System::Drawing::Color::Black;
-			this->grid->RowsDefaultCellStyle = dataGridViewCellStyle6;
+			dataGridViewCellStyle3->BackColor = System::Drawing::Color::Turquoise;
+			dataGridViewCellStyle3->ForeColor = System::Drawing::Color::Black;
+			this->grid->RowsDefaultCellStyle = dataGridViewCellStyle3;
 			this->grid->RowTemplate->Height = 24;
 			this->grid->Size = System::Drawing::Size(864, 296);
 			this->grid->TabIndex = 25;
@@ -286,7 +265,7 @@ namespace Bus_Service_App {
 			// 
 			// idlabel
 			// 
-			this->idlabel->BackColor = System::Drawing::SystemColors::MenuHighlight;
+			this->idlabel->BackColor = System::Drawing::Color::LightSkyBlue;
 			this->idlabel->Font = (gcnew System::Drawing::Font(L"Book Antiqua", 12.2F, System::Drawing::FontStyle::Italic));
 			this->idlabel->Location = System::Drawing::Point(487, 104);
 			this->idlabel->Name = L"idlabel";
@@ -298,7 +277,7 @@ namespace Bus_Service_App {
 			// 
 			// label4
 			// 
-			this->label4->BackColor = System::Drawing::SystemColors::MenuHighlight;
+			this->label4->BackColor = System::Drawing::Color::LightSkyBlue;
 			this->label4->Font = (gcnew System::Drawing::Font(L"Book Antiqua", 12.2F, System::Drawing::FontStyle::Italic));
 			this->label4->Location = System::Drawing::Point(356, 161);
 			this->label4->Name = L"label4";
@@ -306,19 +285,27 @@ namespace Bus_Service_App {
 			this->label4->TabIndex = 29;
 			this->label4->Text = L"ID:";
 			this->label4->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
+			this->label4->Click += gcnew System::EventHandler(this, &Show_Bus_Details::label4_Click);
+			// 
+			// panel1
+			// 
+			this->panel1->BackColor = System::Drawing::Color::SteelBlue;
+			this->panel1->Location = System::Drawing::Point(1, -4);
+			this->panel1->Name = L"panel1";
+			this->panel1->Size = System::Drawing::Size(926, 243);
+			this->panel1->TabIndex = 30;
 			// 
 			// Show_Bus_Details
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->BackColor = System::Drawing::SystemColors::MenuBar;
+			this->BackColor = System::Drawing::Color::LightSkyBlue;
 			this->ClientSize = System::Drawing::Size(926, 609);
 			this->Controls->Add(this->label4);
 			this->Controls->Add(this->idlabel);
 			this->Controls->Add(this->busidlabel);
 			this->Controls->Add(this->modButton);
 			this->Controls->Add(this->grid);
-			this->Controls->Add(this->Aftersearchlabel);
 			this->Controls->Add(this->showbutton);
 			this->Controls->Add(this->label3);
 			this->Controls->Add(this->depTimePick);
@@ -326,9 +313,10 @@ namespace Bus_Service_App {
 			this->Controls->Add(this->arrlabel);
 			this->Controls->Add(this->Depar);
 			this->Controls->Add(this->deplabel);
-			this->Controls->Add(this->mainlabel);
+			this->Controls->Add(this->panel1);
 			this->Name = L"Show_Bus_Details";
 			this->Text = L"Show_Bus_Details";
+			this->Load += gcnew System::EventHandler(this, &Show_Bus_Details::Show_Bus_Details_Load);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->grid))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();
@@ -356,39 +344,38 @@ namespace Bus_Service_App {
 				Depar->ForeColor = Color::Red;
 			}
 		}
+		Ticket^ t = gcnew Ticket();
+		t->arrloc = arrlabel->Text;
+		t->deploc = deplabel->Text;
+		t->date = depTimePick->Value.Date;
+		t->showsearch(grid);
+		//try {
+		//	String^ connStr = "Data Source=localhost\\SQLEXPRESS;Initial Catalog=Bus;Integrated Security=True";
+		//	SqlConnection sqlconn(connStr);
+		//	sqlconn.Open();
+		//	String^ que = "SELECT Id, servProv, classTr, depDT, arrDT, estTime FROM BusInfo WHERE arrLoc=@arrLoc AND depLoc=@depLoc AND CONVERT(date, depDT) =@depDT;";
+		//	SqlCommand cmd(que, % sqlconn);
+		//	cmd.Parameters->AddWithValue("@arrLoc", arrlabel->Text);
+		//	cmd.Parameters->AddWithValue("@depLoc", deplabel->Text);
+		//	cmd.Parameters->AddWithValue("@depDT", depTimePick->Value.Date);
 
-		try {
-			String^ connStr = "Data Source=localhost\\SQLEXPRESS;Initial Catalog=Bus;Integrated Security=True";
-			SqlConnection sqlconn(connStr);
-			sqlconn.Open();
-			String^ que = "SELECT Id, servProv, classTr, depDT, arrDT, estTime FROM BusInfo WHERE arrLoc=@arrLoc AND depLoc=@depLoc AND CONVERT(date, depDT) =@depDT;";
-			SqlCommand cmd(que, % sqlconn);
-			cmd.Parameters->AddWithValue("@arrLoc", arrlabel->Text);
-			cmd.Parameters->AddWithValue("@depLoc", deplabel->Text);
-			cmd.Parameters->AddWithValue("@depDT", depTimePick->Value.Date);
+		//	SqlDataAdapter^ da = gcnew SqlDataAdapter(% cmd);
+		//	System::Data::DataTable^ dt = gcnew System::Data::DataTable();
+		//	da->Fill(dt);
+		//	grid->DataSource = dt;
+		//	grid->Columns[0]->HeaderText = "Bus ID";
+		//	grid->Columns[1]->HeaderText = "Service Provider";
+		//	grid->Columns[2]->HeaderText = "Travel Class";
+		//	grid->Columns[3]->HeaderText = "Arrival Time";
+		//	grid->Columns[4]->HeaderText = "Departure Time";
+		//	grid->Columns[5]->HeaderText = "Estimate Journey Time";
 
-			SqlDataAdapter^ da = gcnew SqlDataAdapter(% cmd);
-			System::Data::DataTable^ dt = gcnew System::Data::DataTable();
-			da->Fill(dt);
-			grid->DataSource = dt;
-			grid->Columns[0]->HeaderText = "Bus ID";
-			grid->Columns[1]->HeaderText = "Service Provider";
-			grid->Columns[2]->HeaderText = "Travel Class";
-			grid->Columns[3]->HeaderText = "Arrival Time";
-			grid->Columns[4]->HeaderText = "Departure Time";
-			grid->Columns[5]->HeaderText = "Estimate Journey Time";
-
-		}
-		catch (Exception^ e) {
-			MessageBox::Show("Database Connection Error", "", MessageBoxButtons::OK, MessageBoxIcon::Warning);
-		}
+		//}
+		//catch (Exception^ e) {
+		//	MessageBox::Show("Database Connection Error", "", MessageBoxButtons::OK, MessageBoxIcon::Warning);
+		//}
 	}
 
-		   //private: System::Void dataGridView1_CellContentClick(System::Object^ sender, System::Windows::Forms::DataGridViewCellEventArgs^ e) {
-		   //}
-
-		   //private: System::Void dataGridView1_CellContentClick(System::Object^ sender, System::Windows::Forms::DataGridViewCellEventArgs^ e) {
-		   //}
 	private: System::Void Aftersearchlabel_Click(System::Object^ sender, System::EventArgs^ e) {
 	}
 	private: System::Void dataGridView1_CellContentClick_1(System::Object^ sender, System::Windows::Forms::DataGridViewCellEventArgs^ e) {
@@ -397,7 +384,6 @@ namespace Bus_Service_App {
 	}
 	private: System::Void label2_Click(System::Object^ sender, System::EventArgs^ e) {
 	}
-		   //public:Ticket^ hold = gcnew Ticket();
 
 	
 private: System::Void modButton_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -407,13 +393,16 @@ private: System::Void modButton_Click(System::Object^ sender, System::EventArgs^
 	idlabel->Focus();
 	idlabel->ForeColor = Color::Red;
 
-		Select_Seats^ sel_seat = gcnew Select_Seats(busidlabel->Text);
+		Select_Seats^ sel_seat = gcnew Select_Seats(busidlabel->Text,username);
 		this->Close();
 		sel_seat->ShowDialog();
-
 }
 private: System::Void mainlabel_Click(System::Object^ sender, System::EventArgs^ e) {
 }
 	//public:Ticket^ data() { return hold; }
+private: System::Void Show_Bus_Details_Load(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void label4_Click(System::Object^ sender, System::EventArgs^ e) {
+}
 };
 }
