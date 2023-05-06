@@ -151,7 +151,6 @@
     <ClInclude Include="Show_Bus_Details.h">
       <FileType>CppForm</FileType>
     </ClInclude>
-    <ClInclude Include="ticketClass.h" />
     <ClInclude Include="Book_ticket.h">
       <FileType>CppForm</FileType>
     </ClInclude>
