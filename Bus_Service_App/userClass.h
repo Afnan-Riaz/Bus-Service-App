@@ -1,5 +1,4 @@
 #pragma once
-
 using namespace System;
 using namespace System::Windows::Forms;
 using namespace System::Data::SqlClient;
@@ -17,7 +16,7 @@ public:
 	String^ phone;
 	String^ address;
 	int balance;
-	
+
 	int countUsers() {	//Returns the total users in database.
 		try {
 			String^ connString = "Data Source=localhost\\SQLEXPRESS;Initial Catalog=Bus;Integrated Security=True";
@@ -91,31 +90,59 @@ public:
 		}
 	}
 
-	bool addbalance(int amount,String^user) {
-		try{
-		String^ connStr = "Data Source=localhost\\SQLEXPRESS;Initial Catalog=Bus;Integrated Security=True";
-		SqlConnection additionConn(connStr);
-		additionConn.Open();
+	bool addbalance(int amount) {
+		try {
+			String^ connStr = "Data Source=localhost\\SQLEXPRESS;Initial Catalog=Bus;Integrated Security=True";
+			SqlConnection additionConn(connStr);
+			additionConn.Open();
 
-		String^ querry = "SELECT balance FROM passengers WHERE username=@user;";
-		SqlCommand command(querry, % additionConn);
-		command.Parameters->AddWithValue("@user", user);
-		
-		int balance = (int)command.ExecuteScalar();
-		balance += amount; 
-		String^ querry1 = "UPDATE passengers SET balance = @balance WHERE username = @user;";
-		SqlCommand command1(querry1, % additionConn);
-		command1.Parameters->AddWithValue("@user", user);
-		command1.Parameters->AddWithValue("@balance", balance);
-	
-		command1.ExecuteNonQuery();
+			String^ querry = "SELECT balance FROM passengers WHERE username=@user;";
+			SqlCommand command(querry, % additionConn);
+			command.Parameters->AddWithValue("@user", username);
 
-		return true;
+			int balance = (int)command.ExecuteScalar();
+			balance += amount;
+			String^ querry1 = "UPDATE passengers SET balance = @balance WHERE username = @user;";
+			SqlCommand command1(querry1, % additionConn);
+			command1.Parameters->AddWithValue("@user", username);
+			command1.Parameters->AddWithValue("@balance", balance);
+
+			command1.ExecuteNonQuery();
+			additionConn.Close();
+			this->balance = balance;
+			return true;
+		}
+		catch (Exception^) {
+			return false;
+		}
 	}
-	catch (Exception^) {
-		return false;
+	bool removebalance(int amount) {
+		try {
+			String^ connStr = "Data Source=localhost\\SQLEXPRESS;Initial Catalog=Bus;Integrated Security=True";
+			SqlConnection additionConn(connStr);
+			additionConn.Open();
+
+			String^ querry = "SELECT balance FROM passengers WHERE username = @user;";
+			SqlCommand command(querry, % additionConn);
+			command.Parameters->AddWithValue("@user", username);
+
+			int balance = (int)command.ExecuteScalar();
+			balance -= amount;
+			String^ querry1 = "UPDATE passengers SET balance = @balance WHERE username = @user;";
+			SqlCommand command1(querry1, % additionConn);
+			command1.Parameters->AddWithValue("@user", username);
+			command1.Parameters->AddWithValue("@balance", balance);
+
+			command1.ExecuteNonQuery();
+			this->balance = balance;
+
+			return true;
+		}
+		catch (Exception^) {
+			return false;
+		}
 	}
-	}
+
 	bool addPassenger() {
 		try {
 			String^ connStr = "Data Source=localhost\\SQLEXPRESS;Initial Catalog=Bus;Integrated Security=True";

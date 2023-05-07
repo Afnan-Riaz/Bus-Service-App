@@ -56,9 +56,6 @@
     <ClInclude Include="sceduleClass.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Book_ticket.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Show_Bus_Details.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -66,6 +63,8 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Select_Seats.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="ModSced.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -102,9 +101,9 @@
     <ClInclude Include="sceduleClass.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="ticketClass.h">
+    <!--<ClInclude Include="ticketClass.h">
       <Filter>Header Files</Filter>
-    </ClInclude>
+    </ClInclude>-->
     <ClInclude Include="cancelTicket.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -121,6 +120,15 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Comp_Feed.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ticketPayment.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="viewTickets.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="seeSchedules.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -187,10 +195,8 @@
     </ClCompile>
     <ClCompile Include="complaintsForm.cpp">
       <Filter>Source Files</Filter>
-    <ClCompile Include="ModSced.cpp">
-      <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Book_ticket.cpp">
+    <ClCompile Include="ModSced.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Show_Bus_Details.cpp">
@@ -198,6 +204,15 @@
     </ClCompile>
     <ClCompile Include="Select_Seats.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ticketPayment.cpp">
+      <Filter>Header Files</Filter>
+    </ClCompile>
+    <ClCompile Include="viewTickets.cpp">
+      <Filter>Header Files</Filter>
+    </ClCompile>
+    <ClCompile Include="seeSchedules.cpp">
+      <Filter>Header Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

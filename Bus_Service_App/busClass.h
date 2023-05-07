@@ -1,12 +1,12 @@
 #pragma once
 
-
+#include"userClass.h"
 #include "sceduleClass.h"
-#include"ticketClass.h"
 #include "routeClass.h"
 using namespace System;
 using namespace System::Windows::Forms;
 using namespace System::Data::SqlClient;
+
 public ref class BusData {
 public:
 	String^ id;
@@ -44,7 +44,7 @@ public:
 		return city;
 	}
 	bool insert() {
-		try{
+		try {
 			String^ connStr = "Data Source=localhost\\SQLEXPRESS;Initial Catalog=Bus;Integrated Security=True";
 			SqlConnection sqlconn(connStr);
 			sqlconn.Open();
@@ -66,7 +66,7 @@ public:
 
 	}
 	bool update() {
-		try{
+		try {
 			String^ connStr = "Data Source=localhost\\SQLEXPRESS;Initial Catalog=Bus;Integrated Security=True";
 			SqlConnection sqlconn(connStr);
 			sqlconn.Open();
@@ -88,7 +88,7 @@ public:
 
 	}
 	bool del() {
-		try{
+		try {
 			String^ connStr = "Data Source=localhost\\SQLEXPRESS;Initial Catalog=Bus;Integrated Security=True";
 			SqlConnection sqlconn(connStr);
 			sqlconn.Open();
@@ -106,7 +106,7 @@ public:
 
 	}
 	bool search(DataGridView^ grid) {
-		try{
+		try {
 			String^ connStr = "Data Source=localhost\\SQLEXPRESS;Initial Catalog=Bus;Integrated Security=True";
 			SqlConnection sqlconn(connStr);
 			sqlconn.Open();
@@ -131,7 +131,7 @@ public:
 
 	}
 	bool show(DataGridView^ grid) {
-		try{
+		try {
 			String^ connStr = "Data Source=localhost\\SQLEXPRESS;Initial Catalog=Bus;Integrated Security=True";
 			SqlConnection sqlconn(connStr);
 			sqlconn.Open();
@@ -155,7 +155,7 @@ public:
 
 	}
 	bool addSced() {
-		try{
+		try {
 			String^ connStr = "Data Source=localhost\\SQLEXPRESS;Initial Catalog=Bus;Integrated Security=True";
 			SqlConnection sqlconn(connStr);
 			sqlconn.Open();
@@ -175,7 +175,7 @@ public:
 
 	}
 	bool updSced() {
-		try{
+		try {
 			String^ connStr = "Data Source=localhost\\SQLEXPRESS;Initial Catalog=Bus;Integrated Security=True";
 			SqlConnection sqlconn(connStr);
 			sqlconn.Open();
@@ -195,7 +195,7 @@ public:
 
 	}
 	bool delSced() {
-		try{
+		try {
 			String^ connStr = "Data Source=localhost\\SQLEXPRESS;Initial Catalog=Bus;Integrated Security=True";
 			SqlConnection sqlconn(connStr);
 			sqlconn.Open();
@@ -213,7 +213,7 @@ public:
 
 	}
 	bool searchSced(DataGridView^ grid) {
-		try{
+		try {
 			String^ connStr = "Data Source=localhost\\SQLEXPRESS;Initial Catalog=Bus;Integrated Security=True";
 			SqlConnection sqlconn(connStr);
 			sqlconn.Open();
@@ -236,7 +236,7 @@ public:
 
 	}
 	bool showSced(DataGridView^ grid) {
-		try{
+		try {
 			String^ connStr = "Data Source=localhost\\SQLEXPRESS;Initial Catalog=Bus;Integrated Security=True";
 			SqlConnection sqlconn(connStr);
 			sqlconn.Open();
@@ -367,5 +367,4 @@ public:
 			return 0;
 		}
 	}
-
 };

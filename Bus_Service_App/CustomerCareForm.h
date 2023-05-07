@@ -126,9 +126,10 @@ namespace Bus_Service_App {
 			// 
 			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft YaHei", 19.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label1->Location = System::Drawing::Point(495, 29);
+			this->label1->Location = System::Drawing::Point(371, 24);
+			this->label1->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(435, 66);
+			this->label1->Size = System::Drawing::Size(326, 54);
 			this->label1->TabIndex = 0;
 			this->label1->Text = L"Customer Care";
 			this->label1->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
@@ -136,9 +137,10 @@ namespace Bus_Service_App {
 			// radioButton1
 			// 
 			this->radioButton1->AutoSize = true;
-			this->radioButton1->Location = System::Drawing::Point(16, 30);
+			this->radioButton1->Location = System::Drawing::Point(12, 24);
+			this->radioButton1->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->radioButton1->Name = L"radioButton1";
-			this->radioButton1->Size = System::Drawing::Size(114, 28);
+			this->radioButton1->Size = System::Drawing::Size(89, 22);
 			this->radioButton1->TabIndex = 2;
 			this->radioButton1->TabStop = true;
 			this->radioButton1->Text = L" Excellent";
@@ -147,9 +149,10 @@ namespace Bus_Service_App {
 			// radioButton2
 			// 
 			this->radioButton2->AutoSize = true;
-			this->radioButton2->Location = System::Drawing::Point(130, 30);
+			this->radioButton2->Location = System::Drawing::Point(98, 24);
+			this->radioButton2->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->radioButton2->Name = L"radioButton2";
-			this->radioButton2->Size = System::Drawing::Size(78, 28);
+			this->radioButton2->Size = System::Drawing::Size(64, 22);
 			this->radioButton2->TabIndex = 3;
 			this->radioButton2->TabStop = true;
 			this->radioButton2->Text = L"Good";
@@ -159,9 +162,10 @@ namespace Bus_Service_App {
 			// radioButton3
 			// 
 			this->radioButton3->AutoSize = true;
-			this->radioButton3->Location = System::Drawing::Point(229, 30);
+			this->radioButton3->Location = System::Drawing::Point(172, 24);
+			this->radioButton3->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->radioButton3->Name = L"radioButton3";
-			this->radioButton3->Size = System::Drawing::Size(63, 28);
+			this->radioButton3->Size = System::Drawing::Size(51, 22);
 			this->radioButton3->TabIndex = 4;
 			this->radioButton3->TabStop = true;
 			this->radioButton3->Text = L"Fair";
@@ -170,9 +174,10 @@ namespace Bus_Service_App {
 			// radioButton4
 			// 
 			this->radioButton4->AutoSize = true;
-			this->radioButton4->Location = System::Drawing::Point(331, 30);
+			this->radioButton4->Location = System::Drawing::Point(248, 24);
+			this->radioButton4->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->radioButton4->Name = L"radioButton4";
-			this->radioButton4->Size = System::Drawing::Size(71, 28);
+			this->radioButton4->Size = System::Drawing::Size(59, 22);
 			this->radioButton4->TabIndex = 5;
 			this->radioButton4->TabStop = true;
 			this->radioButton4->Text = L"Poor";
@@ -182,9 +187,10 @@ namespace Bus_Service_App {
 			// radioButton5
 			// 
 			this->radioButton5->AutoSize = true;
-			this->radioButton5->Location = System::Drawing::Point(449, 30);
+			this->radioButton5->Location = System::Drawing::Point(337, 24);
+			this->radioButton5->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->radioButton5->Name = L"radioButton5";
-			this->radioButton5->Size = System::Drawing::Size(102, 28);
+			this->radioButton5->Size = System::Drawing::Size(84, 22);
 			this->radioButton5->TabIndex = 7;
 			this->radioButton5->TabStop = true;
 			this->radioButton5->Text = L"Not at all";
@@ -193,9 +199,10 @@ namespace Bus_Service_App {
 			// radioButton6
 			// 
 			this->radioButton6->AutoSize = true;
-			this->radioButton6->Location = System::Drawing::Point(312, 30);
+			this->radioButton6->Location = System::Drawing::Point(234, 24);
+			this->radioButton6->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->radioButton6->Name = L"radioButton6";
-			this->radioButton6->Size = System::Drawing::Size(109, 28);
+			this->radioButton6->Size = System::Drawing::Size(88, 22);
 			this->radioButton6->TabIndex = 8;
 			this->radioButton6->TabStop = true;
 			this->radioButton6->Text = L"Not really";
@@ -204,9 +211,10 @@ namespace Bus_Service_App {
 			// radioButton7
 			// 
 			this->radioButton7->AutoSize = true;
-			this->radioButton7->Location = System::Drawing::Point(181, 30);
+			this->radioButton7->Location = System::Drawing::Point(136, 24);
+			this->radioButton7->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->radioButton7->Name = L"radioButton7";
-			this->radioButton7->Size = System::Drawing::Size(120, 28);
+			this->radioButton7->Size = System::Drawing::Size(97, 22);
 			this->radioButton7->TabIndex = 9;
 			this->radioButton7->TabStop = true;
 			this->radioButton7->Text = L"Somewhat";
@@ -215,9 +223,10 @@ namespace Bus_Service_App {
 			// radioButton8
 			// 
 			this->radioButton8->AutoSize = true;
-			this->radioButton8->Location = System::Drawing::Point(6, 30);
+			this->radioButton8->Location = System::Drawing::Point(4, 24);
+			this->radioButton8->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->radioButton8->Name = L"radioButton8";
-			this->radioButton8->Size = System::Drawing::Size(164, 28);
+			this->radioButton8->Size = System::Drawing::Size(130, 22);
 			this->radioButton8->TabIndex = 10;
 			this->radioButton8->TabStop = true;
 			this->radioButton8->Text = L"Yes, completely";
@@ -231,9 +240,11 @@ namespace Bus_Service_App {
 			this->groupBox1->Controls->Add(this->radioButton4);
 			this->groupBox1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->groupBox1->Location = System::Drawing::Point(46, 169);
+			this->groupBox1->Location = System::Drawing::Point(34, 137);
+			this->groupBox1->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->groupBox1->Name = L"groupBox1";
-			this->groupBox1->Size = System::Drawing::Size(749, 64);
+			this->groupBox1->Padding = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->groupBox1->Size = System::Drawing::Size(562, 52);
 			this->groupBox1->TabIndex = 11;
 			this->groupBox1->TabStop = false;
 			this->groupBox1->Text = L"1. How was your experience using the bus application\?";
@@ -248,9 +259,11 @@ namespace Bus_Service_App {
 			this->groupBox2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->groupBox2->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
-			this->groupBox2->Location = System::Drawing::Point(46, 245);
+			this->groupBox2->Location = System::Drawing::Point(34, 199);
+			this->groupBox2->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->groupBox2->Name = L"groupBox2";
-			this->groupBox2->Size = System::Drawing::Size(749, 65);
+			this->groupBox2->Padding = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->groupBox2->Size = System::Drawing::Size(562, 53);
 			this->groupBox2->TabIndex = 12;
 			this->groupBox2->TabStop = false;
 			this->groupBox2->Text = L"2. Did the bus application meet your needs for booking and managing bus trips\?";
@@ -263,9 +276,11 @@ namespace Bus_Service_App {
 			this->groupBox3->Controls->Add(this->radioButton9);
 			this->groupBox3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->groupBox3->Location = System::Drawing::Point(46, 327);
+			this->groupBox3->Location = System::Drawing::Point(34, 266);
+			this->groupBox3->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->groupBox3->Name = L"groupBox3";
-			this->groupBox3->Size = System::Drawing::Size(749, 68);
+			this->groupBox3->Padding = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->groupBox3->Size = System::Drawing::Size(562, 55);
 			this->groupBox3->TabIndex = 13;
 			this->groupBox3->TabStop = false;
 			this->groupBox3->Text = L"3. How satisfied were you with the pricing options available on the bus applicati"
@@ -274,9 +289,10 @@ namespace Bus_Service_App {
 			// radioButton12
 			// 
 			this->radioButton12->AutoSize = true;
-			this->radioButton12->Location = System::Drawing::Point(473, 38);
+			this->radioButton12->Location = System::Drawing::Point(355, 31);
+			this->radioButton12->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->radioButton12->Name = L"radioButton12";
-			this->radioButton12->Size = System::Drawing::Size(128, 28);
+			this->radioButton12->Size = System::Drawing::Size(106, 22);
 			this->radioButton12->TabIndex = 3;
 			this->radioButton12->TabStop = true;
 			this->radioButton12->Text = L" Dissatisfied";
@@ -285,9 +301,10 @@ namespace Bus_Service_App {
 			// radioButton11
 			// 
 			this->radioButton11->AutoSize = true;
-			this->radioButton11->Location = System::Drawing::Point(365, 38);
+			this->radioButton11->Location = System::Drawing::Point(274, 31);
+			this->radioButton11->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->radioButton11->Name = L"radioButton11";
-			this->radioButton11->Size = System::Drawing::Size(91, 28);
+			this->radioButton11->Size = System::Drawing::Size(73, 22);
 			this->radioButton11->TabIndex = 2;
 			this->radioButton11->TabStop = true;
 			this->radioButton11->Text = L"Neutral";
@@ -296,9 +313,10 @@ namespace Bus_Service_App {
 			// radioButton10
 			// 
 			this->radioButton10->AutoSize = true;
-			this->radioButton10->Location = System::Drawing::Point(164, 38);
+			this->radioButton10->Location = System::Drawing::Point(123, 31);
+			this->radioButton10->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->radioButton10->Name = L"radioButton10";
-			this->radioButton10->Size = System::Drawing::Size(191, 28);
+			this->radioButton10->Size = System::Drawing::Size(155, 22);
 			this->radioButton10->TabIndex = 1;
 			this->radioButton10->TabStop = true;
 			this->radioButton10->Text = L"Somewhat satisfied";
@@ -307,9 +325,10 @@ namespace Bus_Service_App {
 			// radioButton9
 			// 
 			this->radioButton9->AutoSize = true;
-			this->radioButton9->Location = System::Drawing::Point(6, 38);
+			this->radioButton9->Location = System::Drawing::Point(4, 31);
+			this->radioButton9->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->radioButton9->Name = L"radioButton9";
-			this->radioButton9->Size = System::Drawing::Size(141, 28);
+			this->radioButton9->Size = System::Drawing::Size(113, 22);
 			this->radioButton9->TabIndex = 0;
 			this->radioButton9->TabStop = true;
 			this->radioButton9->Text = L"Very satisfied";
@@ -323,9 +342,11 @@ namespace Bus_Service_App {
 			this->groupBox4->Controls->Add(this->radioButton13);
 			this->groupBox4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->groupBox4->Location = System::Drawing::Point(46, 407);
+			this->groupBox4->Location = System::Drawing::Point(34, 331);
+			this->groupBox4->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->groupBox4->Name = L"groupBox4";
-			this->groupBox4->Size = System::Drawing::Size(749, 65);
+			this->groupBox4->Padding = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->groupBox4->Size = System::Drawing::Size(562, 53);
 			this->groupBox4->TabIndex = 0;
 			this->groupBox4->TabStop = false;
 			this->groupBox4->Text = L"4. How was your experience with customer support if you needed assistance\?";
@@ -334,9 +355,10 @@ namespace Bus_Service_App {
 			// radioButton16
 			// 
 			this->radioButton16->AutoSize = true;
-			this->radioButton16->Location = System::Drawing::Point(331, 31);
+			this->radioButton16->Location = System::Drawing::Point(248, 25);
+			this->radioButton16->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->radioButton16->Name = L"radioButton16";
-			this->radioButton16->Size = System::Drawing::Size(71, 28);
+			this->radioButton16->Size = System::Drawing::Size(59, 22);
 			this->radioButton16->TabIndex = 3;
 			this->radioButton16->Text = L"Poor";
 			this->radioButton16->UseVisualStyleBackColor = true;
@@ -344,9 +366,10 @@ namespace Bus_Service_App {
 			// radioButton15
 			// 
 			this->radioButton15->AutoSize = true;
-			this->radioButton15->Location = System::Drawing::Point(229, 31);
+			this->radioButton15->Location = System::Drawing::Point(172, 25);
+			this->radioButton15->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->radioButton15->Name = L"radioButton15";
-			this->radioButton15->Size = System::Drawing::Size(63, 28);
+			this->radioButton15->Size = System::Drawing::Size(51, 22);
 			this->radioButton15->TabIndex = 2;
 			this->radioButton15->TabStop = true;
 			this->radioButton15->Text = L"Fair";
@@ -355,9 +378,10 @@ namespace Bus_Service_App {
 			// radioButton14
 			// 
 			this->radioButton14->AutoSize = true;
-			this->radioButton14->Location = System::Drawing::Point(130, 31);
+			this->radioButton14->Location = System::Drawing::Point(98, 25);
+			this->radioButton14->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->radioButton14->Name = L"radioButton14";
-			this->radioButton14->Size = System::Drawing::Size(78, 28);
+			this->radioButton14->Size = System::Drawing::Size(64, 22);
 			this->radioButton14->TabIndex = 21;
 			this->radioButton14->Text = L"Good";
 			this->radioButton14->UseVisualStyleBackColor = true;
@@ -366,9 +390,10 @@ namespace Bus_Service_App {
 			// radioButton13
 			// 
 			this->radioButton13->AutoSize = true;
-			this->radioButton13->Location = System::Drawing::Point(3, 31);
+			this->radioButton13->Location = System::Drawing::Point(2, 25);
+			this->radioButton13->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->radioButton13->Name = L"radioButton13";
-			this->radioButton13->Size = System::Drawing::Size(109, 28);
+			this->radioButton13->Size = System::Drawing::Size(85, 22);
 			this->radioButton13->TabIndex = 20;
 			this->radioButton13->Text = L"Excellent";
 			this->radioButton13->UseVisualStyleBackColor = true;
@@ -379,9 +404,11 @@ namespace Bus_Service_App {
 			this->groupBox5->Controls->Add(this->textBox1);
 			this->groupBox5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->groupBox5->Location = System::Drawing::Point(46, 489);
+			this->groupBox5->Location = System::Drawing::Point(34, 397);
+			this->groupBox5->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->groupBox5->Name = L"groupBox5";
-			this->groupBox5->Size = System::Drawing::Size(973, 152);
+			this->groupBox5->Padding = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->groupBox5->Size = System::Drawing::Size(730, 124);
 			this->groupBox5->TabIndex = 0;
 			this->groupBox5->TabStop = false;
 			this->groupBox5->Text = L"5. Is there anything you particularly liked or disliked about the bus application"
@@ -389,19 +416,21 @@ namespace Bus_Service_App {
 			// 
 			// textBox1
 			// 
-			this->textBox1->Location = System::Drawing::Point(6, 27);
+			this->textBox1->Location = System::Drawing::Point(4, 22);
+			this->textBox1->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->textBox1->Multiline = true;
 			this->textBox1->Name = L"textBox1";
-			this->textBox1->Size = System::Drawing::Size(945, 116);
+			this->textBox1->Size = System::Drawing::Size(710, 95);
 			this->textBox1->TabIndex = 0;
 			// 
 			// button1
 			// 
 			this->button1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button1->Location = System::Drawing::Point(560, 677);
+			this->button1->Location = System::Drawing::Point(420, 550);
+			this->button1->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(133, 29);
+			this->button1->Size = System::Drawing::Size(100, 24);
 			this->button1->TabIndex = 14;
 			this->button1->Text = L"Submit\r\n\r\n";
 			this->button1->UseVisualStyleBackColor = true;
@@ -411,9 +440,10 @@ namespace Bus_Service_App {
 			// 
 			this->button2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button2->Location = System::Drawing::Point(744, 677);
+			this->button2->Location = System::Drawing::Point(558, 550);
+			this->button2->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->button2->Name = L"button2";
-			this->button2->Size = System::Drawing::Size(141, 29);
+			this->button2->Size = System::Drawing::Size(106, 24);
 			this->button2->TabIndex = 15;
 			this->button2->Text = L"Cancel";
 			this->button2->UseVisualStyleBackColor = true;
@@ -423,9 +453,10 @@ namespace Bus_Service_App {
 			// 
 			this->linkLabel1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->linkLabel1->Location = System::Drawing::Point(131, 681);
+			this->linkLabel1->Location = System::Drawing::Point(98, 553);
+			this->linkLabel1->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->linkLabel1->Name = L"linkLabel1";
-			this->linkLabel1->Size = System::Drawing::Size(371, 31);
+			this->linkLabel1->Size = System::Drawing::Size(278, 25);
 			this->linkLabel1->TabIndex = 17;
 			this->linkLabel1->TabStop = true;
 			this->linkLabel1->Text = L"If you have any complaints click on this link.";
@@ -436,8 +467,9 @@ namespace Bus_Service_App {
 			this->panel1->BackColor = System::Drawing::Color::SteelBlue;
 			this->panel1->Controls->Add(this->Label11);
 			this->panel1->Location = System::Drawing::Point(0, 0);
+			this->panel1->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->panel1->Name = L"panel1";
-			this->panel1->Size = System::Drawing::Size(1415, 131);
+			this->panel1->Size = System::Drawing::Size(1061, 106);
 			this->panel1->TabIndex = 18;
 			// 
 			// Label11
@@ -447,19 +479,20 @@ namespace Bus_Service_App {
 			this->Label11->Font = (gcnew System::Drawing::Font(L"Segoe UI", 22.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->Label11->ForeColor = System::Drawing::Color::White;
-			this->Label11->Location = System::Drawing::Point(609, 38);
+			this->Label11->Location = System::Drawing::Point(457, 31);
+			this->Label11->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->Label11->Name = L"Label11";
-			this->Label11->Size = System::Drawing::Size(186, 50);
+			this->Label11->Size = System::Drawing::Size(151, 41);
 			this->Label11->TabIndex = 1;
 			this->Label11->Text = L"Feedback";
 			// 
 			// CustomerCareForm
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
+			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::Color::LightSteelBlue;
 			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Center;
-			this->ClientSize = System::Drawing::Size(1414, 749);
+			this->ClientSize = System::Drawing::Size(1028, 609);
 			this->Controls->Add(this->panel1);
 			this->Controls->Add(this->linkLabel1);
 			this->Controls->Add(this->button2);
@@ -470,7 +503,9 @@ namespace Bus_Service_App {
 			this->Controls->Add(this->groupBox2);
 			this->Controls->Add(this->groupBox1);
 			this->Controls->Add(this->label1);
+			this->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->Name = L"CustomerCareForm";
+			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"Bus_Service_Application";
 			this->Load += gcnew System::EventHandler(this, &CustomerCareForm::CustomerCareForm_Load);
 			this->groupBox1->ResumeLayout(false);

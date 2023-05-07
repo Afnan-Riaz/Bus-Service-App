@@ -86,7 +86,7 @@ int main()
 	while (true) {
 		Bus_Service_App::Login loginform;
 		loginform.ShowDialog();
-		
+
 		if (loginform.toSignup == true) {
 			Bus_Service_App::Signup signform;
 			signform.ShowDialog();

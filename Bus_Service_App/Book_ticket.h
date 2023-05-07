@@ -1,5 +1,8 @@
 #pragma once
 #include"ticketclass.h"
+#include"routeClass.h"
+#include"sceduleClass.h"
+#include"busClass.h"
 namespace Bus_Service_App {
 
 	using namespace System;
@@ -265,8 +268,7 @@ private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e
 		}
 	}
 	Ticket^ t = gcnew Ticket();
-	t->Id = ID;
-	t->passengerName = name;
+	t->bus->id = ID;
 	//t->Email = email;
 	//t->Phone = phoneno;
 	t->setinfo();

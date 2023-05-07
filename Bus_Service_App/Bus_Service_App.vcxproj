@@ -145,13 +145,13 @@
     <ClInclude Include="adminMenu.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="seeSchedules.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="Select_Seats.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="Show_Bus_Details.h">
-      <FileType>CppForm</FileType>
-    </ClInclude>
-    <ClInclude Include="Book_ticket.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="busClass.h" />
@@ -195,7 +195,13 @@
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="ticketClass.h" />
+    <ClInclude Include="ticketPayment.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="userClass.h" />
+    <ClInclude Include="viewTickets.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AddRemAdm.cpp" />
@@ -204,7 +210,6 @@
     <ClCompile Include="adminLogin.cpp" />
     <ClCompile Include="adminMenu.cpp" />
     <ClCompile Include="AssemblyInfo.cpp" />
-    <ClCompile Include="Book_ticket.cpp" />
     <ClCompile Include="Bus_Service_App.cpp" />
     <ClCompile Include="Comp_Feed.cpp" />
     <ClCompile Include="cancelTicket.cpp" />
@@ -222,9 +227,12 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="seeSchedules.cpp" />
     <ClCompile Include="Select_Seats.cpp" />
     <ClCompile Include="Show_Bus_Details.cpp" />
     <ClCompile Include="Signup.cpp" />
+    <ClCompile Include="ticketPayment.cpp" />
+    <ClCompile Include="viewTickets.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="app.ico" />
@@ -249,9 +257,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="adminLogin.resx" />
     <EmbeddedResource Include="adminMenu.resx" />
-    <EmbeddedResource Include="Book_ticket.resx">
-      <DependentUpon>Book_ticket.h</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Comp_Feed.resx">
       <DependentUpon>Comp_Feed.h</DependentUpon>
     </EmbeddedResource>
@@ -282,6 +287,9 @@
     <EmbeddedResource Include="payment.resx">
       <DependentUpon>payment.h</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="seeSchedules.resx">
+      <DependentUpon>seeSchedules.h</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Select_Seats.resx">
       <DependentUpon>Select_Seats.h</DependentUpon>
     </EmbeddedResource>
@@ -290,6 +298,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Signup.resx">
       <DependentUpon>Signup.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ticketPayment.resx">
+      <DependentUpon>ticketPayment.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="viewTickets.resx">
+      <DependentUpon>viewTickets.h</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
