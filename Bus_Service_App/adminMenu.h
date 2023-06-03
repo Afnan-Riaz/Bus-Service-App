@@ -1,6 +1,7 @@
 #pragma once
-#include"userClass.h"
+#include "userClass.h"
 #include "busClass.h"
+#include "ticketClass.h"
 namespace Bus_Service_App {
 
 	using namespace System;
@@ -24,11 +25,14 @@ namespace Bus_Service_App {
 			//
 			Passenger^ pass = gcnew Passenger;
 			BusData^ bus = gcnew BusData;
+			Ticket^ ticket = gcnew Ticket;
 			AdName->Text = admin->name;
 			userlabel->Text = (pass->countUsers()).ToString();
 			buslabel->Text = (bus->countBuses()).ToString();
 			revenuelabel->Text = (pass->countBalance()).ToString();
 			citylabel->Text = (bus->getCities()).ToString();
+			seatlabel->Text = (bus->countSeats()).ToString();
+			complabel->Text = (ticket->totalTickets()).ToString();
 		}
 
 	protected:

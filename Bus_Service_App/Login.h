@@ -98,9 +98,10 @@ namespace Bus_Service_App {
 			this->label2->Font = (gcnew System::Drawing::Font(L"Arial", 9.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label2->ForeColor = System::Drawing::Color::Black;
-			this->label2->Location = System::Drawing::Point(59, 195);
+			this->label2->Location = System::Drawing::Point(79, 240);
+			this->label2->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(79, 16);
+			this->label2->Size = System::Drawing::Size(99, 19);
 			this->label2->TabIndex = 1;
 			this->label2->Text = L"Username: ";
 			// 
@@ -111,9 +112,10 @@ namespace Bus_Service_App {
 			this->label3->Font = (gcnew System::Drawing::Font(L"Arial", 9.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label3->ForeColor = System::Drawing::Color::Black;
-			this->label3->Location = System::Drawing::Point(59, 289);
+			this->label3->Location = System::Drawing::Point(79, 356);
+			this->label3->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(72, 16);
+			this->label3->Size = System::Drawing::Size(93, 19);
 			this->label3->TabIndex = 2;
 			this->label3->Text = L"Password:";
 			// 
@@ -124,9 +126,10 @@ namespace Bus_Service_App {
 			this->tbusername->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->tbusername->ForeColor = System::Drawing::Color::DimGray;
-			this->tbusername->Location = System::Drawing::Point(71, 219);
+			this->tbusername->Location = System::Drawing::Point(95, 270);
+			this->tbusername->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->tbusername->Name = L"tbusername";
-			this->tbusername->Size = System::Drawing::Size(288, 24);
+			this->tbusername->Size = System::Drawing::Size(384, 30);
 			this->tbusername->TabIndex = 0;
 			this->tbusername->TabStop = false;
 			this->tbusername->KeyDown += gcnew System::Windows::Forms::KeyEventHandler(this, &Login::tbusername_KeyDown);
@@ -138,10 +141,11 @@ namespace Bus_Service_App {
 			this->tbpassword->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->tbpassword->ForeColor = System::Drawing::Color::DimGray;
-			this->tbpassword->Location = System::Drawing::Point(70, 313);
+			this->tbpassword->Location = System::Drawing::Point(93, 385);
+			this->tbpassword->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->tbpassword->Name = L"tbpassword";
 			this->tbpassword->PasswordChar = '*';
-			this->tbpassword->Size = System::Drawing::Size(288, 24);
+			this->tbpassword->Size = System::Drawing::Size(384, 30);
 			this->tbpassword->TabIndex = 1;
 			this->tbpassword->TabStop = false;
 			this->tbpassword->KeyDown += gcnew System::Windows::Forms::KeyEventHandler(this, &Login::tbpassword_KeyDown);
@@ -155,9 +159,10 @@ namespace Bus_Service_App {
 			this->loginbtn->Font = (gcnew System::Drawing::Font(L"Segoe UI", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->loginbtn->ForeColor = System::Drawing::Color::White;
-			this->loginbtn->Location = System::Drawing::Point(92, 393);
+			this->loginbtn->Location = System::Drawing::Point(123, 484);
+			this->loginbtn->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->loginbtn->Name = L"loginbtn";
-			this->loginbtn->Size = System::Drawing::Size(112, 36);
+			this->loginbtn->Size = System::Drawing::Size(149, 44);
 			this->loginbtn->TabIndex = 2;
 			this->loginbtn->Text = L"Login";
 			this->loginbtn->UseVisualStyleBackColor = false;
@@ -170,9 +175,10 @@ namespace Bus_Service_App {
 			this->cancelbtn->Font = (gcnew System::Drawing::Font(L"Segoe UI", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->cancelbtn->ForeColor = System::Drawing::Color::RoyalBlue;
-			this->cancelbtn->Location = System::Drawing::Point(221, 393);
+			this->cancelbtn->Location = System::Drawing::Point(295, 484);
+			this->cancelbtn->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->cancelbtn->Name = L"cancelbtn";
-			this->cancelbtn->Size = System::Drawing::Size(106, 36);
+			this->cancelbtn->Size = System::Drawing::Size(141, 44);
 			this->cancelbtn->TabIndex = 3;
 			this->cancelbtn->Text = L"Cancel";
 			this->cancelbtn->UseVisualStyleBackColor = true;
@@ -187,9 +193,10 @@ namespace Bus_Service_App {
 			this->signupbtn->Font = (gcnew System::Drawing::Font(L"Segoe UI", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->signupbtn->ForeColor = System::Drawing::Color::White;
-			this->signupbtn->Location = System::Drawing::Point(94, 488);
+			this->signupbtn->Location = System::Drawing::Point(125, 601);
+			this->signupbtn->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->signupbtn->Name = L"signupbtn";
-			this->signupbtn->Size = System::Drawing::Size(106, 35);
+			this->signupbtn->Size = System::Drawing::Size(141, 43);
 			this->signupbtn->TabIndex = 7;
 			this->signupbtn->Text = L"Signup";
 			this->signupbtn->UseVisualStyleBackColor = false;
@@ -203,9 +210,10 @@ namespace Bus_Service_App {
 			this->label5->Font = (gcnew System::Drawing::Font(L"Arial", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label5->ForeColor = System::Drawing::Color::Black;
-			this->label5->Location = System::Drawing::Point(97, 470);
+			this->label5->Location = System::Drawing::Point(129, 578);
+			this->label5->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label5->Name = L"label5";
-			this->label5->Size = System::Drawing::Size(99, 15);
+			this->label5->Size = System::Drawing::Size(114, 17);
 			this->label5->TabIndex = 9;
 			this->label5->Text = L"SignUp Instead\?";
 			// 
@@ -215,9 +223,10 @@ namespace Bus_Service_App {
 			this->label4->Font = (gcnew System::Drawing::Font(L"Segoe UI", 27.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label4->ForeColor = System::Drawing::Color::Black;
-			this->label4->Location = System::Drawing::Point(51, 104);
+			this->label4->Location = System::Drawing::Point(68, 128);
+			this->label4->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label4->Name = L"label4";
-			this->label4->Size = System::Drawing::Size(281, 56);
+			this->label4->Size = System::Drawing::Size(375, 69);
 			this->label4->TabIndex = 10;
 			this->label4->Text = L"Login.";
 			// 
@@ -228,9 +237,10 @@ namespace Bus_Service_App {
 			this->adminlink->Font = (gcnew System::Drawing::Font(L"Arial", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->adminlink->LinkColor = System::Drawing::Color::LightGray;
-			this->adminlink->Location = System::Drawing::Point(777, 571);
+			this->adminlink->Location = System::Drawing::Point(1036, 703);
+			this->adminlink->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->adminlink->Name = L"adminlink";
-			this->adminlink->Size = System::Drawing::Size(220, 19);
+			this->adminlink->Size = System::Drawing::Size(273, 24);
 			this->adminlink->TabIndex = 11;
 			this->adminlink->TabStop = true;
 			this->adminlink->Text = L"Click here to login as Admin";
@@ -243,9 +253,10 @@ namespace Bus_Service_App {
 			this->textBox1->Enabled = false;
 			this->textBox1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 2.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->textBox1->Location = System::Drawing::Point(62, 252);
+			this->textBox1->Location = System::Drawing::Point(83, 310);
+			this->textBox1->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->textBox1->Name = L"textBox1";
-			this->textBox1->Size = System::Drawing::Size(303, 4);
+			this->textBox1->Size = System::Drawing::Size(404, 5);
 			this->textBox1->TabIndex = 12;
 			// 
 			// textBox2
@@ -255,9 +266,10 @@ namespace Bus_Service_App {
 			this->textBox2->Enabled = false;
 			this->textBox2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 2.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->textBox2->Location = System::Drawing::Point(62, 347);
+			this->textBox2->Location = System::Drawing::Point(83, 427);
+			this->textBox2->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->textBox2->Name = L"textBox2";
-			this->textBox2->Size = System::Drawing::Size(303, 4);
+			this->textBox2->Size = System::Drawing::Size(404, 5);
 			this->textBox2->TabIndex = 13;
 			// 
 			// label1
@@ -268,9 +280,10 @@ namespace Bus_Service_App {
 			this->label1->Font = (gcnew System::Drawing::Font(L"Arial", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label1->ForeColor = System::Drawing::Color::Black;
-			this->label1->Location = System::Drawing::Point(225, 470);
+			this->label1->Location = System::Drawing::Point(300, 578);
+			this->label1->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(95, 15);
+			this->label1->Size = System::Drawing::Size(111, 17);
 			this->label1->TabIndex = 15;
 			this->label1->Text = L"Login as Admin.";
 			// 
@@ -283,9 +296,10 @@ namespace Bus_Service_App {
 			this->toAdminBtn->Font = (gcnew System::Drawing::Font(L"Segoe UI", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->toAdminBtn->ForeColor = System::Drawing::Color::White;
-			this->toAdminBtn->Location = System::Drawing::Point(220, 488);
+			this->toAdminBtn->Location = System::Drawing::Point(293, 601);
+			this->toAdminBtn->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->toAdminBtn->Name = L"toAdminBtn";
-			this->toAdminBtn->Size = System::Drawing::Size(106, 35);
+			this->toAdminBtn->Size = System::Drawing::Size(141, 43);
 			this->toAdminBtn->TabIndex = 14;
 			this->toAdminBtn->Text = L"Admin";
 			this->toAdminBtn->UseVisualStyleBackColor = false;
@@ -295,18 +309,19 @@ namespace Bus_Service_App {
 			// 
 			this->pictureBox1->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox1.BackgroundImage")));
 			this->pictureBox1->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-			this->pictureBox1->Location = System::Drawing::Point(438, -3);
+			this->pictureBox1->Location = System::Drawing::Point(584, -4);
+			this->pictureBox1->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->pictureBox1->Name = L"pictureBox1";
-			this->pictureBox1->Size = System::Drawing::Size(606, 617);
+			this->pictureBox1->Size = System::Drawing::Size(808, 759);
 			this->pictureBox1->TabIndex = 16;
 			this->pictureBox1->TabStop = false;
 			// 
 			// Login
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
+			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::SystemColors::ButtonHighlight;
-			this->ClientSize = System::Drawing::Size(1028, 609);
+			this->ClientSize = System::Drawing::Size(1371, 750);
 			this->Controls->Add(this->pictureBox1);
 			this->Controls->Add(this->label1);
 			this->Controls->Add(this->toAdminBtn);
@@ -323,7 +338,8 @@ namespace Bus_Service_App {
 			this->Controls->Add(this->label3);
 			this->Controls->Add(this->label2);
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::None;
-			this->MinimumSize = System::Drawing::Size(221, 597);
+			this->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->MinimumSize = System::Drawing::Size(295, 735);
 			this->Name = L"Login";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"Bus Service Application";

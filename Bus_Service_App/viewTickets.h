@@ -137,8 +137,9 @@ namespace Bus_Service_App {
 			this->panel2->Controls->Add(this->label2);
 			this->panel2->Controls->Add(this->label1);
 			this->panel2->Location = System::Drawing::Point(0, 0);
+			this->panel2->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->panel2->Name = L"panel2";
-			this->panel2->Size = System::Drawing::Size(228, 79);
+			this->panel2->Size = System::Drawing::Size(304, 97);
 			this->panel2->TabIndex = 33;
 			// 
 			// balanceLabel
@@ -147,9 +148,10 @@ namespace Bus_Service_App {
 			this->balanceLabel->Font = (gcnew System::Drawing::Font(L"Arial", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->balanceLabel->ForeColor = System::Drawing::Color::White;
-			this->balanceLabel->Location = System::Drawing::Point(97, 44);
+			this->balanceLabel->Location = System::Drawing::Point(129, 54);
+			this->balanceLabel->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->balanceLabel->Name = L"balanceLabel";
-			this->balanceLabel->Size = System::Drawing::Size(43, 17);
+			this->balanceLabel->Size = System::Drawing::Size(55, 22);
 			this->balanceLabel->TabIndex = 2;
 			this->balanceLabel->Text = L"Rs. 0";
 			// 
@@ -159,9 +161,10 @@ namespace Bus_Service_App {
 			this->nameLabel->Font = (gcnew System::Drawing::Font(L"Arial", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->nameLabel->ForeColor = System::Drawing::Color::White;
-			this->nameLabel->Location = System::Drawing::Point(115, 19);
+			this->nameLabel->Location = System::Drawing::Point(153, 23);
+			this->nameLabel->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->nameLabel->Name = L"nameLabel";
-			this->nameLabel->Size = System::Drawing::Size(47, 17);
+			this->nameLabel->Size = System::Drawing::Size(60, 22);
 			this->nameLabel->TabIndex = 10;
 			this->nameLabel->Text = L"Name";
 			// 
@@ -171,9 +174,10 @@ namespace Bus_Service_App {
 			this->label2->Font = (gcnew System::Drawing::Font(L"Arial", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label2->ForeColor = System::Drawing::Color::White;
-			this->label2->Location = System::Drawing::Point(25, 42);
+			this->label2->Location = System::Drawing::Point(33, 52);
+			this->label2->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(60, 19);
+			this->label2->Size = System::Drawing::Size(74, 24);
 			this->label2->TabIndex = 1;
 			this->label2->Text = L"Wallet:";
 			// 
@@ -183,9 +187,10 @@ namespace Bus_Service_App {
 			this->label1->Font = (gcnew System::Drawing::Font(L"Arial", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label1->ForeColor = System::Drawing::Color::White;
-			this->label1->Location = System::Drawing::Point(23, 18);
+			this->label1->Location = System::Drawing::Point(31, 22);
+			this->label1->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(87, 19);
+			this->label1->Size = System::Drawing::Size(105, 24);
 			this->label1->TabIndex = 9;
 			this->label1->Text = L"Signed in:";
 			// 
@@ -194,9 +199,10 @@ namespace Bus_Service_App {
 			this->panel1->BackColor = System::Drawing::Color::SteelBlue;
 			this->panel1->Controls->Add(this->back);
 			this->panel1->Controls->Add(this->label5);
-			this->panel1->Location = System::Drawing::Point(230, 0);
+			this->panel1->Location = System::Drawing::Point(307, 0);
+			this->panel1->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->panel1->Name = L"panel1";
-			this->panel1->Size = System::Drawing::Size(819, 79);
+			this->panel1->Size = System::Drawing::Size(1092, 97);
 			this->panel1->TabIndex = 32;
 			// 
 			// back
@@ -207,9 +213,10 @@ namespace Bus_Service_App {
 			this->back->Font = (gcnew System::Drawing::Font(L"Arial", 11.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->back->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"back.Image")));
-			this->back->Location = System::Drawing::Point(18, 8);
+			this->back->Location = System::Drawing::Point(24, 10);
+			this->back->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->back->Name = L"back";
-			this->back->Size = System::Drawing::Size(69, 65);
+			this->back->Size = System::Drawing::Size(92, 80);
 			this->back->TabIndex = 32;
 			this->back->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
 			this->back->TextImageRelation = System::Windows::Forms::TextImageRelation::ImageBeforeText;
@@ -221,9 +228,10 @@ namespace Bus_Service_App {
 			this->label5->Font = (gcnew System::Drawing::Font(L"Segoe UI", 21.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label5->ForeColor = System::Drawing::Color::White;
-			this->label5->Location = System::Drawing::Point(316, 23);
+			this->label5->Location = System::Drawing::Point(421, 28);
+			this->label5->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label5->Name = L"label5";
-			this->label5->Size = System::Drawing::Size(220, 38);
+			this->label5->Size = System::Drawing::Size(293, 47);
 			this->label5->TabIndex = 0;
 			this->label5->Text = L"View Tickets";
 			// 
@@ -233,6 +241,7 @@ namespace Bus_Service_App {
 			this->ticketData->AllowUserToDeleteRows = false;
 			this->ticketData->AllowUserToResizeColumns = false;
 			this->ticketData->AllowUserToResizeRows = false;
+			this->ticketData->AutoSizeColumnsMode = System::Windows::Forms::DataGridViewAutoSizeColumnsMode::Fill;
 			this->ticketData->BackgroundColor = System::Drawing::SystemColors::Control;
 			dataGridViewCellStyle1->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
 			dataGridViewCellStyle1->BackColor = System::Drawing::SystemColors::Control;
@@ -244,7 +253,8 @@ namespace Bus_Service_App {
 			dataGridViewCellStyle1->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
 			this->ticketData->ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
 			this->ticketData->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			this->ticketData->Location = System::Drawing::Point(165, 185);
+			this->ticketData->Location = System::Drawing::Point(220, 228);
+			this->ticketData->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->ticketData->Name = L"ticketData";
 			this->ticketData->ReadOnly = true;
 			this->ticketData->RowHeadersWidthSizeMode = System::Windows::Forms::DataGridViewRowHeadersWidthSizeMode::AutoSizeToAllHeaders;
@@ -252,7 +262,7 @@ namespace Bus_Service_App {
 			this->ticketData->RowTemplate->DefaultCellStyle->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F, System::Drawing::FontStyle::Regular,
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			this->ticketData->ShowEditingIcon = false;
-			this->ticketData->Size = System::Drawing::Size(367, 218);
+			this->ticketData->Size = System::Drawing::Size(489, 268);
 			this->ticketData->TabIndex = 34;
 			// 
 			// label3
@@ -261,9 +271,10 @@ namespace Bus_Service_App {
 			this->label3->Font = (gcnew System::Drawing::Font(L"Arial", 16, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label3->ForeColor = System::Drawing::Color::Black;
-			this->label3->Location = System::Drawing::Point(160, 146);
+			this->label3->Location = System::Drawing::Point(213, 180);
+			this->label3->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(232, 26);
+			this->label3->Size = System::Drawing::Size(297, 32);
 			this->label3->TabIndex = 35;
 			this->label3->Text = L"Your Booked Tickets:";
 			// 
@@ -273,9 +284,10 @@ namespace Bus_Service_App {
 			this->label4->Font = (gcnew System::Drawing::Font(L"Arial", 14, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label4->ForeColor = System::Drawing::Color::Black;
-			this->label4->Location = System::Drawing::Point(161, 439);
+			this->label4->Location = System::Drawing::Point(215, 540);
+			this->label4->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label4->Name = L"label4";
-			this->label4->Size = System::Drawing::Size(326, 22);
+			this->label4->Size = System::Drawing::Size(404, 29);
 			this->label4->TabIndex = 36;
 			this->label4->Text = L"Enter ticket number to see details:";
 			// 
@@ -283,9 +295,10 @@ namespace Bus_Service_App {
 			// 
 			this->numTb->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->numTb->Location = System::Drawing::Point(165, 471);
+			this->numTb->Location = System::Drawing::Point(220, 580);
+			this->numTb->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->numTb->Name = L"numTb";
-			this->numTb->Size = System::Drawing::Size(367, 26);
+			this->numTb->Size = System::Drawing::Size(488, 30);
 			this->numTb->TabIndex = 37;
 			// 
 			// searchBtn
@@ -293,9 +306,10 @@ namespace Bus_Service_App {
 			this->searchBtn->BackColor = System::Drawing::SystemColors::Window;
 			this->searchBtn->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->searchBtn->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"searchBtn.Image")));
-			this->searchBtn->Location = System::Drawing::Point(494, 471);
+			this->searchBtn->Location = System::Drawing::Point(659, 580);
+			this->searchBtn->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->searchBtn->Name = L"searchBtn";
-			this->searchBtn->Size = System::Drawing::Size(38, 26);
+			this->searchBtn->Size = System::Drawing::Size(51, 32);
 			this->searchBtn->TabIndex = 38;
 			this->searchBtn->UseVisualStyleBackColor = false;
 			this->searchBtn->Click += gcnew System::EventHandler(this, &viewTickets::searchBtn_Click);
@@ -319,9 +333,10 @@ namespace Bus_Service_App {
 			this->ticketPanel->Controls->Add(this->label8);
 			this->ticketPanel->Controls->Add(this->ticketNumLabel);
 			this->ticketPanel->Controls->Add(this->label7);
-			this->ticketPanel->Location = System::Drawing::Point(623, 146);
+			this->ticketPanel->Location = System::Drawing::Point(831, 180);
+			this->ticketPanel->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->ticketPanel->Name = L"ticketPanel";
-			this->ticketPanel->Size = System::Drawing::Size(297, 399);
+			this->ticketPanel->Size = System::Drawing::Size(396, 491);
 			this->ticketPanel->TabIndex = 39;
 			this->ticketPanel->Visible = false;
 			// 
@@ -331,9 +346,10 @@ namespace Bus_Service_App {
 			this->fareLabel->Font = (gcnew System::Drawing::Font(L"Arial", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->fareLabel->ForeColor = System::Drawing::Color::Black;
-			this->fareLabel->Location = System::Drawing::Point(88, 302);
+			this->fareLabel->Location = System::Drawing::Point(117, 372);
+			this->fareLabel->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->fareLabel->Name = L"fareLabel";
-			this->fareLabel->Size = System::Drawing::Size(90, 23);
+			this->fareLabel->Size = System::Drawing::Size(113, 28);
 			this->fareLabel->TabIndex = 26;
 			this->fareLabel->Text = L"Rs. 2000";
 			// 
@@ -343,9 +359,10 @@ namespace Bus_Service_App {
 			this->label13->Font = (gcnew System::Drawing::Font(L"Arial", 15, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label13->ForeColor = System::Drawing::Color::Black;
-			this->label13->Location = System::Drawing::Point(25, 301);
+			this->label13->Location = System::Drawing::Point(33, 370);
+			this->label13->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label13->Name = L"label13";
-			this->label13->Size = System::Drawing::Size(59, 24);
+			this->label13->Size = System::Drawing::Size(73, 30);
 			this->label13->TabIndex = 25;
 			this->label13->Text = L"Fare:";
 			// 
@@ -355,9 +372,10 @@ namespace Bus_Service_App {
 			this->provLabel->Font = (gcnew System::Drawing::Font(L"Arial", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->provLabel->ForeColor = System::Drawing::Color::Black;
-			this->provLabel->Location = System::Drawing::Point(123, 266);
+			this->provLabel->Location = System::Drawing::Point(164, 327);
+			this->provLabel->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->provLabel->Name = L"provLabel";
-			this->provLabel->Size = System::Drawing::Size(83, 23);
+			this->provLabel->Size = System::Drawing::Size(105, 28);
 			this->provLabel->TabIndex = 24;
 			this->provLabel->Text = L"Daewoo";
 			// 
@@ -367,9 +385,10 @@ namespace Bus_Service_App {
 			this->classLabel->Font = (gcnew System::Drawing::Font(L"Arial", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->classLabel->ForeColor = System::Drawing::Color::Black;
-			this->classLabel->Location = System::Drawing::Point(94, 229);
+			this->classLabel->Location = System::Drawing::Point(125, 282);
+			this->classLabel->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->classLabel->Name = L"classLabel";
-			this->classLabel->Size = System::Drawing::Size(88, 23);
+			this->classLabel->Size = System::Drawing::Size(116, 28);
 			this->classLabel->TabIndex = 23;
 			this->classLabel->Text = L"Business";
 			// 
@@ -379,9 +398,10 @@ namespace Bus_Service_App {
 			this->seatsLabel->Font = (gcnew System::Drawing::Font(L"Arial", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->seatsLabel->ForeColor = System::Drawing::Color::Black;
-			this->seatsLabel->Location = System::Drawing::Point(174, 192);
+			this->seatsLabel->Location = System::Drawing::Point(232, 236);
+			this->seatsLabel->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->seatsLabel->Name = L"seatsLabel";
-			this->seatsLabel->Size = System::Drawing::Size(55, 23);
+			this->seatsLabel->Size = System::Drawing::Size(68, 28);
 			this->seatsLabel->TabIndex = 22;
 			this->seatsLabel->Text = L"2,3,4";
 			// 
@@ -391,18 +411,20 @@ namespace Bus_Service_App {
 			this->passengerLabel->Font = (gcnew System::Drawing::Font(L"Arial", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->passengerLabel->ForeColor = System::Drawing::Color::Black;
-			this->passengerLabel->Location = System::Drawing::Point(98, 154);
+			this->passengerLabel->Location = System::Drawing::Point(131, 190);
+			this->passengerLabel->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->passengerLabel->Name = L"passengerLabel";
-			this->passengerLabel->Size = System::Drawing::Size(124, 23);
+			this->passengerLabel->Size = System::Drawing::Size(160, 28);
 			this->passengerLabel->TabIndex = 21;
 			this->passengerLabel->Text = L"Maaz Ahmad";
 			// 
 			// panel5
 			// 
 			this->panel5->BackColor = System::Drawing::Color::Black;
-			this->panel5->Location = System::Drawing::Point(70, 64);
+			this->panel5->Location = System::Drawing::Point(93, 79);
+			this->panel5->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->panel5->Name = L"panel5";
-			this->panel5->Size = System::Drawing::Size(141, 3);
+			this->panel5->Size = System::Drawing::Size(188, 4);
 			this->panel5->TabIndex = 20;
 			// 
 			// label12
@@ -411,9 +433,10 @@ namespace Bus_Service_App {
 			this->label12->Font = (gcnew System::Drawing::Font(L"Arial", 15, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label12->ForeColor = System::Drawing::Color::Black;
-			this->label12->Location = System::Drawing::Point(129, 92);
+			this->label12->Location = System::Drawing::Point(172, 113);
+			this->label12->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label12->Name = L"label12";
-			this->label12->Size = System::Drawing::Size(31, 24);
+			this->label12->Size = System::Drawing::Size(37, 30);
 			this->label12->TabIndex = 19;
 			this->label12->Text = L"---";
 			// 
@@ -422,9 +445,10 @@ namespace Bus_Service_App {
 			this->arrLabel->Font = (gcnew System::Drawing::Font(L"Arial", 15, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->arrLabel->ForeColor = System::Drawing::Color::Black;
-			this->arrLabel->Location = System::Drawing::Point(165, 93);
+			this->arrLabel->Location = System::Drawing::Point(220, 114);
+			this->arrLabel->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->arrLabel->Name = L"arrLabel";
-			this->arrLabel->Size = System::Drawing::Size(129, 24);
+			this->arrLabel->Size = System::Drawing::Size(172, 30);
 			this->arrLabel->TabIndex = 18;
 			this->arrLabel->Text = L"Multan";
 			this->arrLabel->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
@@ -434,9 +458,10 @@ namespace Bus_Service_App {
 			this->depLabel->Font = (gcnew System::Drawing::Font(L"Arial", 15, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->depLabel->ForeColor = System::Drawing::Color::Black;
-			this->depLabel->Location = System::Drawing::Point(3, 92);
+			this->depLabel->Location = System::Drawing::Point(4, 113);
+			this->depLabel->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->depLabel->Name = L"depLabel";
-			this->depLabel->Size = System::Drawing::Size(124, 24);
+			this->depLabel->Size = System::Drawing::Size(165, 30);
 			this->depLabel->TabIndex = 17;
 			this->depLabel->Text = L"Lahore";
 			this->depLabel->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
@@ -447,9 +472,10 @@ namespace Bus_Service_App {
 			this->label11->Font = (gcnew System::Drawing::Font(L"Arial", 15, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label11->ForeColor = System::Drawing::Color::Black;
-			this->label11->Location = System::Drawing::Point(25, 265);
+			this->label11->Location = System::Drawing::Point(33, 326);
+			this->label11->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label11->Name = L"label11";
-			this->label11->Size = System::Drawing::Size(103, 24);
+			this->label11->Size = System::Drawing::Size(130, 30);
 			this->label11->TabIndex = 16;
 			this->label11->Text = L"Provider: ";
 			// 
@@ -459,9 +485,10 @@ namespace Bus_Service_App {
 			this->label10->Font = (gcnew System::Drawing::Font(L"Arial", 15, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label10->ForeColor = System::Drawing::Color::Black;
-			this->label10->Location = System::Drawing::Point(24, 228);
+			this->label10->Location = System::Drawing::Point(32, 281);
+			this->label10->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label10->Name = L"label10";
-			this->label10->Size = System::Drawing::Size(69, 24);
+			this->label10->Size = System::Drawing::Size(87, 30);
 			this->label10->TabIndex = 15;
 			this->label10->Text = L"Class:";
 			// 
@@ -471,9 +498,10 @@ namespace Bus_Service_App {
 			this->label9->Font = (gcnew System::Drawing::Font(L"Arial", 15, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label9->ForeColor = System::Drawing::Color::Black;
-			this->label9->Location = System::Drawing::Point(24, 191);
+			this->label9->Location = System::Drawing::Point(32, 235);
+			this->label9->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label9->Name = L"label9";
-			this->label9->Size = System::Drawing::Size(148, 24);
+			this->label9->Size = System::Drawing::Size(185, 30);
 			this->label9->TabIndex = 14;
 			this->label9->Text = L"Seats Booked:";
 			// 
@@ -483,9 +511,10 @@ namespace Bus_Service_App {
 			this->label8->Font = (gcnew System::Drawing::Font(L"Arial", 15, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label8->ForeColor = System::Drawing::Color::Black;
-			this->label8->Location = System::Drawing::Point(24, 153);
+			this->label8->Location = System::Drawing::Point(32, 188);
+			this->label8->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label8->Name = L"label8";
-			this->label8->Size = System::Drawing::Size(70, 24);
+			this->label8->Size = System::Drawing::Size(87, 30);
 			this->label8->TabIndex = 13;
 			this->label8->Text = L"Name:";
 			// 
@@ -495,9 +524,10 @@ namespace Bus_Service_App {
 			this->ticketNumLabel->Font = (gcnew System::Drawing::Font(L"Arial", 16, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->ticketNumLabel->ForeColor = System::Drawing::Color::Black;
-			this->ticketNumLabel->Location = System::Drawing::Point(178, 33);
+			this->ticketNumLabel->Location = System::Drawing::Point(237, 41);
+			this->ticketNumLabel->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->ticketNumLabel->Name = L"ticketNumLabel";
-			this->ticketNumLabel->Size = System::Drawing::Size(36, 26);
+			this->ticketNumLabel->Size = System::Drawing::Size(44, 32);
 			this->ticketNumLabel->TabIndex = 12;
 			this->ticketNumLabel->Text = L"10";
 			// 
@@ -507,18 +537,19 @@ namespace Bus_Service_App {
 			this->label7->Font = (gcnew System::Drawing::Font(L"Arial", 16, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label7->ForeColor = System::Drawing::Color::Black;
-			this->label7->Location = System::Drawing::Point(65, 33);
+			this->label7->Location = System::Drawing::Point(87, 41);
+			this->label7->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label7->Name = L"label7";
-			this->label7->Size = System::Drawing::Size(113, 26);
+			this->label7->Size = System::Drawing::Size(144, 32);
 			this->label7->TabIndex = 11;
 			this->label7->Text = L"Ticket no.";
 			// 
 			// viewTickets
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
+			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::Color::LightSteelBlue;
-			this->ClientSize = System::Drawing::Size(1047, 622);
+			this->ClientSize = System::Drawing::Size(1396, 766);
 			this->Controls->Add(this->ticketPanel);
 			this->Controls->Add(this->searchBtn);
 			this->Controls->Add(this->numTb);
@@ -527,6 +558,7 @@ namespace Bus_Service_App {
 			this->Controls->Add(this->ticketData);
 			this->Controls->Add(this->panel2);
 			this->Controls->Add(this->panel1);
+			this->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->Name = L"viewTickets";
 			this->Text = L"viewTickets";
 			this->panel2->ResumeLayout(false);

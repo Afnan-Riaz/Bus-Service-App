@@ -20,6 +20,26 @@ public:
 		sced = gcnew Scedule();
 		route = gcnew Route();
 	}
+	int countSeats() {
+		try {
+			String^ connString = "Data Source=localhost\\SQLEXPRESS;Initial Catalog=Bus;Integrated Security=True";
+			SqlConnection sqlconn(connString);
+			sqlconn.Open();
+
+			String^ sqlquery = "SELECT SUM(LEN(Booked_Seats)) - COUNT(*) AS character_count FROM BusInfo;";
+			SqlCommand command(sqlquery, % sqlconn);
+			int charcount = (int)command.ExecuteScalar();
+
+			sqlconn.Close();
+
+			return charcount;
+		}
+		catch (Exception^ e) {
+			MessageBox::Show(e->Message, "Error", MessageBoxButtons::OK);
+			return -1;
+		}
+
+	}
 	int countBuses() {	//Returns the total buses in database.
 		try {
 			String^ connString = "Data Source=localhost\\SQLEXPRESS;Initial Catalog=Bus;Integrated Security=True";

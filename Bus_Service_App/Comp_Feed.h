@@ -1,5 +1,6 @@
 #pragma once
 #include"userClass.h"
+#include "feedback.h"
 namespace Bus_Service_App {
 
 	using namespace System;
@@ -8,6 +9,7 @@ namespace Bus_Service_App {
 	using namespace System::Windows::Forms;
 	using namespace System::Data;
 	using namespace System::Drawing;
+	using namespace System::Diagnostics;
 
 	/// <summary>
 	/// Summary for Comp_Feed
@@ -54,7 +56,8 @@ namespace Bus_Service_App {
 	private: System::Windows::Forms::Label^ label2;
 	private: System::Windows::Forms::Label^ label1;
 	private: System::Windows::Forms::LinkLabel^ linkLabel1;
-	private: System::Windows::Forms::Label^ label5;
+	private: System::Windows::Forms::Label^ feedlable;
+
 	private: System::Windows::Forms::Label^ assistlabel;
 	private: System::Windows::Forms::Label^ pricelabel;
 	private: System::Windows::Forms::Label^ needlabel;
@@ -86,15 +89,15 @@ namespace Bus_Service_App {
 			this->dataGridView1 = (gcnew System::Windows::Forms::DataGridView());
 			this->panel4 = (gcnew System::Windows::Forms::Panel());
 			this->linkLabel1 = (gcnew System::Windows::Forms::LinkLabel());
-			this->label5 = (gcnew System::Windows::Forms::Label());
+			this->feedlable = (gcnew System::Windows::Forms::Label());
+			this->assistlabel = (gcnew System::Windows::Forms::Label());
+			this->pricelabel = (gcnew System::Windows::Forms::Label());
 			this->label4 = (gcnew System::Windows::Forms::Label());
+			this->needlabel = (gcnew System::Windows::Forms::Label());
 			this->label3 = (gcnew System::Windows::Forms::Label());
+			this->explabel = (gcnew System::Windows::Forms::Label());
 			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->label1 = (gcnew System::Windows::Forms::Label());
-			this->explabel = (gcnew System::Windows::Forms::Label());
-			this->needlabel = (gcnew System::Windows::Forms::Label());
-			this->pricelabel = (gcnew System::Windows::Forms::Label());
-			this->assistlabel = (gcnew System::Windows::Forms::Label());
 			this->panel1->SuspendLayout();
 			this->panel2->SuspendLayout();
 			this->panel3->SuspendLayout();
@@ -136,6 +139,7 @@ namespace Bus_Service_App {
 			this->delButton->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			this->delButton->TextImageRelation = System::Windows::Forms::TextImageRelation::ImageBeforeText;
 			this->delButton->UseVisualStyleBackColor = true;
+			this->delButton->Click += gcnew System::EventHandler(this, &Comp_Feed::delButton_Click);
 			// 
 			// panel2
 			// 
@@ -180,6 +184,7 @@ namespace Bus_Service_App {
 			this->addButton->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			this->addButton->TextImageRelation = System::Windows::Forms::TextImageRelation::ImageBeforeText;
 			this->addButton->UseVisualStyleBackColor = true;
+			this->addButton->Click += gcnew System::EventHandler(this, &Comp_Feed::addButton_Click);
 			// 
 			// mngBusButton
 			// 
@@ -248,6 +253,7 @@ namespace Bus_Service_App {
 			this->dataGridView1->Location = System::Drawing::Point(385, 217);
 			this->dataGridView1->Name = L"dataGridView1";
 			this->dataGridView1->ReadOnly = true;
+			this->dataGridView1->RowHeadersVisible = false;
 			this->dataGridView1->RowHeadersWidth = 51;
 			this->dataGridView1->RowTemplate->Height = 24;
 			this->dataGridView1->ShowCellErrors = false;
@@ -262,7 +268,7 @@ namespace Bus_Service_App {
 			// 
 			this->panel4->BackColor = System::Drawing::Color::AliceBlue;
 			this->panel4->Controls->Add(this->linkLabel1);
-			this->panel4->Controls->Add(this->label5);
+			this->panel4->Controls->Add(this->feedlable);
 			this->panel4->Controls->Add(this->assistlabel);
 			this->panel4->Controls->Add(this->pricelabel);
 			this->panel4->Controls->Add(this->label4);
@@ -290,17 +296,40 @@ namespace Bus_Service_App {
 			this->linkLabel1->TabIndex = 5;
 			this->linkLabel1->TabStop = true;
 			this->linkLabel1->Text = L"See Feedback";
+			this->linkLabel1->LinkClicked += gcnew System::Windows::Forms::LinkLabelLinkClickedEventHandler(this, &Comp_Feed::linkLabel1_LinkClicked);
 			// 
-			// label5
+			// feedlable
 			// 
-			this->label5->AutoSize = true;
-			this->label5->Font = (gcnew System::Drawing::Font(L"Poppins Medium", 14, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->feedlable->AutoSize = true;
+			this->feedlable->Font = (gcnew System::Drawing::Font(L"Poppins Medium", 14, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label5->Location = System::Drawing::Point(254, 18);
-			this->label5->Name = L"label5";
-			this->label5->Size = System::Drawing::Size(135, 42);
-			this->label5->TabIndex = 4;
-			this->label5->Text = L"Feedback";
+			this->feedlable->Location = System::Drawing::Point(254, 18);
+			this->feedlable->Name = L"feedlable";
+			this->feedlable->Size = System::Drawing::Size(135, 42);
+			this->feedlable->TabIndex = 4;
+			this->feedlable->Text = L"Feedback";
+			// 
+			// assistlabel
+			// 
+			this->assistlabel->AutoSize = true;
+			this->assistlabel->Font = (gcnew System::Drawing::Font(L"Poppins", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->assistlabel->Location = System::Drawing::Point(217, 279);
+			this->assistlabel->Name = L"assistlabel";
+			this->assistlabel->Size = System::Drawing::Size(121, 36);
+			this->assistlabel->TabIndex = 3;
+			this->assistlabel->Text = L"Assistance";
+			// 
+			// pricelabel
+			// 
+			this->pricelabel->AutoSize = true;
+			this->pricelabel->Font = (gcnew System::Drawing::Font(L"Poppins", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->pricelabel->Location = System::Drawing::Point(182, 222);
+			this->pricelabel->Name = L"pricelabel";
+			this->pricelabel->Size = System::Drawing::Size(83, 36);
+			this->pricelabel->TabIndex = 2;
+			this->pricelabel->Text = L"Pricing";
 			// 
 			// label4
 			// 
@@ -313,6 +342,17 @@ namespace Bus_Service_App {
 			this->label4->TabIndex = 3;
 			this->label4->Text = L"Assistance:";
 			// 
+			// needlabel
+			// 
+			this->needlabel->AutoSize = true;
+			this->needlabel->Font = (gcnew System::Drawing::Font(L"Poppins", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->needlabel->Location = System::Drawing::Point(178, 162);
+			this->needlabel->Name = L"needlabel";
+			this->needlabel->Size = System::Drawing::Size(77, 36);
+			this->needlabel->TabIndex = 1;
+			this->needlabel->Text = L"Needs";
+			// 
 			// label3
 			// 
 			this->label3->AutoSize = true;
@@ -323,6 +363,17 @@ namespace Bus_Service_App {
 			this->label3->Size = System::Drawing::Size(89, 36);
 			this->label3->TabIndex = 2;
 			this->label3->Text = L"Pricing:";
+			// 
+			// explabel
+			// 
+			this->explabel->AutoSize = true;
+			this->explabel->Font = (gcnew System::Drawing::Font(L"Poppins", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->explabel->Location = System::Drawing::Point(217, 103);
+			this->explabel->Name = L"explabel";
+			this->explabel->Size = System::Drawing::Size(122, 36);
+			this->explabel->TabIndex = 0;
+			this->explabel->Text = L"Experience";
 			// 
 			// label2
 			// 
@@ -346,50 +397,6 @@ namespace Bus_Service_App {
 			this->label1->TabIndex = 0;
 			this->label1->Text = L"Experience:";
 			// 
-			// explabel
-			// 
-			this->explabel->AutoSize = true;
-			this->explabel->Font = (gcnew System::Drawing::Font(L"Poppins", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->explabel->Location = System::Drawing::Point(217, 103);
-			this->explabel->Name = L"explabel";
-			this->explabel->Size = System::Drawing::Size(122, 36);
-			this->explabel->TabIndex = 0;
-			this->explabel->Text = L"Experience";
-			// 
-			// needlabel
-			// 
-			this->needlabel->AutoSize = true;
-			this->needlabel->Font = (gcnew System::Drawing::Font(L"Poppins", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->needlabel->Location = System::Drawing::Point(178, 162);
-			this->needlabel->Name = L"needlabel";
-			this->needlabel->Size = System::Drawing::Size(77, 36);
-			this->needlabel->TabIndex = 1;
-			this->needlabel->Text = L"Needs";
-			// 
-			// pricelabel
-			// 
-			this->pricelabel->AutoSize = true;
-			this->pricelabel->Font = (gcnew System::Drawing::Font(L"Poppins", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->pricelabel->Location = System::Drawing::Point(182, 222);
-			this->pricelabel->Name = L"pricelabel";
-			this->pricelabel->Size = System::Drawing::Size(83, 36);
-			this->pricelabel->TabIndex = 2;
-			this->pricelabel->Text = L"Pricing";
-			// 
-			// assistlabel
-			// 
-			this->assistlabel->AutoSize = true;
-			this->assistlabel->Font = (gcnew System::Drawing::Font(L"Poppins", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->assistlabel->Location = System::Drawing::Point(217, 279);
-			this->assistlabel->Name = L"assistlabel";
-			this->assistlabel->Size = System::Drawing::Size(121, 36);
-			this->assistlabel->TabIndex = 3;
-			this->assistlabel->Text = L"Assistance";
-			// 
 			// Comp_Feed
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
@@ -404,6 +411,7 @@ namespace Bus_Service_App {
 			this->Name = L"Comp_Feed";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"Bus Service Application";
+			this->Load += gcnew System::EventHandler(this, &Comp_Feed::Comp_Feed_Load);
 			this->panel1->ResumeLayout(false);
 			this->panel2->ResumeLayout(false);
 			this->panel3->ResumeLayout(false);
@@ -422,10 +430,27 @@ namespace Bus_Service_App {
 		go_back = true;
 		this->Close();
 	}
-		   String^ activeCell;
+	String^ activeCell;
+	String^ text;
 private: System::Void dataGridView1_CellClick(System::Object^ sender, System::Windows::Forms::DataGridViewCellEventArgs^ e) {
 	if (e->RowIndex >= 0)
 		activeCell = dataGridView1->Rows[e->RowIndex]->Cells[e->ColumnIndex]->Value->ToString();
+	Feedback^ feedback = gcnew Feedback;
+	feedback->getData(activeCell);
+	if (feedback->Comp == "") {
+		feedlable->Text = "Feedback";
+		linkLabel1->Text = "See Feedback";
+		text = feedback->FB;
+	}
+	else if (feedback->FB == "") {
+		feedlable->Text = "Complain";
+		linkLabel1->Text = "See Complain";
+		text = feedback->Comp;
+	}
+	explabel->Text = feedback->Q1;
+	needlabel->Text = feedback->Q2;
+	pricelabel->Text = feedback->Q3;
+	assistlabel->Text = feedback->Q4;
 }
 
 private: System::Void BackButton_MouseEnter(System::Object^ sender, System::EventArgs^ e) {
@@ -433,6 +458,29 @@ private: System::Void BackButton_MouseEnter(System::Object^ sender, System::Even
 }
 private: System::Void BackButton_MouseLeave(System::Object^ sender, System::EventArgs^ e) {
 	BackButton->BorderStyle = BorderStyle::None;
+}
+private: System::Void Comp_Feed_Load(System::Object^ sender, System::EventArgs^ e) {
+	Feedback^ feedback = gcnew Feedback;
+	feedback->showFeedback(dataGridView1);
+}
+private: System::Void linkLabel1_LinkClicked(System::Object^ sender, System::Windows::Forms::LinkLabelLinkClickedEventArgs^ e) {
+	MessageBox::Show(text,"Review", MessageBoxButtons::OK);
+}
+private: System::Void delButton_Click(System::Object^ sender, System::EventArgs^ e) {
+	Feedback^ feedback = gcnew Feedback;
+	feedback->username = activeCell;
+	feedback->delfeedback();
+	feedback->showFeedback(dataGridView1);
+}
+private: System::Void addButton_Click(System::Object^ sender, System::EventArgs^ e) {
+	String^ senderEmail = "l227882@lhr.nu.edu.pk";
+	String^ receiverEmail = "l226197@lhr.nu.edu.pk";
+	String^ subject = "Technical support";
+
+	// Generate the mailto link
+	String^ mailtoLink = L"mailto:{receiverEmail}?subject={Uri.EscapeDataString(subject)}&from={Uri.EscapeDataString(senderEmail)}";
+
+	Process::Start(mailtoLink);
 }
 };
 }

@@ -112,9 +112,9 @@ namespace Bus_Service_App {
 			this->panel1->Controls->Add(this->deplabel);
 			this->panel1->Dock = System::Windows::Forms::DockStyle::Top;
 			this->panel1->Location = System::Drawing::Point(0, 0);
-			this->panel1->Margin = System::Windows::Forms::Padding(2);
+			this->panel1->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->panel1->Name = L"panel1";
-			this->panel1->Size = System::Drawing::Size(847, 85);
+			this->panel1->Size = System::Drawing::Size(1129, 105);
 			this->panel1->TabIndex = 28;
 			this->panel1->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &Select_Seats::panel1_Paint);
 			// 
@@ -124,10 +124,9 @@ namespace Bus_Service_App {
 			this->arrlabel->Font = (gcnew System::Drawing::Font(L"Arial", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->arrlabel->ForeColor = System::Drawing::Color::White;
-			this->arrlabel->Location = System::Drawing::Point(464, 30);
-			this->arrlabel->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->arrlabel->Location = System::Drawing::Point(619, 37);
 			this->arrlabel->Name = L"arrlabel";
-			this->arrlabel->Size = System::Drawing::Size(69, 24);
+			this->arrlabel->Size = System::Drawing::Size(92, 32);
 			this->arrlabel->TabIndex = 0;
 			this->arrlabel->Text = L"label1";
 			// 
@@ -137,10 +136,9 @@ namespace Bus_Service_App {
 			this->dash->Font = (gcnew System::Drawing::Font(L"Arial", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->dash->ForeColor = System::Drawing::Color::White;
-			this->dash->Location = System::Drawing::Point(404, 30);
-			this->dash->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->dash->Location = System::Drawing::Point(539, 37);
 			this->dash->Name = L"dash";
-			this->dash->Size = System::Drawing::Size(39, 24);
+			this->dash->Size = System::Drawing::Size(53, 32);
 			this->dash->TabIndex = 0;
 			this->dash->Text = L"TO";
 			// 
@@ -150,10 +148,9 @@ namespace Bus_Service_App {
 			this->deplabel->Font = (gcnew System::Drawing::Font(L"Arial", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->deplabel->ForeColor = System::Drawing::Color::White;
-			this->deplabel->Location = System::Drawing::Point(313, 30);
-			this->deplabel->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->deplabel->Location = System::Drawing::Point(417, 37);
 			this->deplabel->Name = L"deplabel";
-			this->deplabel->Size = System::Drawing::Size(69, 24);
+			this->deplabel->Size = System::Drawing::Size(92, 32);
 			this->deplabel->TabIndex = 0;
 			this->deplabel->Text = L"label1";
 			// 
@@ -168,8 +165,8 @@ namespace Bus_Service_App {
 			this->SeatingChart->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Percent, 14.28652F)));
 			this->SeatingChart->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Percent, 14.28652F)));
 			this->SeatingChart->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Percent, 14.28652F)));
-			this->SeatingChart->Location = System::Drawing::Point(277, 66);
-			this->SeatingChart->Margin = System::Windows::Forms::Padding(2);
+			this->SeatingChart->Location = System::Drawing::Point(336, 81);
+			this->SeatingChart->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->SeatingChart->Name = L"SeatingChart";
 			this->SeatingChart->RowCount = 9;
 			this->SeatingChart->RowStyles->Add((gcnew System::Windows::Forms::RowStyle(System::Windows::Forms::SizeType::Percent, 11.11111F)));
@@ -181,7 +178,7 @@ namespace Bus_Service_App {
 			this->SeatingChart->RowStyles->Add((gcnew System::Windows::Forms::RowStyle(System::Windows::Forms::SizeType::Percent, 11.11111F)));
 			this->SeatingChart->RowStyles->Add((gcnew System::Windows::Forms::RowStyle(System::Windows::Forms::SizeType::Percent, 11.11111F)));
 			this->SeatingChart->RowStyles->Add((gcnew System::Windows::Forms::RowStyle(System::Windows::Forms::SizeType::Percent, 11.11111F)));
-			this->SeatingChart->Size = System::Drawing::Size(313, 266);
+			this->SeatingChart->Size = System::Drawing::Size(467, 327);
 			this->SeatingChart->TabIndex = 2;
 			this->SeatingChart->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &Select_Seats::tableLayoutPanel1_Paint);
 			// 
@@ -192,11 +189,11 @@ namespace Bus_Service_App {
 			this->modButton->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->modButton->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
 			this->modButton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13));
-			this->modButton->Location = System::Drawing::Point(389, 363);
-			this->modButton->Margin = System::Windows::Forms::Padding(2);
+			this->modButton->Location = System::Drawing::Point(519, 447);
+			this->modButton->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->modButton->Name = L"modButton";
-			this->modButton->Padding = System::Windows::Forms::Padding(22, 0, 0, 0);
-			this->modButton->Size = System::Drawing::Size(102, 28);
+			this->modButton->Padding = System::Windows::Forms::Padding(29, 0, 0, 0);
+			this->modButton->Size = System::Drawing::Size(136, 34);
 			this->modButton->TabIndex = 27;
 			this->modButton->Text = L"Next    ";
 			this->modButton->TextImageRelation = System::Windows::Forms::TextImageRelation::ImageBeforeText;
@@ -208,22 +205,22 @@ namespace Bus_Service_App {
 			this->panel->BackColor = System::Drawing::Color::LightSteelBlue;
 			this->panel->Controls->Add(this->modButton);
 			this->panel->Controls->Add(this->SeatingChart);
-			this->panel->Location = System::Drawing::Point(0, 77);
-			this->panel->Margin = System::Windows::Forms::Padding(2);
+			this->panel->Location = System::Drawing::Point(0, 95);
+			this->panel->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->panel->Name = L"panel";
-			this->panel->Size = System::Drawing::Size(847, 448);
+			this->panel->Size = System::Drawing::Size(1129, 551);
 			this->panel->TabIndex = 29;
 			// 
 			// Select_Seats
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
+			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::SystemColors::Window;
-			this->ClientSize = System::Drawing::Size(847, 520);
+			this->ClientSize = System::Drawing::Size(1129, 640);
 			this->Controls->Add(this->panel1);
 			this->Controls->Add(this->panel);
 			this->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->Margin = System::Windows::Forms::Padding(2);
+			this->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->Name = L"Select_Seats";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"Select_Seats";
@@ -257,6 +254,23 @@ private: System::Void Select_Seats::SeatButton_Click(System::Object^ sender, Sys
 	{
 		seatButton->BackColor = Color::Gray; 
 		seatButton->Tag = "Available"; 
+		int no = System::Convert::ToInt32(seatButton->Text);
+		int newlen = 0;
+		for (int i = 0; i < len; i++) {
+			if (intarr[i] != no) {
+				intarr[newlen] = intarr[i];
+				newlen++;
+			}
+		}
+		len = newlen;
+		newlen = 0;
+		for (int i = 0; i < len1; i++) {
+			if (selArr[i] != no) {
+				selArr[newlen] = selArr[i];
+				newlen++;
+			}
+		}
+		len1 = newlen;
 	}
 	else if (seatButton->Tag->ToString() == "Booked")
 	{
@@ -378,11 +392,12 @@ private: System::Void Select_Seats_Load(System::Object^ sender, System::EventArg
 	}
 	int rows=seats/6;
 	int exseats = seats - 6 * rows,count=0;
-	for (row = 0; row <6 ; row++)
+	for (row = 0; row <rows ; row++)
 	{
 		for (col = 0; col < 6; col++)
 		{
 			Button^ seatButton = gcnew Button();
+			seatButton->Dock = System::Windows::Forms::DockStyle::Fill;
 			count++;
 			seatButton->Text = (row * 6+ col + 1).ToString();
 			seatButton->Tag = "Available";
@@ -401,6 +416,7 @@ private: System::Void Select_Seats_Load(System::Object^ sender, System::EventArg
 		col = 0;
 	for (int i = 0; i < exseats; i++) {
 		Button^ seatButton = gcnew Button();
+		seatButton->Dock = System::Windows::Forms::DockStyle::Fill;
 		seatButton->Text = (count).ToString();
 		seatButton->Tag = "Available";
 		seatButton->Click += gcnew EventHandler(this, &Select_Seats::SeatButton_Click);
