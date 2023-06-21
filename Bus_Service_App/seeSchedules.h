@@ -100,9 +100,10 @@ namespace Bus_Service_App {
 			this->panel2->Controls->Add(this->nameLabel);
 			this->panel2->Controls->Add(this->label2);
 			this->panel2->Controls->Add(this->label1);
-			this->panel2->Location = System::Drawing::Point(-2, 0);
+			this->panel2->Location = System::Drawing::Point(-3, 0);
+			this->panel2->Margin = System::Windows::Forms::Padding(4);
 			this->panel2->Name = L"panel2";
-			this->panel2->Size = System::Drawing::Size(228, 79);
+			this->panel2->Size = System::Drawing::Size(304, 97);
 			this->panel2->TabIndex = 33;
 			// 
 			// balanceLabel
@@ -111,9 +112,10 @@ namespace Bus_Service_App {
 			this->balanceLabel->Font = (gcnew System::Drawing::Font(L"Arial", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->balanceLabel->ForeColor = System::Drawing::Color::White;
-			this->balanceLabel->Location = System::Drawing::Point(97, 44);
+			this->balanceLabel->Location = System::Drawing::Point(129, 54);
+			this->balanceLabel->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->balanceLabel->Name = L"balanceLabel";
-			this->balanceLabel->Size = System::Drawing::Size(43, 17);
+			this->balanceLabel->Size = System::Drawing::Size(55, 22);
 			this->balanceLabel->TabIndex = 2;
 			this->balanceLabel->Text = L"Rs. 0";
 			// 
@@ -123,9 +125,10 @@ namespace Bus_Service_App {
 			this->nameLabel->Font = (gcnew System::Drawing::Font(L"Arial", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->nameLabel->ForeColor = System::Drawing::Color::White;
-			this->nameLabel->Location = System::Drawing::Point(115, 19);
+			this->nameLabel->Location = System::Drawing::Point(153, 23);
+			this->nameLabel->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->nameLabel->Name = L"nameLabel";
-			this->nameLabel->Size = System::Drawing::Size(47, 17);
+			this->nameLabel->Size = System::Drawing::Size(60, 22);
 			this->nameLabel->TabIndex = 10;
 			this->nameLabel->Text = L"Name";
 			// 
@@ -135,9 +138,10 @@ namespace Bus_Service_App {
 			this->label2->Font = (gcnew System::Drawing::Font(L"Arial", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label2->ForeColor = System::Drawing::Color::White;
-			this->label2->Location = System::Drawing::Point(25, 42);
+			this->label2->Location = System::Drawing::Point(33, 52);
+			this->label2->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(60, 19);
+			this->label2->Size = System::Drawing::Size(74, 24);
 			this->label2->TabIndex = 1;
 			this->label2->Text = L"Wallet:";
 			// 
@@ -147,9 +151,10 @@ namespace Bus_Service_App {
 			this->label1->Font = (gcnew System::Drawing::Font(L"Arial", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label1->ForeColor = System::Drawing::Color::White;
-			this->label1->Location = System::Drawing::Point(23, 18);
+			this->label1->Location = System::Drawing::Point(31, 22);
+			this->label1->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(87, 19);
+			this->label1->Size = System::Drawing::Size(105, 24);
 			this->label1->TabIndex = 9;
 			this->label1->Text = L"Signed in:";
 			// 
@@ -158,9 +163,10 @@ namespace Bus_Service_App {
 			this->panel1->BackColor = System::Drawing::Color::SteelBlue;
 			this->panel1->Controls->Add(this->back);
 			this->panel1->Controls->Add(this->label5);
-			this->panel1->Location = System::Drawing::Point(228, 0);
+			this->panel1->Location = System::Drawing::Point(304, 0);
+			this->panel1->Margin = System::Windows::Forms::Padding(4);
 			this->panel1->Name = L"panel1";
-			this->panel1->Size = System::Drawing::Size(815, 79);
+			this->panel1->Size = System::Drawing::Size(1087, 97);
 			this->panel1->TabIndex = 32;
 			// 
 			// back
@@ -171,9 +177,10 @@ namespace Bus_Service_App {
 			this->back->Font = (gcnew System::Drawing::Font(L"Arial", 11.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->back->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"back.Image")));
-			this->back->Location = System::Drawing::Point(18, 8);
+			this->back->Location = System::Drawing::Point(24, 10);
+			this->back->Margin = System::Windows::Forms::Padding(4);
 			this->back->Name = L"back";
-			this->back->Size = System::Drawing::Size(69, 65);
+			this->back->Size = System::Drawing::Size(92, 80);
 			this->back->TabIndex = 32;
 			this->back->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
 			this->back->TextImageRelation = System::Windows::Forms::TextImageRelation::ImageBeforeText;
@@ -185,9 +192,10 @@ namespace Bus_Service_App {
 			this->label5->Font = (gcnew System::Drawing::Font(L"Segoe UI", 21.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label5->ForeColor = System::Drawing::Color::White;
-			this->label5->Location = System::Drawing::Point(316, 22);
+			this->label5->Location = System::Drawing::Point(421, 27);
+			this->label5->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label5->Name = L"label5";
-			this->label5->Size = System::Drawing::Size(209, 38);
+			this->label5->Size = System::Drawing::Size(279, 47);
 			this->label5->TabIndex = 0;
 			this->label5->Text = L"See Schedules";
 			// 
@@ -210,9 +218,10 @@ namespace Bus_Service_App {
 			dataGridViewCellStyle1->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
 			dataGridViewCellStyle1->WrapMode = System::Windows::Forms::DataGridViewTriState::False;
 			this->scedGrid->DefaultCellStyle = dataGridViewCellStyle1;
+			this->scedGrid->EditMode = System::Windows::Forms::DataGridViewEditMode::EditProgrammatically;
 			this->scedGrid->GridColor = System::Drawing::SystemColors::Window;
-			this->scedGrid->Location = System::Drawing::Point(215, 226);
-			this->scedGrid->Margin = System::Windows::Forms::Padding(2);
+			this->scedGrid->Location = System::Drawing::Point(169, 347);
+			this->scedGrid->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->scedGrid->Name = L"scedGrid";
 			this->scedGrid->ReadOnly = true;
 			dataGridViewCellStyle2->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
@@ -224,11 +233,11 @@ namespace Bus_Service_App {
 			dataGridViewCellStyle2->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
 			this->scedGrid->RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
 			this->scedGrid->RowHeadersWidth = 60;
-			dataGridViewCellStyle3->BackColor = System::Drawing::Color::Turquoise;
+			dataGridViewCellStyle3->BackColor = System::Drawing::Color::AliceBlue;
 			dataGridViewCellStyle3->ForeColor = System::Drawing::Color::Black;
 			this->scedGrid->RowsDefaultCellStyle = dataGridViewCellStyle3;
 			this->scedGrid->RowTemplate->Height = 24;
-			this->scedGrid->Size = System::Drawing::Size(648, 273);
+			this->scedGrid->Size = System::Drawing::Size(1053, 189);
 			this->scedGrid->TabIndex = 37;
 			// 
 			// applyBtn
@@ -238,10 +247,10 @@ namespace Bus_Service_App {
 			this->applyBtn->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->applyBtn->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
-			this->applyBtn->Location = System::Drawing::Point(773, 170);
-			this->applyBtn->Margin = System::Windows::Forms::Padding(2);
+			this->applyBtn->Location = System::Drawing::Point(1055, 208);
+			this->applyBtn->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->applyBtn->Name = L"applyBtn";
-			this->applyBtn->Size = System::Drawing::Size(89, 32);
+			this->applyBtn->Size = System::Drawing::Size(119, 39);
 			this->applyBtn->TabIndex = 36;
 			this->applyBtn->Text = L"Apply";
 			this->applyBtn->UseVisualStyleBackColor = true;
@@ -252,12 +261,11 @@ namespace Bus_Service_App {
 			this->label3->BackColor = System::Drawing::Color::Transparent;
 			this->label3->Font = (gcnew System::Drawing::Font(L"Arial", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label3->Location = System::Drawing::Point(612, 136);
-			this->label3->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->label3->Location = System::Drawing::Point(807, 171);
 			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(260, 24);
+			this->label3->Size = System::Drawing::Size(163, 30);
 			this->label3->TabIndex = 35;
-			this->label3->Text = L"Filter according to Date:";
+			this->label3->Text = L"Filter by Date:";
 			this->label3->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
 			// 
 			// timeFilter
@@ -265,11 +273,11 @@ namespace Bus_Service_App {
 			this->timeFilter->CustomFormat = L"MM/dd/yyyy";
 			this->timeFilter->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10));
 			this->timeFilter->Format = System::Windows::Forms::DateTimePickerFormat::Custom;
-			this->timeFilter->Location = System::Drawing::Point(640, 171);
-			this->timeFilter->Margin = System::Windows::Forms::Padding(2);
+			this->timeFilter->Location = System::Drawing::Point(812, 217);
+			this->timeFilter->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->timeFilter->MinDate = System::DateTime(2023, 4, 25, 0, 0, 0, 0);
 			this->timeFilter->Name = L"timeFilter";
-			this->timeFilter->Size = System::Drawing::Size(114, 23);
+			this->timeFilter->Size = System::Drawing::Size(151, 26);
 			this->timeFilter->TabIndex = 34;
 			// 
 			// mainLabel
@@ -277,10 +285,9 @@ namespace Bus_Service_App {
 			this->mainLabel->BackColor = System::Drawing::Color::Transparent;
 			this->mainLabel->Font = (gcnew System::Drawing::Font(L"Arial", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->mainLabel->Location = System::Drawing::Point(212, 176);
-			this->mainLabel->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->mainLabel->Location = System::Drawing::Point(242, 217);
 			this->mainLabel->Name = L"mainLabel";
-			this->mainLabel->Size = System::Drawing::Size(235, 24);
+			this->mainLabel->Size = System::Drawing::Size(313, 30);
 			this->mainLabel->TabIndex = 38;
 			this->mainLabel->Text = L"All Scheduled Buses:";
 			this->mainLabel->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
@@ -292,10 +299,10 @@ namespace Bus_Service_App {
 			this->allBtn->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->allBtn->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
-			this->allBtn->Location = System::Drawing::Point(492, 170);
-			this->allBtn->Margin = System::Windows::Forms::Padding(2);
+			this->allBtn->Location = System::Drawing::Point(615, 209);
+			this->allBtn->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->allBtn->Name = L"allBtn";
-			this->allBtn->Size = System::Drawing::Size(105, 32);
+			this->allBtn->Size = System::Drawing::Size(140, 39);
 			this->allBtn->TabIndex = 39;
 			this->allBtn->Text = L"See All";
 			this->allBtn->UseVisualStyleBackColor = true;
@@ -304,10 +311,10 @@ namespace Bus_Service_App {
 			// 
 			// seeSchedules
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
+			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::Color::LightSteelBlue;
-			this->ClientSize = System::Drawing::Size(1047, 628);
+			this->ClientSize = System::Drawing::Size(1386, 674);
 			this->Controls->Add(this->allBtn);
 			this->Controls->Add(this->mainLabel);
 			this->Controls->Add(this->scedGrid);
@@ -316,8 +323,9 @@ namespace Bus_Service_App {
 			this->Controls->Add(this->timeFilter);
 			this->Controls->Add(this->panel2);
 			this->Controls->Add(this->panel1);
+			this->Margin = System::Windows::Forms::Padding(4);
 			this->Name = L"seeSchedules";
-			this->Text = L"seeSchedules";
+			this->Text = L"Bus Service Application";
 			this->panel2->ResumeLayout(false);
 			this->panel2->PerformLayout();
 			this->panel1->ResumeLayout(false);
@@ -342,6 +350,12 @@ namespace Bus_Service_App {
 
 			// Bind the data to the DataGridView
 			dgv->DataSource = dataTable;
+			dgv->Columns[0]->HeaderText = "Bus ID";
+			dgv->Columns[1]->HeaderText = "Departure Location";
+			dgv->Columns[2]->HeaderText = "Arrival Location";
+			dgv->Columns[3]->HeaderText = "Class of Travel";
+			dgv->Columns[4]->HeaderText = "Service Provider";
+			dgv->Columns[5]->HeaderText = "Departure Date";
 		}
 
 		void FilterDataByDate(DataGridView^ dgv, DateTimePicker^ dateTimePicker)

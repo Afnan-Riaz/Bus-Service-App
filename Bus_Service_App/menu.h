@@ -349,7 +349,7 @@ namespace Bus_Service_App {
 			this->cprt->Name = L"cprt";
 			this->cprt->Size = System::Drawing::Size(714, 24);
 			this->cprt->TabIndex = 14;
-			this->cprt->Text = L"Copyright 2022-2026 | Developed By Bus Conductors | All Rights Reserved";
+			this->cprt->Text = L"Copyright 2022-2026 | Developed By FAST-NUCES | All Rights Reserved";
 			// 
 			// walletBtn
 			// 
